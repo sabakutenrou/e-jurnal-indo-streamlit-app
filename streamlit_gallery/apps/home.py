@@ -16,8 +16,16 @@ from streamlit_gallery.utils.lottie import lottie_show
 import streamlit_gallery.utils.database as db
 
 def main():
-    df = st.session_state.df
-    df.to_csv(r'.\my_data.csv', index=False)
+    # df = st.session_state.df
+    users = db.fetch_all_users()
+
+    key = [user["key"] for user in users]
+    names = [user["name"] for user in users]
+
+    # st.write(key)
+    # st.write(names)
+    # df.to_csv(r'.\my_data.csv', index=False)
+
     # df.to_sql('dataset', con=conn, if_exists='replace', index = False)
     # df = pd.read_sql('SELECT * FROM e_jurnal_db.dataset', con=conn)
     # st.dataframe(df)
@@ -38,10 +46,10 @@ def main():
         if checkbox:
             judul = st.text_input('judul jurnal',help="input judul (opsional)", placeholder="masukkan judul jurnal")
         abstrak = st.text_area('abstrak jurnal', height=200, key='abstrak', help="masukkan atau copy abstrak jurnal disini..", placeholder='masukkan teks abstrak disini')
-        st.button(label='Klasifikasi')
+        classify = st.button(label='Klasifikasi')
 
     with col2:
-        if len(judul) == 0 and len(abstrak) == 0:
+        if not classify:
             text1 = 'Selamat datang di,'
             text2 = 'Aplikasi Klasifikasi E-Jurnal berbahasa Indonesia 🎉'
             text3 = """Aplikasi klasifikasi jurnal melakukan klafikasi pada dokumen 
@@ -57,39 +65,40 @@ def main():
                     </div>
                 </div>"""
             st.markdown(ht_welcome.format(text1, text2, text3, color=accent_color), unsafe_allow_html=True)
-        elif len(judul) > 0 and len(abstrak) == 0:
-            st.write('null')
-        else:
-            # in range(100,500)
-            teks_length = len(abstrak.split())
-            # if teks_length >= 100 and teks_length <= 500:
-            if teks_length < 100 or teks_length > 500:
-                container = st.empty()
-                with container:
-                    if not st.button('Teks yang diinputkan dideteksi bukan abstrak. Tetap ingin melanjutkan? (ya)'):
-                        return
-                container.empty()
-            
-            # def prediksi():
-            #     st.session_state['hasil'] = 
+        elif classify:
+            if len(judul) >= 0 and len(abstrak) == 0:
+                st.write('null')
+            else:
+                # in range(100,500)
+                teks_length = len(abstrak.split())
+                if teks_length < 50 or teks_length > 500:
+                    container = st.empty()
+                    with container:
+                        if not st.button('Teks yang diinputkan dideteksi bukan abstrak. Tetap ingin melanjutkan? (ya)'):
+                            return
+                    container.empty()
+                
+                # def prediksi():
+                #     st.session_state['hasil'] = 
 
-            selected = option_menu('hasil', ["kelas", "preprocess", "tfidf"], 
-            icons=['house', 'cloud-upload', "list-task", 'gear'], 
-            menu_icon="cast", default_index=0, orientation="horizontal",
-            styles={
-                "container": {"padding": "0!important"},
-                "icon": {"font-size": "0px"},
-                "nav-link": {"font-size": "15px", "text-align": "center", "margin":"2px"},
-                "nav-link-selected": {"font-size": "12px"}
-                }
-            )
-            if selected == 'kelas':
-                st.success('Prediksi : Data Mining')
-                # elif "text" in st.session_state:
-                predicted_text = predict(st.session_state['abstrak'])
-                plot_radar(predicted_text["decision"][0])
-            
-            st.write(predicted_text)
+                selected = option_menu('hasil', ["kelas", "preprocess", "tfidf"], 
+                icons=['house', 'cloud-upload', "list-task", 'gear'], 
+                menu_icon="cast", default_index=0, orientation="horizontal",
+                styles={
+                    "container": {"padding": "0!important"},
+                    "icon": {"font-size": "0px"},
+                    "nav-link": {"font-size": "15px", "text-align": "center", "margin":"2px"},
+                    "nav-link-selected": {"font-size": "12px"}
+                    }
+                )
+                if selected == 'kelas':
+                    st.success('Prediksi : Data Mining')
+                    # elif "text" in st.session_state:
+                    predicted_text = predict(st.session_state['abstrak'])
+                    plot_radar(predicted_text["decision"][0])
+                
+                st.write(predicted_text)
 
+    st.write(db)
 if __name__ == "__main__":
     main()

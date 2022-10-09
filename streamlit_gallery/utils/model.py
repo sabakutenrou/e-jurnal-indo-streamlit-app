@@ -6,18 +6,21 @@ from sklearn.feature_extraction.text import TfidfVectorizer, CountVectorizer, Tf
 from sklearn.svm import LinearSVC
 from streamlit_gallery.utils.relabel import relabel
 
-def load_data():
-    df = pd.read_csv("dataset.csv")
-    df = df[['judul-jurnal','abstrak-jurnal','kategori']]
-    df['kategori'] = df['kategori'].factorize()[0]
-    df['abstrak-jurnal'] = df['abstrak-jurnal'].apply(remove_tweet_special)
 
+df = pd.read_csv("dataset.csv")
+df = df[['judul-jurnal','abstrak-jurnal','kategori']]
+df['kategori'] = df['kategori'].factorize()[0]
+df['abstrak-jurnal'] = df['abstrak-jurnal'].apply(remove_tweet_special)
+
+X = df['abstrak-jurnal']
+y = df['kategori']
+
+def load_data():
     return df
 
 def predict(text):
     df = load_data()
-    X = df['abstrak-jurnal']
-    y = df['kategori']
+    
     X_train, X_test, y_train, y_test = train_test_split(X, y , random_state= 0)
 
     pipeline    = Pipeline([("vect",CountVectorizer()), ("tfidf",TfidfTransformer())])

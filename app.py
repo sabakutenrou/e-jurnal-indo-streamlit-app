@@ -12,9 +12,9 @@ def main():
     image = Image.open('e-jurnal_logo.png')
     page = page_group("p")
     
-    if 'df' not in st.session_state:
-        df = load_data()
-        st.session_state.df = df
+    # if 'df' not in st.session_state:
+    #     df = load_data()
+    #     st.session_state.df = df
 
     with st.sidebar:
         st.image(image)
@@ -31,7 +31,7 @@ def main():
         with st.expander("⭐ LAINNYA", False):
             st.write('Tentang Aplikasi')
             st.write('aplikasi ini di buat oleh Dian Mahesa')
-
+        st.write(st.session_state)
     page.show()
 
 if __name__ == "__main__":

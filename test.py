@@ -35,7 +35,7 @@ text = data_func.convert_pdf_to_string(
 import abstrak
 text = abstrak.pdfparser('132747-ID-klasifikasi-berita-online-menggunakan-me.pdf')
 
-para = abstrak.abstractExtraction(text, 'abstrak')
-st.write(para)
+parag = abstrak.abstractExtraction(text, 'abstrak')
+st.write(parag)
 st.markdown('---')  
 st.write(text)

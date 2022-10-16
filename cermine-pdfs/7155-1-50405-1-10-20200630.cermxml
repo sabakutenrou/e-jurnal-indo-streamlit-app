@@ -1,0 +1,1131 @@
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD v1.0 20120330//EN" "JATS-archivearticle1.dtd">
+<article xmlns:xlink="http://www.w3.org/1999/xlink">
+  <front>
+    <journal-meta>
+      <issn pub-type="ppub">2548-964X</issn>
+    </journal-meta>
+    <article-meta>
+      <title-group>
+        <article-title>Analisis Sentimen Berbasis Aspek Ulasan Pelanggan Terhadap Kertanegara Premium Guest House Menggunakan Support Vector Machine</article-title>
+      </title-group>
+      <contrib-group>
+        <contrib contrib-type="author">
+          <string-name>Article</string-name>
+          <xref ref-type="aff" rid="aff0">0</xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <string-name>CITATIONS</string-name>
+          <xref ref-type="aff" rid="aff0">0</xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <string-name>authors</string-name>
+          <xref ref-type="aff" rid="aff0">0</xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <string-name>including: Wirdhayanti Paulina</string-name>
+          <email>1wirdhayantipaulina@gmail.com</email>
+          <xref ref-type="aff" rid="aff0">0</xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <string-name>PUBLICATIONS</string-name>
+          <xref ref-type="aff" rid="aff0">0</xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <string-name>CITATIONS    SEE PROFILE</string-name>
+          <xref ref-type="aff" rid="aff0">0</xref>
+        </contrib>
+        <aff id="aff0">
+          <label>0</label>
+          <institution>Alfi Nur Rusydi Brawijaya University 19 PUBLICATIONS 9 CITATIONS SEE PROFILE</institution>
+        </aff>
+      </contrib-group>
+      <pub-date>
+        <year>2020</year>
+      </pub-date>
+      <volume>4</volume>
+      <issue>4</issue>
+      <fpage>1141</fpage>
+      <lpage>1149</lpage>
+      <abstract>
+        <p>Food Labeling on Android using TensorFlow View project</p>
+      </abstract>
+    </article-meta>
+  </front>
+  <body>
+    <fig>
+      <graphic xlink:href="cermine-pdfs\7155-1-50405-1-10-20200630.images\img_1_1.png" />
+    </fig>
+    <fig>
+      <graphic xlink:href="cermine-pdfs\7155-1-50405-1-10-20200630.images\img_1_2.png" />
+    </fig>
+    <fig>
+      <graphic xlink:href="cermine-pdfs\7155-1-50405-1-10-20200630.images\img_1_3.png" />
+    </fig>
+    <fig>
+      <graphic xlink:href="cermine-pdfs\7155-1-50405-1-10-20200630.images\img_1_4.png" />
+    </fig>
+    <fig>
+      <graphic xlink:href="cermine-pdfs\7155-1-50405-1-10-20200630.images\img_4_1.png" />
+    </fig>
+    <fig>
+      <graphic xlink:href="cermine-pdfs\7155-1-50405-1-10-20200630.images\img_5_1.png" />
+    </fig>
+    <fig>
+      <graphic xlink:href="cermine-pdfs\7155-1-50405-1-10-20200630.images\img_8_1.png" />
+    </fig>
+    <fig>
+      <graphic xlink:href="cermine-pdfs\7155-1-50405-1-10-20200630.images\img_8_2.png" />
+    </fig>
+    <fig>
+      <graphic xlink:href="cermine-pdfs\7155-1-50405-1-10-20200630.images\img_9_1.png" />
+    </fig>
+    <sec id="sec-1">
+      <title>-</title>
+      <p>Some of the authors of this publication are also working on these related projects:
+Mobile-based Sleepiness Detection View project
+READS
+185
+All content following this page was uploaded by Alfi Nur Rusydi on 01 July 2020.</p>
+      <p>The user has requested enhancement of the downloaded file.</p>
+    </sec>
+    <sec id="sec-2">
+      <title>Abstrak</title>
+      <p>Kertanegara Premium Guest House adalah salah satu penginapan di Kota Malang yang terletak di Jl.
+Semeru No.59. Kertanegara sangat menyadari pentingnya keberadaan E-WOM (Electronic Word Of
+Mouth) demi kelangsungan bisnisnya. E-WOM dapat disebarkan melalui ulasan pelanggan. Kertanegara
+memiliki dua sumber ulasan pelanggan yaitu Guest Review dan ulasan online di situs OTA (Online
+Travel Agent). Saat ini, proses pengolahan ulasan pelanggan masih berfokus hanya pada Guest Review.
+Namun di sisi lain, Kertanegara juga memiliki ulasan dalam situs OTA yang perlu untuk diolah karena
+90 persen proses booking berasal dari situs OTA. Salah satu cara yang dapat digunakan untuk
+menganalisis dan mengolah teks ulasan/review tersebut adalah analisis sentimen. Analisis sentimen
+dilakukan dalam tingkat aspek untuk menentukan layanan dan aspek yang memiliki polaritas negatif
+atau positif menggunakan metode Support Vector Machine (SVM) dan Term Weighting (TF-IDF). Data
+teks ulasan yang digunakan berbahasa Indonesia berasal dari situs Agoda.com, Expedia, Pegi-Pegi,
+Booking.Com, TripAdvisor dan berjangka waktu dari tahun 2012 sampai tahun 2019. Pengujian hasil
+klasifikasi menghasilkan rata-rata nilai Accuracy diatas 70%. Hasil analisis kemudian divisualisasikan
+melalui dashboard dengan menampilkan 6 komponen penting sehingga dapat membantu Kertanegara
+dalam pengambilan langkah strategis untuk membenahi, memperbaiki dan meningkatkan layanan yang
+memiliki polaritas negatif.</p>
+      <p>Kata kunci: Guest House, Online Travel Agent, Analisis Sentimen, Klasifikasi, SVM, Dashboard
+Kertanegara Premium Guest House is one of the inns in the city of Malang, located on Jl. Semeru No.59.
+Kertanegara is very aware of the importance of the existence of E-WOM (Electronic Word Of Mouth)
+for the continuity of its business. E-WOM can be disseminated through customer reviews. Kertanegara
+has two sources of customer reviews namely Guest Reviews and online reviews on the OTA (Online
+Travel Agent) site. At present, the process of processing customer reviews is still focused only on Guest
+Review. But on the other hand, Kertanegara also has a review on the OTA website that needs to be
+processed because 90 percent of the booking process comes from the OTA website. One method that
+can be used to analyze and process the review text is sentiment analysis. Sentiment analysis is carried
+out at the aspect level to determine services and aspects that have negative or positive polarity using
+the Support Vector Machine (SVM) and Term Weighting (TF-IDF) methods. The review text data used
+in the Indonesian language comes from the sites of Agoda.com, Expedia, Pegi-Pegi, Booking.Com,
+TripAdvisor and has a timeline from 2012 to 2019. Testing the classification results produce an average
+Accuracy value above 70%. The results of the analysis are then visualized through a dashboard by
+displaying 6 important components so that it can assist Kertanegara in taking strategic steps to fix,
+improve and improve services that have negative polarity.</p>
+    </sec>
+    <sec id="sec-3">
+      <title>1. PENDAHULUAN</title>
+      <p>Saat ini, situs pemesanan perjalanan wisata
+atau yang biasa disebut Online Travel Agent
+Fakultas Ilmu Komputer
+Universitas Brawijaya
+(OTA) bukan hanya berfungsi untuk reservasi
+akomodasi wisata tetapi juga mempunyai peran
+baru sebagai media Electronic Word of Mouth
+(E-WOM). Menurut WestBrook (1987)
+EWOM adalah semua komunikasi yang sifatnya
+informal yang ditujukan untuk konsumen
+melalui teknologi berbasis internet terkait
+penggunaan atau karakteristik dari suatu produk,
+layanan, atau penyedianya. Melalui situs
+tersebut, pelanggan dapat menyampaikan
+pengalaman pasca penggunaan suatu produk
+atau jasa melalui teks ulasan atau review.</p>
+      <sec id="sec-3-1">
+        <title>Kertanegara Premium Guest House</title>
+        <p>merupakan salah satu penginapan di kota
+Malang yang berada di Jl. Semeru No.59 dan
+telah beroperasi sejak tahun 2012. Kertanegara
+telah menyadari pentingnya peran teknologi
+demi kelangsungan bisnisnya. Saat ini,
+Kertanegara telah mendaftarkan propertinya ke
+dalam beberapa situs OTA seperti Tripadvisor,</p>
+      </sec>
+      <sec id="sec-3-2">
+        <title>Booking.com, Pegi-Pegi, dsb. Melalui penuturan</title>
+      </sec>
+      <sec id="sec-3-3">
+        <title>Donny selaku Sales &amp; Marketing Manager, 90</title>
+        <p>
+          persen proses booking berasal dari situs OTA.
+Fakta tersebut patutnya menjadi pertimbangan
+bagi pihak manajemen dalam mengolah konten
+di situs OTA untuk membangun image
+Kertanegara yang baik sehingga mampu
+menghasilkan E-WOM yang positif. Sebab,
+EWOM yang positif memiliki pengaruh yang
+signifikan terhadap konsumen karena dapat
+mendorong mereka untuk memilih akomodasi
+yang sesuai dengan apa yang mereka harapkan,
+meningkatkan keinginan konsumen untuk
+membeli dan merekomendasikannya ke kerabat
+mereka serta meningkatkan tingkat keputusan
+konsumen untuk menggunakan layanan tersebut
+          <xref ref-type="bibr" rid="ref4">(Ouyang 2017)</xref>
+          . E-WOM positif dapat
+dihasilkan melalui ulasan pelanggan yang baik,
+sementara itu ulasan yang baik dapat dihasilkan
+dari pengalaman pelanggan yang memuaskan
+terhadap layanan dan akomodasi yang
+disediakan.
+        </p>
+        <p>Kertanegara mempunyai dua sumber untuk
+mendapatkan feedback pelanggan yaitu guest
+review (berbentuk kertas) dan ulasan online di
+situs OTA. Donny menyebutkan bahwa selama
+ini proses pengolahan ulasan pelanggan masih
+berfokus hanya pada Guest Review. Guest
+Review yang telah dikumpulkan akan dibahas
+langsung satu persatu secara verbal oleh pihak
+manajemen dan proses ini dilakukan rutin setiap
+bulan oleh Kertanegara. Pihak manajemen
+secara aktif mengulas hal-hal negatif yang
+diutarakan pelanggan dan mencari solusi yang
+mungkin dilakukan. Walaupun dilakukan secara
+aktif, proses ini dinilai tidak efektif karena
+jumlah guest review yang sedikit dan informasi
+yang tersedia juga terbatas. Disisi lain, ulasan
+online di situs OTA belum dimanfaatkan secara
+maksimal oleh pihak Kertanegara. Hal ini
+disebakan karena jumlah ulasan sangat banyak
+dan tersebar di berbagai situs OTA sehingga
+memiliki cakupan yang sangat luas serta butuh
+waktu 2-3 hari untuk mendapatkannya setelah
+pelanggan menulis ulasan lewat email. Donny
+berharap agar ulasan online dapat diolah untuk
+mengambil informasi tersembunyi yang dapat
+membantu proses evaluasi manajemen
+Kertanegara.</p>
+        <p>Salah satu cara yang dapat digunakan untuk
+menganalisis dan mengolah teks ulasan/review
+tersebut adalah analisis sentimen. Analisis
+sentimen dilakukan untuk mengelompokkan
+polaritas dari ulasan pelanggan untuk
+mengetahui opini pada kalimat tersebut
+termasuk positif atau negatif. Analisis sentimen
+dilakukan pada tingkat aspek untuk
+mengelompokkan hal-hal yang dikeluhkan oleh
+pelanggan ke dalam aspek-aspek tertentu
+kemudian divisualisasikan melalui dashboard
+sehingga informasi yang dibutuhkan oleh pihak
+manajemen dalam menentukan solusi yang tepat
+menjadi lebih rinci dan efektif.</p>
+        <p>
+          <xref ref-type="bibr" rid="ref8">Tsujii (2015)</xref>
+          melakukan penelitian untuk
+mengambil informasi tersembunyi dari
+komentar HotelClub.com, Agoda.com,
+Booking.com, dan Expedia.com menggunakan
+teknik text mining untuk mengevaluasi ungkapan
+yang ada di dalam komentar yang berdasarkan
+label positif dan negatif. Selain sentimen juga
+terdapat beberapa kategori yang diuji dimana
+aspek lokasi, kamar, hotel, dan layanan menjadi
+topik yang paling banyak dibahas oleh para
+wisatawan.
+          <xref ref-type="bibr" rid="ref6">Pratama et. al., (2018</xref>
+          ) menggunakan
+metode TF-IDF sebagai Term Weighting dan
+Support Vector Machine (SVM) secara
+multiclass dengan teknik one vs all untuk
+analisis sentimen data opini pelanggan pada
+aspek pariwisata pantai malang. Rata-rata
+akurasi yang dihasilkan dari penggunaan metode
+ini sebesar 80%.
+          <xref ref-type="bibr" rid="ref2">Han Xiao Shi (2011</xref>
+          )
+menggunakan SVM untuk klasifikasi review
+online tentang hotel dengan alasan SVM
+mempunyai efektifitas terbaik diantara algoritme
+supervised machine learning lainnya. Penelitian
+ini menghasilkan bahwa penerapan SVM dengan
+Term Weighting TF-IDF mempunyai nilai Recall
+sebesar 89,2%, Precision 85,2% dan F-Score
+87,2%.
+          <xref ref-type="bibr" rid="ref7">Rodrigues (2017)</xref>
+          juga menyebutkan
+dalam hasil penelitiannya bahwa diantara
+classifier machine learning Support Vector
+Machine memiliki akurasi terbaik dibandingkan
+dengan classifier lainnya.
+        </p>
+        <p>Berdasarkan paparan diatas, Analisis
+Sentimen akan dilakukan pada tingkat aspek
+terhadap ulasan pelanggan pada situs OTA</p>
+      </sec>
+      <sec id="sec-3-4">
+        <title>Kertanegara Premium Guest House</title>
+        <p>menggunakan algoritme Support Vector
+Machine dengan aspek berupa kamar, harga dan
+layanan. Hasil dari penelitian ini akan berupa
+klasifikasi opini pelanggan berdasarkan
+beberapa aspek tersebut dengan tujuan agar
+Kertanegara dapat membenahi layanan yang
+kurang memuaskan sehingga dapat
+mempertahankan kualitas dan menghasilkan
+eWOM yang positif.</p>
+      </sec>
+    </sec>
+    <sec id="sec-4">
+      <title>2. LANDASAN KEPUSTAKAAN</title>
+    </sec>
+    <sec id="sec-5">
+      <title>2.1 Analisis Sentimen</title>
+      <p>
+        Analisis sentimen atau opinion mining
+merupakan payung dari cabang studi seperti
+opinion extraction, sentiment mining,
+subjectivity analysis, affect analysis, emotion
+analysis, review mining, dll. Analisis sentimen
+adalah suatu bidang studi yang menganalisis
+opini, sentimen pujian, emosi seseorang
+terhadap entitas seperti produk, layanan,
+organisasi, kejadian, masalah, serta atribut dari
+entitas
+        <xref ref-type="bibr" rid="ref3">(Liu 2012)</xref>
+        . Analisis sentimen terbagi
+menjadi 3 tingkat yaitu : Document Level,
+      </p>
+      <sec id="sec-5-1">
+        <title>Sentence Level, dan Entity Level</title>
+        <sec id="sec-5-1-1">
+          <title>2.2 Support Vector Machine</title>
+          <p>Algoritma SVM bertujuan untuk mencari</p>
+        </sec>
+      </sec>
+      <sec id="sec-5-2">
+        <title>Maximum Marginal Hyperplane (MMH)</title>
+        <p>menggunakan support vector dan margin. MMH
+merupakan sebuah hyperplane terbaik dengan
+jarak margin terbesar yang digunakan untuk
+memisahkan data secara maksimal dan akurat
+terhadap setiap kelas.</p>
+        <p>
+          Margin bisa di definisikan sebagai jarak
+terpendek dari sebuah hyperplane terhadap satu
+sisi dari margin itu sama dengan jarak
+hyperplane dengan sisi margin lainnya, dengan
+catatan kedua margin tersebut dalam posisi
+paralel dengan hyperplane
+          <xref ref-type="bibr" rid="ref1">(Han et al. 2012)</xref>
+          Keterangan
+- W
+- n
+- b
+- X
+        </p>
+        <p>tuples
+2.3 TF-IDF
+= Bobot Scalar
+= banyak atribut
+= Nilai scalar atau disebut bias
+= set data latih atau training
+Gambar 1. Small Hyperplane vs Optimal</p>
+        <p>Hyperplane</p>
+        <p>Jika terdapat sebuah dataset dalam bentuk
+(X1, y1), (X2,y2), (X3,y3), …. , (Xi,yi) dimana Xi
+adalah training tuple dan yi adalah label kelas
+dengan  = 1…. , ∈  dan  ∈ {−1,1}.
+Setiap yi dapat memilih salah satu dari dua nilai
+baik +1 atau -1 SVM akan membentuk classifier
+seperti persamaan (1) berikut :</p>
+        <p>(  ) = {≥&lt;00,,  ==+−11 (1)</p>
+        <p>Dalam SVM sebuah hyperplane akan
+digambarkan dalam persamaan berikut:
+ .  +  = 0
+(2)</p>
+        <p>Term Weighting TI-IDF adalah salah satu
+pembobotan yang sering digunakan dan
+merupakan gabungan dari Term Frequency dan
+Inverse Document Frequency. TF-IDF terdiri
+dari frekuensi term dan inverse dokumen yang
+didapatkan dari membagi seluruh jumlah
+dokumen terhadap jumlah dokumen yang
+memiliki term tersebut. (Feldman and James
+2007).</p>
+        <p>( ) =   ∗ log  /  (3)
+Keterangan :
+-   ( ) = bobot dari istilah t dalam
+dokumen d
+-    = frekuensi munculnya istilah t
+dalam dokumen d
+- log</p>
+        <p>frequency dari istilah t</p>
+        <p>= nilai inverse document</p>
+        <sec id="sec-5-2-1">
+          <title>2.4 Confusion Matrix</title>
+          <p>Confusion Matrix berisi informasi mengenai
+performa dari suatu sistem klasifikasi yang
+dievaluasi menggunakan data atau metrik yang
+ada di dalam Confusion matrix. Confusion
+Matrix menganalisis seberapa baik klasifikasi
+yang telah dilakukan terhadap kelas aktual dan
+kelas hasil prediksi.</p>
+          <p>Tabel 1. Confussion Matrix</p>
+          <p>Positif</p>
+          <p>Prediksi</p>
+          <p>Negatif
+Aktual</p>
+          <p>Positif
+Negatif</p>
+          <p>TP
+FP</p>
+          <p>FN
+TN</p>
+          <p>Confussion matrix merepresentasikan
+tingkat akurasi dari proses klasifikasi yang telah
+dilakukan. Tingkat akurasi menunjukkan
+proporsi jumlah prediksi benar.</p>
+          <p>=  + ++ + (4)</p>
+          <p>Precision adalah proporsi dari pelabelan
+yang teridentifikasi dengan benar
+(Completeness) , rumus mencari Precision:
+ =   + (5)</p>
+          <p>Recall adalah proporsi dari informasi yang
+dapat ditemukan dari label, rumus mencari</p>
+        </sec>
+      </sec>
+      <sec id="sec-5-3">
+        <title>Recall:</title>
+        <p>=  (6)</p>
+        <p>+</p>
+        <p>Precision dan Recall dapat digunakan
+untuk mendapatkan proporsi pengukuran lain
+yaitu F1-Score. F1-Score merupakan harmonic
+mean dari perhitungan Precision dan Recall,
+rumus mencari F1-Score:</p>
+        <p>1  = 2 ×  +×  (7)</p>
+        <sec id="sec-5-3-1">
+          <title>2.5 Dashboard</title>
+          <p>Dashboard adalah sebuah tools yang secara
+diagnostik memberikan gambaran singkat
+tentang kinerja perusahaan untuk pihak top
+management. Terdapat fitur visual dan
+fungsional yang dapat membantu meningkatkan
+dan pengetahuan (Pauwels 2009). Penelitian ini
+menggunakan Metabase yang merupakan
+sebuah tools Business Intelligence open source
+untuk memvisualisasikan data melalui grafik
+yang telah dianalis melalui dashboard yang
+interaktif.</p>
+        </sec>
+      </sec>
+    </sec>
+    <sec id="sec-6">
+      <title>3. METODE PENELITIAN</title>
+      <p>Gambar 2. Metodologi Penelitian</p>
+      <p>Tahap penelitian dimulai dengan
+mengidentifikasi masalah melalui proses
+wawancara dengan salah satu pihak
+Kertanegara. Selanjutnya dilakukan tahap studi
+literatur yang bertujuan untuk mengumpulkan
+teori yang dapat menunjang penelitan yang akan
+dilakukan untuk menyelesaikan permasalahan.
+Pengumpulan data dilakukan pada situs OTA
+(Online Travel Agent) menggunakan tools
+webscraping untuk mengekstrak data ulasan
+pelanggan yang akan digunakan pada proses
+Analisis Sentimen. Selanjutnya dilakukan
+perancangan data yang meliputi proses
+pengkategorian data dan pelabelan data secara
+manual serta perancangan dashboard. Hasil
+pelabelan data akan diberikan kembali pada
+pihak Kertanegara untuk validasi data.</p>
+      <p>Tahap berikutnya adalah text preprocessing
+yang bertujuan untuk mempersiapkan data
+sebelum masuk ke tahap term weighting dengan
+menggunakan modul NLTK dan Sastrawi pada
+Python. Beberapa tahapan yang ada dalam text
+preprocessing adalah formalisasi dan translasi,
+cleansing, tokenizing, case folding, stemming,
+dan stopword removal. Selanjutnya adalah tahap
+pembobotan kata atau term weighting yang akan
+menghasilkan data ulasan yang memiliki bobot
+kata dengan menggunakan modul Sckit-learn
+pada Python. Tahap klasifikasi sentimen
+membutuhkan dua data yaitu data ulasan yang
+telah memiliki label dan bobot kata. Tahap ini
+dibagi menjadi dua bagian, dimana tahap
+pertama bertujuan untuk memilih model terbaik
+yang akan digunakan pada tahap kedua yaitu
+klasifikasi sentimen terhadap setiap aspek.
+Pemilihan model dilakukan dengan menerapkan</p>
+      <sec id="sec-6-1">
+        <title>Stratified KFold Cross Validation dan klasifikasi</title>
+        <p>dilakukan dengan algoritme Support Vector</p>
+      </sec>
+      <sec id="sec-6-2">
+        <title>Machine.</title>
+        <p>Tahap analisis dan pengujian hasil
+kalsifikasi dilakukan dengan menggunakan
+metrik F1-Score, Precision, dan Recall serta
+penghitungan Accuracy. Pengujian dilakukan
+dengan memanfaatkan modul Scikit-learn pada
+Bahasa Pemrograman Python. Tahap terakhir
+adalah menyajikan visualisasi melalui
+dashboard dari hasil analisis klasifikasi
+sentimen sesuai dengan rancangan dashboard.</p>
+      </sec>
+    </sec>
+    <sec id="sec-7">
+      <title>4. IMPLEMENTASI</title>
+    </sec>
+    <sec id="sec-8">
+      <title>4.1 Pengumpulan Data</title>
+      <p>Pengumpulan dilakukan dengan metode</p>
+      <sec id="sec-8-1">
+        <title>Web Scraping melalui tools webscraper.io. Data</title>
+        <p>yang akan dikumpulkan berupa ulasan
+pelanggan yang berasal dari beberapa situs OTA.
+Metode Web Scraping bertujuan untuk
+mengambil variabel dari data ulasan pada situs
+untuk dapat diolah dalam Analisis Sentimen.
+Variabel yang diambil antara lain adalah nama
+pembuat ulasan, waktu membuat ulasan, dan
+teks ulasan terhadap akomodasi yang akan
+dianalisis. Proses Scraping menghasilkan data
+sebanyak 1561 data teks ulasan yang terdiri dari
+435 teks ulasan dari situs Agoda.com, 37 teks
+ulasan dari situs Expedia, 27 teks ulasan dari
+situs Pegi-Pegi, 235 teks ulasan dari situs
+Booking.Com, dan 827 teks ulasan dari situs
+TripAdvisor. Data teks ulasan berbahasa
+Indonesia dan berjangka waktu dari tahun 2012
+sampai tahun 2019.</p>
+      </sec>
+    </sec>
+    <sec id="sec-9">
+      <title>4.2 Perancangan Dataset</title>
+      <p>Pemilihan Aspek yang digunakan didasarkan
+pada hasil penelitian oleh Dolnicar (2003) untuk
+mencari atribut hotel yang paling penting dan di
+perhatikan oleh konsumen, lalu membuat urutan
+tingkatannya. Proses pemilihan aspek juga
+melibatkan pihak Kertanegara melalui proses
+wawancara sehingga didapatkan tiga aspek yang
+akan digunakan dalam Analisis Sentimen yaitu
+aspek harga, kamar dan layanan.</p>
+      <p>Setelah mendapatkan aspek yang akan
+digunakan maka dilakukan perancangan dataset
+dengan tujuan untuk manualisasi pelabelan data
+ulasan pelanggan terhadap aspek yang telah
+ditentukan dan sentimen dari setiap aspek. Label
+data akan dibagi menjadi 2 kelas berdasarkan
+sentimen positif dan negatif.</p>
+      <p>Tabel 2. Polaritas sentimen aspek
+Nama Aspek
+Kamar
+Harga
+Layanan</p>
+      <p>Negatif
+hotel tidak dapat
+memenuhi
+halhal terkait
+kondisi kamar
+hotel
+hotel tidak dapat
+menetapkan
+harga sesuai
+dengan nilai
+yang didapatkan
+hotel tidak
+memenuhi
+ekspektasi
+pelanggan
+mengenai
+layanan yang
+dimiliki</p>
+      <sec id="sec-9-1">
+        <title>4.3 Text Preprocessing</title>
+        <p>Berikut adalah tahapan yang dilakukan
+dalam proses text preprocessing.</p>
+        <p>a. Formalisasi dan Translasi</p>
+        <p>Formalisasi merupakan tahap mengubah
+kata menjadi bentuk baku yang sesuai dengan
+KBBI. Translasi merupakan tahap untuk
+menerjemahkan kata dari bahasa asing ke dalam
+bahasa Indonesia</p>
+        <p>Tabel 3. Formalisasi dan Translasi</p>
+        <p>Isi Teks
+Tdk
+Sdh
+Thanks
+Friendly
+b. Cleansing</p>
+        <p>Tahap Cleansing bertujuan untuk
+menghilangkan elemen elemen yang tidak
+diperlukan dalam proses analisis sentimen.
+Elemen tersebut terdiri tanda baca, angka, tag
+html.</p>
+        <p>Bentuk Baku KBBI
+tidak
+sudah
+Terima Kasih</p>
+        <p>Ramah</p>
+        <p>Isi Teks
+semua hal penting mudah
+diakses. akomodasi yang
+sangat rapi, staf yang
+baik.
+tempat menginap yang
+cukup nyaman ... harga
+baik ... pelayanan baik</p>
+        <p>Tabel 4. Cleansing</p>
+        <p>Cleansing
+semua hal penting mudah
+diakses akomodasi yang
+sangat rapi staf yang baik
+c. Tokenizing</p>
+        <p>Tahap Tokenizing bertujuan untuk
+memisahkan teks atau kalimat ulasan menjadi
+potongan kata.</p>
+        <p>Tabel 5. Tokenizing
+Isi Teks</p>
+        <p>Tokenizing
+semua hal penting mudah
+diakses akomodasi yang
+sangat rapi staf yang baik
+d. Case Folding</p>
+        <p>Tahap Case Folding bertujuan untuk
+mengubah kata yang dihasilkan pada proses
+tokenizing menjadi karakter huruf kecil.</p>
+        <p>Tabel 6. Case Folding</p>
+        <p>Isi Teks Case Folding
+['semua', 'hal', 'penting', ['semua', 'hal', 'penting',
+'mudah', 'diakses', 'mudah', 'diakses',
+'akomodasi', 'yang', 'akomodasi', 'yang',
+'sangat', 'rapi', 'staf', 'sangat', 'rapi', 'staf',
+'yang', 'baik'] 'yang', 'baik']
+['tempat', 'menginap', ['tempat', 'menginap',
+'yang', 'cukup', 'nyaman', 'yang', 'cukup', 'nyaman',
+'harga', 'baik', 'pelayanan', 'harga', 'baik', 'pelayanan',
+'baik'] 'baik']
+e. Stemming</p>
+        <p>Tahap Stemming bertujuan untuk
+menghilangkan imbuhan kata pada teks ulasan
+pelanggan sehingga didapatkan kata dasar.</p>
+        <p>Tabel 7. Stemming</p>
+        <p>Isi Teks Stemming
+['semua', 'hal', 'penting', ['semua', 'hal', 'penting',
+'mudah', 'diakses', 'mudah', 'akses',
+'akomodasi', 'yang', 'akomodasi', 'yang',
+'sangat', 'rapi', 'staf', 'sangat', 'rapi', 'staf',
+'yang', 'baik'] 'yang', 'baik']
+['tempat', 'menginap', ['tempat', 'inap', 'yang',
+'yang', 'cukup', 'nyaman', 'cukup', 'nyaman', 'harga',
+'harga', 'baik', 'pelayanan', 'baik', 'layan', 'baik']
+'baik']
+f.</p>
+        <sec id="sec-9-1-1">
+          <title>Stopword Removal</title>
+        </sec>
+        <sec id="sec-9-1-2">
+          <title>Tahap Stopword Removal bertujuan</title>
+          <p>untuk menghilangkan kata-kata yang tidak
+terlalu berpengaruh pada analisis sentimen atau
+kata yang terdapat di dalam stopword list.</p>
+          <p>Tabel 8. Stopword Removal</p>
+          <p>Isi Teks
+['semua', 'hal', 'penting',
+'mudah', 'diakses',
+'akomodasi', 'yang',
+'sangat', 'rapi', 'staf',
+'yang', 'baik']
+['tempat', 'menginap',
+'yang', 'cukup', 'nyaman',
+'harga', 'baik', 'pelayanan',
+'baik']</p>
+        </sec>
+      </sec>
+      <sec id="sec-9-2">
+        <title>4.4 Term Weighting</title>
+        <p>Stopword Removal
+['semua', 'penting',
+'mudah', 'akses',
+'akomodasi', 'sangat',
+'rapi', 'staf', 'baik']
+['tempat', 'inap', 'cukup',
+'nyaman', 'harga', 'baik',
+'layan', 'baik']</p>
+        <p>Perhitungan bobot kata (term weighting)
+1
+1
+0
+0
+0
+0
+0,39794
+2
+0
+1
+0
+0
+0
+5
+1
+1
+1
+0
+0
+0
+0
+2
+0
+0
+0
+0,39794
+0,39794
+0,39794
+0,69897</p>
+        <p>Selanjutnya adalah contoh perhitungan
+bobot TF-IDF ntuk kata ‘kamar’ pada D2:
+Tf-idft,d = TF * IDF = 2 * 0,09691 = 0,1938
+Tabel 10. Hasil TF-IDF</p>
+        <p>TF
+D1</p>
+        <p>D2</p>
+        <p>D3</p>
+        <p>D4</p>
+        <p>D5
+kamar
+0,09691
+0,19382
+0,48455
+0,19382
+dilakukan menggunakan TF-IDF. Hasil dari nilai
+TF-IDF akan menampilkan bobot kata yang
+meningkat sesuai dengan kemuculan kata dan
+perhitungan IDF menghasilkan bobot yang
+sesuai dengan tingkat keunikan dari kata tersebut
+dalam indeks kata. Berikut adalah manualisasi
+hasil perhitungan Term Frequency (TF),
+Document Frequency (DF) dan dilanjutkan
+dengan Inverse Document Frequency (IDF).</p>
+        <p>Tabel 9. Perhitungan TF, DF, IDF</p>
+        <p>TF
+D1</p>
+        <p>D2</p>
+        <p>D3</p>
+        <p>D4</p>
+        <p>D5
+Term
+kamar
+harga
+hotel
+staf
+Term
+harga
+hotel
+staf
+DF
+4
+2
+2
+1
+0
+0
+0
+0</p>
+        <p>IDF
+0,0969
+0,3979
+0,3979
+0,6989
+0
+0
+0</p>
+      </sec>
+    </sec>
+    <sec id="sec-10">
+      <title>4.5 Klasifikasi Sentimen</title>
+      <p>Klasfikasi sentimen dibagi menjadi dua
+tahap. Tahap pertama adalah pemilihan model
+betujuan untuk mendapatkan model terbaik yang
+akan digunakan untuk klasifikasi sentimen
+dalam rangka menghasilkan akurasi yang tinggi
+untuk setiap data. Pemilihan model dilakukan
+menggunakan K-Fold Cross Validation. Tujuan
+dari penggunaan K-Fold Cross Validation untuk
+menyusun dataset menjadi data training dan data
+testing dalam rangka untuk membatasi masalah
+overfitting data, adanya variansi tunggal atau
+tumpah tindih pada pembagian data training dan
+data testing sehingga model tidak kehilangan
+data yang signifikan untuk proses pemodelan
+dan pengujian. Stratified K-fold memastikan
+bahwa setiap fold yang dipilih memiliki
+persentase proporsi sampel yang sama untuk
+setiap kelas.</p>
+      <p>Nilai k yang digunakan adalah 6
+sehingga dataset akan dibagi menjadi 6 bagian
+dengan rasio data latih dan data uji sebesar 83 :
+17. Kombinasi data latih dan data uji akan
+disimpan ke dalam 4 variabel yaitu X_Train,
+X_Test, y_train, y_test. Variabel X_Train berisi
+data bobot ulasan yang digunakan sebagai data
+latih. Variabel X_Test berisi data ulasan yang
+digunakan sebagai data uji. Variabel y_train
+berisi data label yang akan dilatih. Variabel
+y_test berisi data label yang akan diuji. Seluruh
+proses dalam tahap ini akan diterapkan pada data
+masing-masing aspek dengan tujuan
+mendapatkan model terbaik untuk proses
+klasifikasi sentimen.</p>
+      <p>Tahap kedua adalah klasifikasi sentimen
+menggunakan Support Vector Machine kernel
+Linear dengan classifier LinearSVC. Langkah
+awal klasifikasi sentimen dilakukan dengan
+fungsi fit untuk menyiapkan dan menyesuaikan
+model dengan memanfaatkan variabel X_Train
+dan y_train. Langkah selanjutnya, klasifikasi
+sentiment menggunakan fungsi predict untuk
+memprediksi label kelas dengan memanfaatkan
+variabel X_Test yang bertindak sebagai data
+yang akan diklasifikasi. Hasil dari proses ini
+berupa array yang berisi hasil klasifikasi
+sentiment dari variabel X_Test.</p>
+    </sec>
+    <sec id="sec-11">
+      <title>5. HASIL DAN PEMBAHASAN</title>
+    </sec>
+    <sec id="sec-12">
+      <title>5.1 Analisis Hasil Klasifikasi</title>
+      <p>Berikut adalah hasil klasifikasi sentimen
+terhadap 3 aspek yaitu :
+a. Kamar</p>
+      <p>Klasifikasi terhadap ulasan aspek kamar
+menghasilkan 1070 ulasan dengan nilai 860
+ulasan untuk kelas sentimen positif dan 210
+ulasan untuk kelas sentimen negatif.</p>
+      <p>b. Harga</p>
+      <p>Klasifikasi terhadap ulasan aspek harga
+menghasilkan 461 ulasan dengan nilai 414
+ulasan untuk kelas sentimen positif dan 47
+ulasan untuk kelas sentimen negatif.</p>
+      <p>c. Layanan</p>
+      <p>Klasifikasi terhadap ulasan aspek
+layanan menghasilkan 885 ulasan dengan nilai
+816 ulasan untuk kelas sentimen positif dan 69
+ulasan untuk kelas sentimen negatif.
+Gambar 3. Tren sentimen positif</p>
+      <p>Gambar 4. Tren sentimen negatif</p>
+      <p>Melalui gambar 3 dan 4 menunjukkan tren
+sentimen dari ketiga aspek mengalami
+pergerakan naik turun. Kelas sentimen positif
+dari ketiga aspek memiliki nilai rata-rata
+tertinggi pada tahun 2019 sedangkan. Kelas
+sentimen negatif dari ketiga aspek memiliki nilai
+rata-rata tertinggi pada tahun 2013 dan 2019. Hal
+ini menunjukkan bahwa Kertanegara terus
+melakukan perbaikan pada ketiga aspek tersebut
+namun perbaikan yang dilakukan belum tepat
+sasaran sehingga menurunkan kepuasan
+pelanggan.</p>
+      <p>Berdasarkan analisis hasil klasifikasi dan
+analisis tren dapat diketahui bahwa aspek kamar
+memiliki urgensi untuk segera ditangani oleh
+pihak Kertanegara. Hal ini dapat dibuktikan
+melalui hasil klasifikasi yang menunjukkan
+bahwa aspek kamar memiliki tingkat ulasan
+negatif yang paling besar selama kurun waktu
+2012-2019. Analisis tren juga menunjukkan
+pada tahun 2019 terjadi kenaikan tingkat ulasan
+negatif terhadap ketiga aspek. Namun, aspek
+kamar memiliki tingkat kenaikan tertinggi
+diantara ketiganya.</p>
+    </sec>
+    <sec id="sec-13">
+      <title>5.2 Pengujian Klasifikasi</title>
+      <p>Pengujian hasil klasifikasi sentimen
+dilakukan menggunakan modul Sckit-learn pada
+Phyton dengan menggunakan 4 parameter
+pengujian yaitu Accuracy, Precision, Recall dan</p>
+      <sec id="sec-13-1">
+        <title>F1-Score.</title>
+        <p>Kama</p>
+        <p>r
+Harga
+Layan
+an</p>
+        <p>Negatif 0,79</p>
+        <p>Tabel.11 menampilkan hasil pengujian hasil
+klasifikasi terhdap setiap aspek menggunakan
+metrik pengukuran yaitu Accuracy, Precision,
+Recall, dan F1-Score. Aspek layanan memiliki
+nilai akurasi tertinggi sebesar 0,83, sedangkan
+nilai akurasi terendah terdapat pada aspek harga
+sebesar 0,70. Aspek kamar memiliki nilai
+precision tertinggi pada sentimen positif sebesar
+0,82, sedangkan nilai precision terendah pada
+sentimen positif terdapat pada aspek harga
+sebesar 0,65. Aspek layanan dan harga memiliki
+nilai recall tertinggi pada sentimen positif
+sebesar 0,92, sedangkan nilai recall terendah
+pada sentimen positif terdapat pada aspek kamar
+sebesar 0,75. Aspek layanan memiliki nilai
+F1Score tertinggi pada sentimen positif sebesar
+0,85 , sedangkan nilai F1-Score terendah pada
+sentimen positif terdapat pada aspek harga
+sebesar 0,63.</p>
+      </sec>
+    </sec>
+    <sec id="sec-14">
+      <title>5.3 Hasil Visualisasi Dashboard</title>
+      <p>Visualisasi dari hasil klasifikasi sentimen
+ditampilkan melalui dashboard dengan
+menggunakan tool Metabase yang menyajikan 6
+komponen informasi diantaranya, informasi
+mengenai jumlah ulasan yang digunakan untuk
+analisis sentimen, bar chart yang menunjukkan
+jumlah ulasan pelanggan berdasarkan terhadap
+semua aspek yang telah ditentukan, line chart
+untuk menunjukkan tren jumlah ulasan
+pelanggan terhadap semua aspek yang telah
+ditentukan berdasarkan kelas sentimen pada
+kurun waktu tertentu, pie chart menunjukkan
+jumlah sentimen pada setiap aspek yang dipilih,
+yaitu line chart menunjukkan tren jumlah
+sentimen untuk setiap aspek yang dipilih pada
+kurun waktu tertentu, tabel yang menampilkan
+nama, tanggal, dan isi ulasan berdasarkan aspek
+dan sentimen yang dipilih.</p>
+      <p>Selanjutnya dilakukan pengujian Usability
+terhadap dashboard yang menghasilkan SUS
+Score sebesar 67,5 dimana dashboard memiliki
+tingkat Acceptable dengan rating Good yang
+berarti dashboard dapat diterima dengan baik
+oleh pihak Kertanegara Premium Guest House.
+Gambar 5. Halaman Dashboard Analisis Sentimen</p>
+    </sec>
+    <sec id="sec-15">
+      <title>6. KESIMPULAN</title>
+      <p>1. Penggunaan metode Support Vector
+Machine yang digunakan dengan
+pembobotan TF-IDF dapat menjadi
+salah satu cara untuk menyelesaikan
+permasalahan klasifikasi dalam analisis
+sentimen. Hal tersebut dapat dibuktikan
+dengan penggunaan hasil pembobotan
+kata TF-IDF data ulasan dengan nilai
+label terhadap masing-masing aspek
+untuk proses klasifikasi sentimen
+menggunakan metode SVM.
+2. Analisis hasil klasifikasi menunjukkan
+bahwa aspek kamar memilki nilai ulasan
+negatif terbesar diantara kelima aspek
+sehingga aspek ini memiliki tingkat
+urgensi untuk segera ditangani oleh
+pihak Kertanegara.
+3. Pengujian hasil klasifikasi sentimen
+memiliki rata-rata yang baik dengan
+nilai Accuracy, Precision. Recall, dan
+F1-Score diatas 70%.
+4. Hasil visualisasi dashboard dengan
+tools Metabase menghasilkan nilai 67,5
+pada Usability Testing menggunakan
+metode System Usability Scale (SUS).</p>
+      <sec id="sec-15-1">
+        <title>Dashboard memiliki tingkat Acceptable</title>
+        <p>dengan rating Good yang berarti
+dashboard dapat diterima dengan baik
+oleh pihak Kertanegara Premium Guest</p>
+      </sec>
+      <sec id="sec-15-2">
+        <title>House.</title>
+      </sec>
+    </sec>
+    <sec id="sec-16">
+      <title>7. DAFTAR PUSTAKA</title>
+      <p>Dolnicar, Sara. 2003. “Which Hotel attributes
+Matter ? A review of previous and a
+framework for future research.”</p>
+      <sec id="sec-16-1">
+        <title>Proceedings of the 9th Annual Conference</title>
+        <p>of the Asia Pacific Tourism Association
+(APTA). 176-188.</p>
+        <p>Feldman, Ronen, dan Sanger James. 2007. The</p>
+      </sec>
+      <sec id="sec-16-2">
+        <title>Text Mining Handbook : Advanced</title>
+      </sec>
+      <sec id="sec-16-3">
+        <title>Approaches in Analyzing Unstructured</title>
+        <p>Data. New York: Cambridge University
+Press.
+View publication stats</p>
+      </sec>
+    </sec>
+  </body>
+  <back>
+    <ref-list>
+      <ref id="ref1">
+        <mixed-citation>
+          <string-name>
+            <surname>Han</surname>
+            ,
+            <given-names>J</given-names>
+          </string-name>
+          .,
+          <string-name>
+            <surname>Kamber</surname>
+            ,
+            <given-names>M.</given-names>
+          </string-name>
+          , &amp;
+          <string-name>
+            <surname>Pei</surname>
+            ,
+            <given-names>J.</given-names>
+          </string-name>
+          ,
+          <year>2012</year>
+          .
+          <article-title>Data Mining: concepts and techniques</article-title>
+          . Amsterdam : Elsevier/Morgan
+        </mixed-citation>
+      </ref>
+      <ref id="ref2">
+        <mixed-citation>
+          <string-name>
+            <given-names>Han</given-names>
+            <surname>Xiao</surname>
+          </string-name>
+          <string-name>
+            <surname>Shi</surname>
+          </string-name>
+          ,
+          <source>Xiao Jun Li</source>
+          .
+          <year>2011</year>
+          .
+          <article-title>“A Sentiment Analysis Model for Hotel Reviews Based on Supervised Learnind</article-title>
+          .
+          <source>” Proceedings of the 2011 International Conference on Machine Learning and Cybernetics</source>
+          , Guilin,
+          <fpage>10</fpage>
+          -
+          <issue>13</issue>
+          <year>July</year>
+          ,
+          <year>2011</year>
+          10-
+          <fpage>13</fpage>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref3">
+        <mixed-citation>
+          <string-name>
+            <surname>Liu</surname>
+          </string-name>
+          , Bing.
+          <year>2012</year>
+          .
+          <article-title>Sentiment Analysis and Opinion Mining</article-title>
+          . Morgan &amp; Claypool Publishers.
+        </mixed-citation>
+      </ref>
+      <ref id="ref4">
+        <mixed-citation>
+          <string-name>
+            <surname>Ouyang</surname>
+          </string-name>
+          , Yu.
+          <year>2017</year>
+          .
+          <article-title>“A Study of the Tourism Consumers ' Acceptance of Electronic</article-title>
+        </mixed-citation>
+      </ref>
+      <ref id="ref5">
+        <mixed-citation>
+          Accommodation.”
+          <source>Proceedings of the 2017 IEEE International Conference on Information, Communication and Engineering IEEE-ICICE 2017 - Lam, Meen &amp; Prior</source>
+          <volume>258</volume>
+          -261.
+        </mixed-citation>
+      </ref>
+      <ref id="ref6">
+        <mixed-citation>
+          <string-name>
+            <surname>Pratama</surname>
+            ,
+            <given-names>Y.</given-names>
+          </string-name>
+          ,
+          <string-name>
+            <surname>Bachtiar</surname>
+            ,
+            <given-names>F.</given-names>
+          </string-name>
+          , &amp;
+          <string-name>
+            <surname>Setiawan</surname>
+            ,
+            <given-names>N.</given-names>
+          </string-name>
+          <year>2018</year>
+          . “
+          <article-title>Analisis Sentimen Opini Pelanggan Terhadap Aspek Pariwisata Pantai Malang Selatan Menggunakan TF-IDF dan Support Vector Machine</article-title>
+          .”
+          <string-name>
+            <surname>Jurnal Pengembangan Teknologi Informasi dan Ilmu Komputer (J-PTIIK</surname>
+          </string-name>
+          )
+          <source>Universitas Brawijaya</source>
+          <volume>2</volume>
+          (
+          <issue>12</issue>
+          ):
+          <fpage>6244</fpage>
+          -
+          <lpage>6252</lpage>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref7">
+        <mixed-citation>
+          <string-name>
+            <surname>Rodrigues</surname>
+          </string-name>
+          , Anisha P.
+          <year>2017</year>
+          . “
+          <article-title>Comparative Study of Machine Learning Techniques in Sentimental Analysis</article-title>
+          .
+          <source>” International Conference on Inventive Communication and Computational Technologies (ICICCT</source>
+          <year>2017</year>
+          )
+          <volume>216</volume>
+          -
+          <fpage>221</fpage>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref8">
+        <mixed-citation>
+          <string-name>
+            <surname>Tsujii</surname>
+          </string-name>
+          , Koichi.
+          <year>2015</year>
+          . “
+          <article-title>Towards Extracting the Hotel Evaluations from the Comments by the ForeignTourists with Text mining</article-title>
+          .”
+          <source>2015 IIAI 4th International Congress on Advanced Applied Informatics</source>
+          <volume>46</volume>
+          -49.
+        </mixed-citation>
+      </ref>
+    </ref-list>
+  </back>
+</article>

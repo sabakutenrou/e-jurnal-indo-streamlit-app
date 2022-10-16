@@ -33,7 +33,6 @@ def pdfparser(pdffile):
         data = re.sub('[%s]' % re.escape(string.punctuation), '', data)
         data = re.sub('\w*\d\w*', '', data)
         data = data.replace("\n", "")
-
         # print(data)
 
         return data
@@ -59,8 +58,19 @@ def abstractExtraction(text,paragraph):
                 else:
                     para =para+i
                     continue
-            # print(count)
     if(len(para)>1000):
         return 'None'
     else:
         return para
+
+def between(value, a, b):
+    # Find and validate before-part.
+    pos_a = value.find(a)
+    if pos_a == -1: return ""
+    # Find and validate after part.
+    pos_b = value.rfind(b)
+    if pos_b == -1: return ""
+    # Return middle part.
+    adjusted_pos_a = pos_a + len(a)
+    if adjusted_pos_a >= pos_b: return ""
+    return value[adjusted_pos_a:pos_b]

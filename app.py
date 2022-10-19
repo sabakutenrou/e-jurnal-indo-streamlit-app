@@ -12,9 +12,9 @@ def main():
     image = Image.open('e-jurnal_logo.png')
     page = page_group("p")
     
-    # if 'df' not in st.session_state:
-    #     df = load_data()
-    #     st.session_state.df = df
+    if 'df' not in st.session_state:
+        df = load_data()
+        st.session_state.df = df
 
     with st.sidebar:
         st.image(image)

@@ -1,0 +1,704 @@
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD v1.0 20120330//EN" "JATS-archivearticle1.dtd">
+<article xmlns:xlink="http://www.w3.org/1999/xlink">
+  <front>
+    <journal-meta>
+      <journal-title-group>
+        <journal-title>Jurnal Teknologi Rekayasa</journal-title>
+      </journal-title-group>
+    </journal-meta>
+    <article-meta>
+      <title-group>
+        <article-title>EKSTRAKSI FITUR DAN KLASIFIKASI MENGGUNAKAN METODE GLCM DAN SVM PADA CITRA MAMMOGRAM UNTUK IDENTIFIKASI KANKER PAYUDARA</article-title>
+      </title-group>
+      <contrib-group>
+        <contrib contrib-type="author">
+          <string-name>Jurusan Teknik Informatika</string-name>
+          <xref ref-type="aff" rid="aff0">0</xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <string-name>Fakultas Teknologi Industri</string-name>
+          <xref ref-type="aff" rid="aff0">0</xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <string-name>Universitas Gunadarma bebby_dj</string-name>
+          <xref ref-type="aff" rid="aff0">0</xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <string-name>@yahoo.com</string-name>
+          <xref ref-type="aff" rid="aff0">0</xref>
+        </contrib>
+        <aff id="aff0">
+          <label>0</label>
+          <institution>Kata Kunci :Image Processing</institution>
+          ,
+          <addr-line>Ekstraksi Fitur, SVM, Kanker Payudara, Matlab</addr-line>
+        </aff>
+      </contrib-group>
+      <pub-date>
+        <year>2017</year>
+      </pub-date>
+      <volume>22</volume>
+      <issue>1</issue>
+      <fpage>18</fpage>
+      <lpage>26</lpage>
+      <kwd-group>
+        <kwd>Image Processing</kwd>
+        <kwd>Feature Extraction</kwd>
+        <kwd>SVM</kwd>
+        <kwd>Breast Cancer</kwd>
+        <kwd>Matlab</kwd>
+      </kwd-group>
+    </article-meta>
+  </front>
+  <body>
+    <fig>
+      <graphic xlink:href="tempDir\1603-3668-1-SM.images\img_1_1.png" />
+    </fig>
+    <fig>
+      <graphic xlink:href="tempDir\1603-3668-1-SM.images\img_2_1.png" />
+    </fig>
+    <fig>
+      <graphic xlink:href="tempDir\1603-3668-1-SM.images\img_2_2.png" />
+    </fig>
+    <fig>
+      <graphic xlink:href="tempDir\1603-3668-1-SM.images\img_2_3.png" />
+    </fig>
+    <fig>
+      <graphic xlink:href="tempDir\1603-3668-1-SM.images\img_3_1.png" />
+    </fig>
+    <fig>
+      <graphic xlink:href="tempDir\1603-3668-1-SM.images\img_3_2.png" />
+    </fig>
+    <fig>
+      <graphic xlink:href="tempDir\1603-3668-1-SM.images\img_3_3.png" />
+    </fig>
+    <fig>
+      <graphic xlink:href="tempDir\1603-3668-1-SM.images\img_4_1.png" />
+    </fig>
+    <fig>
+      <graphic xlink:href="tempDir\1603-3668-1-SM.images\img_4_2.png" />
+    </fig>
+    <fig>
+      <graphic xlink:href="tempDir\1603-3668-1-SM.images\img_4_3.png" />
+    </fig>
+    <fig>
+      <graphic xlink:href="tempDir\1603-3668-1-SM.images\img_4_4.png" />
+    </fig>
+    <fig>
+      <graphic xlink:href="tempDir\1603-3668-1-SM.images\img_5_1.png" />
+    </fig>
+    <fig>
+      <graphic xlink:href="tempDir\1603-3668-1-SM.images\img_5_2.png" />
+    </fig>
+    <fig>
+      <graphic xlink:href="tempDir\1603-3668-1-SM.images\img_5_3.png" />
+    </fig>
+    <fig>
+      <graphic xlink:href="tempDir\1603-3668-1-SM.images\img_6_1.png" />
+    </fig>
+    <fig>
+      <graphic xlink:href="tempDir\1603-3668-1-SM.images\img_6_2.png" />
+    </fig>
+    <fig>
+      <graphic xlink:href="tempDir\1603-3668-1-SM.images\img_6_3.png" />
+    </fig>
+    <fig>
+      <graphic xlink:href="tempDir\1603-3668-1-SM.images\img_7_1.png" />
+    </fig>
+    <fig>
+      <graphic xlink:href="tempDir\1603-3668-1-SM.images\img_7_2.png" />
+    </fig>
+    <fig>
+      <graphic xlink:href="tempDir\1603-3668-1-SM.images\img_7_3.png" />
+    </fig>
+    <fig>
+      <graphic xlink:href="tempDir\1603-3668-1-SM.images\img_8_1.png" />
+    </fig>
+    <fig>
+      <graphic xlink:href="tempDir\1603-3668-1-SM.images\img_9_1.png" />
+    </fig>
+    <sec id="sec-1">
+      <title>-</title>
+      <p>Abstrak</p>
+      <p>FEATURE EXTRACTION AND CLASSIFICATION BY USING SVM AND
+GLCM METHOD ON THE MAMMOGRAM IMAGE FOR BREAST CANCER</p>
+    </sec>
+    <sec id="sec-2">
+      <title>IDENTIFICATION</title>
+    </sec>
+    <sec id="sec-3">
+      <title>PENDAHULUAN</title>
+      <p>Kanker payudara menempati urutan
+kedua pada perempuan setelah kanker
+rahim.Kanker payudara merupakan
+penyebab kematian utama diantara wanita
+yang berusia antara 35-50 tahun.Jika
+skrining mamografi dilakukan secara
+teratur, dapat memberikan keuntungan
+pada wanita yang berusia dibawah 50
+tahun. Berdasarkan Sistem Informasi RS
+(SIRS), jumlah penderita kanker
+payudara di Indonesia (28.7%).Pengobatan
+kanker payudara pada stadium awal
+secara umum memberi hasil yang lebih
+baik dibanding stadium lanjut, oleh
+karena itu perempuan sebaiknya memahami
+tentang kanker payudara sehingga bisa
+mendeteksi secara dini terhadap
+gejalagejala terjadinya kanker payudara.
+Kanker terjadi ketika sel abnormal
+membagi dan tidak terkontrol, mereka
+dapat menjadi besar dengan membentuk
+jaringan ekstra, atau tumor, yang dapat
+menjadi jinak atau ganas [Sugita, 2012].</p>
+      <p>
+        Deteksi dini kanker payudara dapat
+dilakukan dengan teknologi pencitraan
+medis yang saat ini berkembang dan
+teknologi tersebut memungkinkan
+pemanfaatan citra medis untuk membantu
+paramedis dalam melakukan diagnosa
+penyakit, dalam kasus ini adalah untuk
+mendeteksi kanker payudara.Citra medis
+tersebut dapat dihasilkan dari berbagai
+macam peralatan yangdigunakan di
+bidang kedokteran, seperti Ultra Sound
+Graphic (USG), MRI,
+CT-Scan/CATScan, dan Diagnostic Mammogram
+[Nagaraj, Paga,
+        <xref ref-type="bibr" rid="ref12">Lamichhane, 2014</xref>
+        ].
+      </p>
+      <p>Mammogram adalah pemeriksaan
+radiologi khusus menggunakan
+sinarXdosis rendah untuk deteksi kelainan
+pada payudara atau ada tidaknya
+keabnormalan pada payudara, bahkan sebelum
+adanya gejala yang terlihat padapayudara
+seperti benjolan yang dapat dirasakan,
+kanker payudara dapatdikenali dengan
+keberadaan massa atau keberadaan
+mikroklasifikasi padacitra mammogram
+[Rizqi, 2012], yaitu :
+1. Massa adalah area terdapatnya pola
+tekstur dengan bentuk serta batasarea
+tertentu pada proyeksi foto
+mammografi (Gambar 1).
+2. Mikrokalsifikasi yaitu
+deposit-deposit kecil kalsium dalam jaringan
+payudara yang terlihat sebagai
+titiktitik kecil putih di sekitar jaringan
+payudara (Gambar 2).</p>
+      <p>Gambar 1. Massa [Lisha V, Anitha, 2013]
+Gambar 2. Mikroklasifikasi[Lisha V, et al., 2013]
+Dalam rangka meningkatkan kinerja
+diagnostik ahli radiologi, beberapa skema
+Computer-Aided Diagnosis (CAD) telah
+dikembangkan untuk meningkatkan
+deteksi utama dari penyakit ini.
+ComputerAided Diagnosis (CAD) dikembangkan
+untuk meningkatkan deteksi utama dari
+penyakit ini dimana proses tersebut antara
+lainpreprocessing, deteksi dan
+segmentasi, ekstrasi fitur, serta klasifikasi. Dalam
+penelitian ini dilakukan ekstraksi fitur
+dengan menggunakan metode Gray Level
+Co-occurance Matrix (GLCM)</p>
+    </sec>
+    <sec id="sec-4">
+      <title>METODE PENELITIAN</title>
+      <p>Dalam setiap metode penelitian
+pastinya memiliki langkah-langkah
+umum dalam pelaksanaanya, seperti
+proses pengambilan citra, prepocessing,
+ekstrasi fitur dan klasifikasi dimana
+nantinya proses-proses tersebut
+menghasilkan sebuah data yang dapat diolah.
+Gambar 3 adalah gambaran metode
+penelitian secara umum.</p>
+    </sec>
+    <sec id="sec-5">
+      <title>Region of Interest (ROI)</title>
+      <p>Suatu citra diperoleh dari hasil
+mammogram kanker payudara,
+pengambilan citra untuk analisa tekstur
+sendiri harus memiliki kriteria yaitu citra
+mammogram dengan format .bmp yang
+dipilih dengan bitdepth 24 dengan 256
+warna dan pada proses pengambilan
+citra hanya dipilih bagian region of
+interest (ROI) (Gambar4).</p>
+    </sec>
+    <sec id="sec-6">
+      <title>Preprocessing</title>
+      <p>Pada tahap preprocessing terdapat
+dua buah proses, pertama adalah proses
+normalisasi citra, didalam proses
+normalisasi citra terdapat proses resizing
+untuk mengatur ukuran citra. Tahap
+kedua ialah proses image enchancement,
+yaitu proses peningkatan kualitas citra
+menggunakan teknik sharpening.</p>
+      <p>Gambar 3. Gambaran Umum Metodologi Penelitian Ekstrasi Fitur dan Klasifikasi</p>
+      <p>Gambar 4. ROI Mammogram Kanker Payudara</p>
+    </sec>
+    <sec id="sec-7">
+      <title>Ekstrasi Fitur</title>
+      <p>Dalam tahapan ekstrasi fitur ini
+menggunakan metode GLCM. GLCM
+merupakan langkah penting,
+dikarenakan fitur yang diekstrak tersebut
+digunakan sebagai informasi yang
+menentukan kriteria nilai dari citra
+kanker itu sendiri. Didalam ekstrasi fitur
+ini dilakukan 10 kali pengambilan nilai
+untuk citra pembelajaran dan citra
+pengujian. Contoh hasil ekstraksi fitur
+dapat dilihat pada Gambar 5.</p>
+    </sec>
+    <sec id="sec-8">
+      <title>Klasifikasi</title>
+      <p>Pada proses klasifikasi terdapat
+beberapa rangkaian proses seperti
+proses pengklasifikasi nilai pada citra
+pembelajaran dan proses pengklasifikasian
+nilai pada citra pengujian dimana
+nantinya akan menghasilkan sebuah
+hasil apakah citra pengujian tersebut
+termasuk kategori citra jinak atau ganas.
+Rangkaian langkah-langkahnya dapat
+dilihat pada Gambar 6.</p>
+    </sec>
+    <sec id="sec-9">
+      <title>Perancangan Aplikasi</title>
+      <p>Aplikasi yang dibuat juga didukung
+dan berasal dari rancangan hardware dan
+software menggunakan pendekatan
+metode SDLC (Software Development
+Live Cycle).</p>
+      <p>Gambar 5: Ha.il Ekstrasi Fitur Menggunakan Metode GLCM</p>
+      <p>Gambar 6. Blok Diagram Ekstrasi Fitur</p>
+    </sec>
+    <sec id="sec-10">
+      <title>Pendefinisian Kebutuhan</title>
+      <p>Aplikasi pendeteksian citra
+kanker payudara ini memiliki beberapa
+syarat agar dapat digunakan. Aplikasi
+ini membutuhkan:
+1. Sebuah citra yang diambil kamera
+harus murni dari pencahayaan
+langsung dimana dapat merusak
+pengambilan nilai input yangdiperoleh
+melalui metode GLCM.
+2. Sebuah program terpisah yang
+berfungsi merekontruksi ketajaman
+citra gray sebelumnya dengan
+menampilkan grafik perubahannya.
+3. Sebuah program terpisah yang
+berfungsi untuk membangun ekastrasi
+fitur dari hasil dengan inputan yang
+diperoleh, melakukan simulasi dari
+hasil pembelajaran menggunakan
+SVM dan metode pengambilan
+keputusan.</p>
+    </sec>
+    <sec id="sec-11">
+      <title>Proses Aplikasi</title>
+      <p>Pada tahap ini dilakukan
+perancangan antarmuka grafis untuk
+pengguna. Perancangan antarmuka ini
+dilibatkan sedikit penggunaan alat bantu
+pembuatan citra seperti kamera dan
+sebagainya sehingga diusahakan
+semaksimal mungkin untuk memperoleh
+tampilan antarmuka yang
+memudahkan para pengguna, termasuk
+pengecekan bug dan perbaikan sehingga
+menghasilkan program sesuai
+kebutuhan. Berikut merupakan
+langkahlangkah yang digunakan dalam proses
+perancangan aplikasi.</p>
+    </sec>
+    <sec id="sec-12">
+      <title>PEMBAHASAN</title>
+      <sec id="sec-12-1">
+        <title>Pembahasan berisi tentang pembuatan GUI dan hasil pendeteksian kanker menggunakan metode GLCM.</title>
+      </sec>
+    </sec>
+    <sec id="sec-13">
+      <title>Pembuatan GUI</title>
+      <p>Jendela ini merupakan yang
+muncul pertama kali pada saat aplikasi ini
+dijalankan, jendela ini merupakan pusat
+dari kegiatan yang dilakukan pada
+aplikasi ini. Untuk membuat tampilan
+jendela utama ini sesuai dengan
+(Gambar 8 dan Gambar 9) maka rancangan
+GUI nya seperti pada gambar berikut.</p>
+      <p>Gambar 7. Struktur Navigasi Aplikasi GLCM &amp; SVM
+Gambar 8. Rancangan GUI Jendela Utama
+Gambar 9. Hasil dari Program GLCM.m</p>
+    </sec>
+    <sec id="sec-14">
+      <title>Uji Coba Aplikasi</title>
+      <p>Aplikasi pendeteksian kanker
+payudara ini mengalami beberapa ujian
+runtime seperti mengambil nilai GLCM
+dari data pembelajaran dan data testing
+yang akan digunakan untuk parameter
+data SVM pada saat aplikasi selesai
+dikompilasi. Pengujian dilakukan untuk
+melihat apakah exception yang
+ditetapkan oleh kode sumber program dapat
+menangani kesalahan perintah terjadi
+saat aplikasi berjalan untuk pertama
+kalinya (sebelum proses debug).
+Setelah mengalami serangkaian perbaikan
+kode sumber program sesuai dengan
+kebutuhan dan layak untuk dijalankan
+secara runtime. Pertama adalah proses
+pengambilan citra sebagai contoh
+pemrosesan secara GUI dengan cara
+menekan tombol Open Image maka akan
+nampak seperti gambar 10.</p>
+      <p>Kemudian tekantombol Proses
+Image untuk mendapatkan hasil
+preprocessing citra seperti gambar 11.</p>
+      <p>Setelah itu dilakukan ekstraksi fitur
+dan klasifikasi menggunakan GLCM.
+Hasil klasifikasi dapat dilihat pada Tabel
+1.</p>
+      <p>Gambar 10. Mengambil Data Citra</p>
+      <p>Gambar 11. Preprocessing Citra</p>
+      <p>Tabel 1. Data Range GLCM Klaisifikasi</p>
+      <sec id="sec-14-1">
+        <title>Dari data (Tabel1 ) dapat dihitung</title>
+        <p>probabilitas yaitu dengan cara
+menjumlahkan jumlah data yang berhasil
+diujicoba dibagi dengan total data
+pengujian (10 buah) dan dikalikan 100.
+Jumlah data yang digunakan adalah 10
+citra, yang berhasil dalam uji coba
+aplikasi adalah 6 dari 10 citra tersebut.
+Sehingga mendapatkan nilai
+probabilitas sebesar 60%. Berikut adalah
+rumus yang digunakan untuk
+menghitung probilitas.</p>
+        <p>Edata ℎ
+ 
+ 100% … [1]
+Sehingga dapat disimpulkan bahwa
+metode Gray Level Co-occurrence
+Matrix GLCM) dan Support Vector
+Machine (SVM) memiliki tingkat
+keberhasilan sebesar 60% dari hasil uji coba
+tersebut dalam identifikasi kanker
+payudara menggunakan citra mammogram.</p>
+      </sec>
+    </sec>
+    <sec id="sec-15">
+      <title>SIMPULAN</title>
+      <sec id="sec-15-1">
+        <title>Metode analisis tekstur menggu</title>
+        <p>nakan GLCM dan proses klasifikasi
+menggunakan SVM pada citra
+mammogram berhasil dikembangkan
+menggunakan citra ROI mammogram
+identifikasi kanker payudar. Aplikasi
+GLCM dan SVM ini berhasil
+menunjukan nilai-nilai pengukuran statistik
+dalam bentuk histogram dari hasil
+ekstrasi fitur menggunakan GLCM dan
+klasifikasi metode SVM pada citra
+kanker yang jinak dan ganas yang
+menghasilkan nilai probabilitas sebesar
+60% dengan data pengujian yang
+digunakan sebanyak 10 citra gabungan (5
+jinak dan 5 ganas) dan data
+pembelajaran yang digunakam sebanyak 10
+data jinak dan 10 data ganas. Nilai
+tersebut cukup baik dan nilai tersebut
+dapat berbeda-beda tergantung pada
+jumlah database dan metode yang
+digunakan. Hasil pembuatan aplikasi
+tersebut menampilkan nilai-nilai yang
+digunakan sebagai data dalam objek
+penelitian seperti nilai GLCM,
+histogram dan nilai klasifikasi SVM.</p>
+      </sec>
+    </sec>
+    <sec id="sec-16">
+      <title>DAFTAR PUSTAKA</title>
+      <p>[1] Adi Purnomo, Sulistyo
+Puspitodjati. 2013. Analisis
+Tekstur Kayu Parquet dengan
+Menggunakan Metode Grey
+Level Co-occurrence Matrix
+(GLCM).
+[2] Abdul Kadir, Adhi Susanto. 2013.</p>
+      <p>Teori Dan Aplikasi Pengolahan
+Citra, Penerbit: Andi.
+[3] Beny Firman. 2010.Mesin V ektor
+Pendukung (svm) Kasus Non
+Linier.
+[4] Chang, Chih-Chung, Lin,
+ChihJen, 2013. A Library For
+Support Vector Machines.</p>
+      <p>Libsvm.
+[5] Christianini. 2000. Teori
+Pembelajaran pada Support
+Vector Machine (SVM).
+[6] Dipankar, Hazra. 2011. Texture
+Recognition With Combined
+glcm, Waveletand Rotated
+Wavelet Features.
+[7] Eko Prasetyo. 2011.Pengolahan</p>
+      <p>Citra Digital dan Aplikasinya</p>
+    </sec>
+  </body>
+  <back>
+    <ref-list>
+      <ref id="ref1">
+        <mixed-citation>
+          Andi. [8]
+          <string-name>
+            <surname>Feriza</surname>
+          </string-name>
+          , Irawan.
+          <year>2012</year>
+          , Buku Pintar
+        </mixed-citation>
+      </ref>
+      <ref id="ref2">
+        <mixed-citation>
+          MediaKom. [9]
+          <string-name>
+            <given-names>Guru</given-names>
+            <surname>Kumar</surname>
+          </string-name>
+          , Mohanaiah,
+        </mixed-citation>
+      </ref>
+      <ref id="ref3">
+        <mixed-citation>
+          <string-name>
+            <surname>Sathyanarayana</surname>
+          </string-name>
+          .
+          <year>2013</year>
+          . Image
+        </mixed-citation>
+      </ref>
+      <ref id="ref4">
+        <mixed-citation>
+          <article-title>Using glcm For Human</article-title>
+          . [10]
+          <string-name>
+            <surname>Karatzouglou</surname>
+          </string-name>
+          .
+          <year>2004</year>
+          . Kernel
+        </mixed-citation>
+      </ref>
+      <ref id="ref5">
+        <mixed-citation>
+          method. [11]
+          <string-name>
+            <surname>Kiswanto</surname>
+          </string-name>
+          .
+          <year>2012</year>
+          . Identifiasi Citra
+        </mixed-citation>
+      </ref>
+      <ref id="ref6">
+        <mixed-citation>
+          <string-name>
+            <given-names>Wavelete</given-names>
+            <surname>Haar</surname>
+          </string-name>
+          . [12]
+          <string-name>
+            <surname>Kusumanto</surname>
+          </string-name>
+          .
+          <year>2011</year>
+          . Pengolahan
+        </mixed-citation>
+      </ref>
+      <ref id="ref7">
+        <mixed-citation>
+          Semantik. [13]
+          <string-name>
+            <surname>Mehul</surname>
+          </string-name>
+          . Sampat, Markey, Bovik.
+        </mixed-citation>
+      </ref>
+      <ref id="ref8">
+        <mixed-citation>2005. Computer-Aided Detection and</mixed-citation>
+      </ref>
+      <ref id="ref9">
+        <mixed-citation>
+          Diagnosis in Mammography. [14]
+          <string-name>
+            <surname>Meritxell</surname>
+          </string-name>
+          , Arnau, Robert, Mariona,
+        </mixed-citation>
+      </ref>
+      <ref id="ref10">
+        <mixed-citation>2012. Adapting Breast Density</mixed-citation>
+      </ref>
+      <ref id="ref11">
+        <mixed-citation>
+          <string-name>
+            <surname>Imaging</surname>
+          </string-name>
+          , pages
+          <fpage>561</fpage>
+          -
+          <lpage>568</lpage>
+          . Springer. [15]
+          <string-name>
+            <surname>Nagaraj</surname>
+          </string-name>
+          , Paga, Prasanna,
+        </mixed-citation>
+      </ref>
+      <ref id="ref12">
+        <mixed-citation>
+          <string-name>
+            <surname>Lamichhane</surname>
+          </string-name>
+          .
+          <year>2014</year>
+          . Early Breast
+        </mixed-citation>
+      </ref>
+      <ref id="ref13">
+        <mixed-citation>
+          <article-title>Technology (IMPACT: IJRET)</article-title>
+          . [16]
+          <string-name>
+            <surname>Nugroho</surname>
+          </string-name>
+          .
+          <year>2003</year>
+          . Metode SVM Dan
+        </mixed-citation>
+      </ref>
+      <ref id="ref14">
+        <mixed-citation>
+          Pengaplikasiannya. [17]
+          <string-name>
+            <surname>Poongodi</surname>
+          </string-name>
+          , Samuel, Manoharan,
+        </mixed-citation>
+      </ref>
+      <ref id="ref15">
+        <mixed-citation>
+          2011.
+          <string-name>
+            <given-names>A</given-names>
+            <surname>Survey On</surname>
+          </string-name>
+          <article-title>The</article-title>
+        </mixed-citation>
+      </ref>
+      <ref id="ref16">
+        <mixed-citation>
+          <source>of Breast Cancer. [18] Santosa</source>
+          .
+          <year>2007</year>
+          .MetodeOne-Against-
+        </mixed-citation>
+      </ref>
+      <ref id="ref17">
+        <mixed-citation>
+          One. [19]
+          <string-name>
+            <surname>Sianipar</surname>
+          </string-name>
+          .
+          <year>2013</year>
+          . Pemrograman
+        </mixed-citation>
+      </ref>
+      <ref id="ref18">
+        <mixed-citation>
+          Bandung. [20]
+          <string-name>
+            <surname>Sugita</surname>
+          </string-name>
+          , Lina.
+          <year>2012</year>
+          , Tingkat
+        </mixed-citation>
+      </ref>
+      <ref id="ref19">
+        <mixed-citation>
+          <string-name>
+            <surname>Bogor</surname>
+          </string-name>
+          (IPB). [21]
+          <string-name>
+            <surname>Sembiring</surname>
+          </string-name>
+          .
+          <year>2007</year>
+          . Metode Analisa
+        </mixed-citation>
+      </ref>
+      <ref id="ref20">
+        <mixed-citation>
+          (SVM). [22]
+          <string-name>
+            <surname>Tanuja</surname>
+          </string-name>
+          , Sarode, Suryawanshi,
+        </mixed-citation>
+      </ref>
+      <ref id="ref21">
+        <mixed-citation>
+          <string-name>
+            <surname>Kekre</surname>
+          </string-name>
+          , Sudeep, Thepade.
+          <year>2010</year>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref22">
+        <mixed-citation>
+          <string-name>
+            <given-names>Features</given-names>
+            <surname>Extracted</surname>
+          </string-name>
+          . [23]
+          <string-name>
+            <given-names>Rizqi</given-names>
+            <surname>Adnamazida</surname>
+          </string-name>
+          .
+          <year>2012</year>
+          . Apa sih
+        </mixed-citation>
+      </ref>
+      <ref id="ref23">
+        <mixed-citation>
+          URL:http://www.artikelpayudara.
+          <source>com/20</source>
+        </mixed-citation>
+      </ref>
+      <ref id="ref24">
+        <mixed-citation>
+          <volume>09</volume>
+          /04/15/mendeteksi-kanker-payudara-
+        </mixed-citation>
+      </ref>
+    </ref-list>
+  </back>
+</article>

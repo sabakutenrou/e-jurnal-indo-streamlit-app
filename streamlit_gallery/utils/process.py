@@ -19,14 +19,14 @@ import joblib
 st.set_page_config(layout="wide")
 st.set_option('deprecation.showPyplotGlobalUse', False)
 
-raw = pd.read_csv("jurnal_komputer.csv")
+raw = pd.read_csv("dataset.csv")
 
-raw = raw[['web-scraper-start-url','judul','abstract']]
+raw = raw[['kategori','judul-jurnal','abstrak-jurnal']]
 
-raw['cat_id'] = raw['web-scraper-start-url'].factorize()[0]    # category_id column auto inserted? 
+raw['cat_id'] = raw['kategori'].factorize()[0]    # category_id column auto inserted? 
 
 langdf = []
-for line in raw['abstract']:
+for line in raw['abstrak-jurnal']:
     result = detect(line)
     langdf.append(result)
 
@@ -34,7 +34,7 @@ raw['lang'] = langdf
 
 raw = raw.loc[raw['lang'] == 'id']
 
-df = raw[['judul', 'abstract', 'cat_id']]
+df = raw[['judul-jurnal', 'abstrak-jurnal', 'cat_id']]
 
 st.table(df.head(2))
 
@@ -45,13 +45,14 @@ tfidf = TfidfVectorizer(sublinear_tf= True, #use a logarithmic form for frequenc
                        ngram_range= (1,2), #to indicate that we want to consider both unigrams and bigrams.
                        stop_words ='english') #to remove all common pronouns to reduce the number of noisy features
 
-features = tfidf.fit_transform(df.abstract).toarray()
+# features = tfidf.fit_transform(df.abstract).toarray()
+features = tfidf.fit_transform(df['abstrak-jurnal']).toarray()
 st.write(features)
 
 labels = df.cat_id
 features.shape
 
-X_train, X_test, y_train, y_test = train_test_split(df['abstract'], df['cat_id'], random_state= 0)
+X_train, X_test, y_train, y_test = train_test_split(df['abstrak-jurnal'], df['cat_id'], random_state= 0)
 count_vect = CountVectorizer()
 CV = count_vect.fit(X_train)
 X_train_counts = count_vect.fit_transform(X_train)
@@ -79,8 +80,8 @@ class_names=['pengolahan','data mining','microcontroller','multimedia']
 mapping = {'pengolahan': 0, ' data mining': 1, 'microcontroller': 2, 'multimedia': 3}
 
 st.subheader('Confusion Matrix')
-plot_confusion_matrix(clf,X_test_CV,y_test,display_labels=mapping)
-st.pyplot()
+# plot_confusion_matrix(clf,X_test_CV,y_test,display_labels=mapping)
+# st.pyplot()
 
 from sklearn.model_selection import train_test_split, cross_val_predict, cross_val_score, StratifiedKFold
 from sklearn.metrics import confusion_matrix, accuracy_score
@@ -106,8 +107,9 @@ def cross_validation_functions(model, input, output):
       'mean': mean,
       'std': std
    })
-   
 kfold_cross_validation_scikit(X_train_tfidf, y_train, clf)
+
+
 from yellowbrick.classifier import ROCAUC
 X_test_counts = CV.transform(X_test)
 X_test_tfidf = TF.transform(X_test_counts)
@@ -115,7 +117,7 @@ visualizer = ROCAUC(clf, classes=labels)
 visualizer.fit(X_train_tfidf, y_train)        # Fit the training data to the visualizer
 visualizer.score(X_test_tfidf, y_test)        # Evaluate the model on the test data
 visualizer.show()
-st.pyplot()
+# st.pyplot()
 
 # st.subheader('ROC Curve')
 # plot_roc_curve(clf,X_test_CV,y_test)
@@ -127,7 +129,7 @@ st.pyplot()
 # split
 # split persebaran
 
-df_text_genre = df[['abstract', 'cat_id']]
+df_text_genre = df[['abstrak-jurnal', 'cat_id']]
 train_df, test_df = train_test_split(df_text_genre, test_size=0.2, random_state=42, shuffle=True)
 train_cts = train_df.groupby("cat_id").size()
 test_cts  = test_df.groupby("cat_id").size()
@@ -162,7 +164,7 @@ mapping = dict(zip(labeler.classes_, range(len(labeler.classes_))))
 mapping = {'pengolahan': 0, ' data mining': 1, 'microcontroller': 2, 'multimedia': 3}
 
 def plot_wordcloud(df: pd.DataFrame, category: str, target: int) -> None:
-    words = " ".join(train_df[train_df["cat_id"] == target]["abstract"].values)
+    words = " ".join(train_df[train_df["cat_id"] == target]["abstrak-jurnal"].values)
 
     plt.rcParams['figure.figsize'] = 10, 20
     wordcloud = WordCloud(stopwords=STOPWORDS, 
@@ -184,7 +186,7 @@ from sklearn.feature_extraction.text import CountVectorizer
 
 count_vect = CountVectorizer()
 
-X_train_tf = count_vect.fit_transform(train_df["abstract"])
+X_train_tf = count_vect.fit_transform(train_df["abstrak-jurnal"])
 
 st.write("Shape of term-frequency matrix:", X_train_tf.shape)
 
@@ -202,7 +204,7 @@ from imblearn.pipeline import Pipeline
 
 plot_tfidf(pipe    = Pipeline([("vect",count_vect), ("tfidf",tfidf_transformer)]),
            labeler = labeler,
-           X       = train_df["abstract"],
+           X       = train_df["abstrak-jurnal"],
            y       = train_df["cat_id"],
            vect    = "vect",
            tfidf   = "tfidf",

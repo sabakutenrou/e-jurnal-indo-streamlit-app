@@ -62,16 +62,21 @@ def main():
 
     st.markdown('---')
 
-    st.subheader('MATRIKS {}'.format(vectorizer_text))
     
     def markdown(text:str, color:str=accent_color, font_size:int=40):
         st.markdown('<div style="color:{}; font-size: {}px; font-weight:600; margin-top:-20px">{}</div>'
             .format(color, font_size, text), unsafe_allow_html=True)
     
-    st.markdown('##### Jumlah dokumen :')
-    markdown(features.shape[0])
-    st.markdown('##### Jumlah feature :')
-    markdown(features.shape[1])
+    col1, col2 = st.columns([1, 4])
+    with col1:
+        # st.subheader('MATRIKS {}'.format(vectorizer_text))
+        markdown('MATRIKS '+ vectorizer_text, font_size=24)
+        st.markdown(' ')
+        st.markdown(' ')
+        st.markdown('##### Jumlah dokumen :')
+        markdown(features.shape[0])
+        st.markdown('##### Jumlah feature :')
+        markdown(features.shape[1])
 
     labels = df.kategori  ### needs check
 
@@ -84,8 +89,11 @@ def main():
     feature_names = feature_n.get_feature_names_out()
     # corpus_index = [n for n in X_train]
     df = pd.DataFrame(X_train_vect.T.todense(), index=feature_names, columns=nodes)
-    with st.expander('tabel {}'.format(vectorizer_text)):
-        st.dataframe(df)
+    with col2:
+        with st.expander('tabel {}'.format(vectorizer_text), expanded=True):
+            # st.dataframe(df.style.highlight_max(axis=0))
+            st.dataframe(df)
+            # st.dataframe(df.style.background_gradient(cmap='Blues'))
 
     mapping = {'pengolahan citra': 0, 'jaringan': 1, 'hardware programming': 2, 'data mining': 3, 'multimedia': 4}
 
@@ -106,7 +114,9 @@ def main():
                     X       = X_train,
                     y       = y_train,
                     vect    = vect)
-
+    
+    # st.write(top_features)
+    
     st.info("""Panjang dari setiap bar menunjukkan rata-rata score fitur pada 
     semua dokumen berdasarkan kelas targetnya. Berdasarkan yang dapat kita lihat 
     dari grafik diatas kata "{}", "{}", dll adalah kata umum yang memiliki score 

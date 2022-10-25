@@ -1,5 +1,6 @@
 from ast import pattern
 from contextlib import suppress
+from turtle import bgcolor
 import streamlit as st
 from st_aggrid import AgGrid
 from st_aggrid.grid_options_builder import GridOptionsBuilder
@@ -17,6 +18,8 @@ import os
 import xml.etree.ElementTree as ET
 import glob
 from streamlit_lottie import st_lottie_spinner
+
+from streamlit_gallery.utils.streamlit_prop import get_theme_colors
 
 def save_uploadedfile(uploadedfile):
     with open(os.path.join("tempDir",uploadedfile.name),"wb") as f:
@@ -106,12 +109,16 @@ def main():
     # reload data
     # st.header("Input data")
     delete_files()
-    accent_color = st.get_option('theme.primaryColor')
+    colors = get_theme_colors()
+    accent_color = colors['primaryColor']
+    background_color = colors['backgroundColor']
+    scnd_background_color = colors['secondaryBackgroundColor']
+    text_color = colors['textColor']
     text_style = ' style="color:{color}; font-size:{font_size}px"'.format(color=accent_color, font_size=35)
     st.markdown("<h1{}>Input data</h1>".format(text_style), unsafe_allow_html=True)
 
     col1, col2, col3, col4 = st.columns([4,1,2,1])
-    files = col1.file_uploader('upload file (.pdf)', type="pdf", accept_multiple_files=True)
+    files = col1.file_uploader('upload file jurnal (.pdf)', type="pdf", accept_multiple_files=True)
 
     total_files = len(files)
     area_hasil = st.container()
@@ -120,15 +127,20 @@ def main():
         # message = st.empty()
         lottie = lottie_json("lf30_editor_ilf1k19x.json")
         with col3:
+            message = st.empty()
+            
             with st_lottie_spinner(lottie):
-                message = st.empty()
+                message_md = """
+                    <p style="text-align: center; color: {}; font-size:10px"></p>
+                    """.format(accent_color)
+                message.markdown(message_md, unsafe_allow_html=True)
                 for pdf_file in files:
                     # file_details = {"FileName":pdf_file.name,"FileType":pdf_file.type}
                     # with open(os.path.join("tempDir",pdf_file.name),"wb") as f: 
                     #     f.write(pdf_file.getbuffer())
                     save_uploadedfile(pdf_file)
 
-                message.write("extracting text...")
+                
                 # for file in os.listdir("/tempDir"):
                 #     if file.endswith(".cermxml"):
                 #         print(os.path.join("/tempDir", file))
@@ -138,15 +150,34 @@ def main():
                 # st.write(file_list)
 
                 # for file_pdf in file_list:
-                java = subprocess.call('java -cp cermine-impl-1.13-jar-with-dependencies.jar pl.edu.icm.cermine.ContentExtractor -path tempDir')
+                java = subprocess.call('java -cp cermine-impl-1.13-jar-with-dependencies.jar pl.edu.icm.cermine.ContentExtractor -path tempDir -outputs jats')
                 xml_list = [os.path.join("tempDir", file) for file in os.listdir("tempDir") if file.endswith(".cermxml")]
                 
                 hasil_abstract = [parse_hasil_cermine(xml) for xml in xml_list]
                 
                 message.empty()
-            show_lottie_json("square-loading.json")
+
+            # show_lottie_json("square-loading.json")
         with area_hasil:
-            st.write(hasil_abstract)
+            # st.write(hasil_abstract)
+            st.button('download hasil (.csv)')
+            hasil_md = """
+            <div class="column_1" style="background: {bgcolor}; padding: 20px; border-radius: 5px; margin-top: 20px; width: 75%; float: left;">
+                <h1 style="color:{color}; font-size:20px">{}</h1>
+                <p>author</p>
+                <p>kata kunci</p>
+                <p>pub date</p>
+                <p>jurnal</p>
+                <div style="background: {color}26; padding: 20px; border: 1px solid {color}33; border-radius: 5px;">
+                    <p style="color:{color}; font-size:15px">{}</p>
+                </div>
+            </div>
+            <div class="column_2" style="padding: 20px; border-radius: 5px; width: 23%; float: left;">
+                <h1 style="color:{textcolor}; text-align: center;">pengolahan citra</h1>
+            </div>"""
+            
+            for hasil in hasil_abstract:
+                st.markdown(hasil_md.format(hasil[0], hasil[1][0], color=text_color, bgcolor=scnd_background_color, textcolor=accent_color), unsafe_allow_html=True)
 
 
         # for uploaded in files:

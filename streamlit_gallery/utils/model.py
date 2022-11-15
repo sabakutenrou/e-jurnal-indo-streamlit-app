@@ -1,5 +1,5 @@
 import pandas as pd
-from streamlit_gallery.utils.preprocess import remove_tweet_special
+from streamlit_gallery.utils.preprocess import preprocess
 from imblearn.pipeline import Pipeline
 from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import TfidfVectorizer, CountVectorizer, TfidfTransformer
@@ -10,7 +10,7 @@ from streamlit_gallery.utils.relabel import relabel
 df = pd.read_csv("dataset.csv")
 df = df[['judul-jurnal','abstrak-jurnal','kategori']]
 df['kategori'] = df['kategori'].factorize()[0]
-df['abstrak-jurnal'] = df['abstrak-jurnal'].apply(remove_tweet_special)
+df['abstrak-jurnal'] = df['abstrak-jurnal'].apply(preprocess)
 
 X = df['abstrak-jurnal']
 y = df['kategori']

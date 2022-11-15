@@ -17,7 +17,7 @@ from st_aggrid.grid_options_builder import GridOptionsBuilder
 import matplotlib as plt
 import joblib
 
-from streamlit_gallery.utils.preprocess import remove_tweet_special
+from streamlit_gallery.utils.preprocess import preprocess
 
 def main():
     # st.set_option('deprecation.showPyplotGlobalUse', False)
@@ -43,7 +43,7 @@ def main():
     tfidf_transformer = TfidfTransformer()
 
     if(impl[0] in multi_sel):
-            df['abstrak-jurnal'] = df['abstrak-jurnal'].apply(remove_tweet_special)
+            df['abstrak-jurnal'] = df['abstrak-jurnal'].apply(preprocess)
     if(impl[1] in multi_sel):
         pipeline    = Pipeline([("vect",count_vect), ("tfidf",tfidf_transformer)])
         vect = ['vect','tfidf']

@@ -132,7 +132,7 @@ def main():
             elif selected == 'tfidf':
                 st.success('tfidf berhasil')
         else: show_card()
-    st.write(db)
+    st.write(db) # db for testing, not really used
     
 if __name__ == "__main__":
     main()

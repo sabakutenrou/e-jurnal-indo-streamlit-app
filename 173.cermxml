@@ -1,0 +1,1032 @@
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD v1.0 20120330//EN" "JATS-archivearticle1.dtd">
+<article xmlns:xlink="http://www.w3.org/1999/xlink">
+  <front>
+    <journal-meta />
+    <article-meta>
+      <contrib-group>
+        <contrib contrib-type="author">
+          <string-name>Bagus Rizky Hermawan</string-name>
+          <email>bagusrizkyh@gmail.com</email>
+          <xref ref-type="aff" rid="aff0">0</xref>
+        </contrib>
+        <aff id="aff0">
+          <label>0</label>
+          <institution>Program Studi Informatik</institution>
+          ,
+          <addr-line>Universitas Wijaya Kusuma Surabaya</addr-line>
+        </aff>
+      </contrib-group>
+      <pub-date>
+        <year>2021</year>
+      </pub-date>
+      <volume>7</volume>
+      <issue>2</issue>
+      <fpage>33</fpage>
+      <lpage>48</lpage>
+      <abstract>
+        <p>Vaganza Kitchen Catering is a company that operates in the field of services. Vaganza Kitchen catering has not been well managed the promotion still uses conventional promotions, such as brochure spread, installing pamphlets etc., and orders continue to decline. Vaganza Kitchen Catering Information and Promotion Information System is designed to assist the company in managing sales information systems and marketing information, and the results of catering data reports. The method used for software development is to use prototyping methodology. The system is web-based using PHP Programming Language and MySQL Database. The results of the system achieved is a system that can help the caterer in arranging sales, where there is a sales period report, displaying customer payment information, customer transaction reports that can be seen on the web. Features of sales reports by the owner</p>
+      </abstract>
+    </article-meta>
+  </front>
+  <body>
+    <sec id="sec-1">
+      <title>-</title>
+      <p>SISTEM INFORMASI PENJUALAN DAN PROMOSI DAPUR VAGANZA BERBASIS WEB</p>
+      <p>Abstrak</p>
+    </sec>
+    <sec id="sec-2">
+      <title>PENDAHULUAN</title>
+      <p>Catering adalah suatu usaha di bidang jasa dalam hal
+menyediakan / melayani permintaan makanan, untuk
+berbagai macam keperluan. catering adalah
+penyeleggaraan makanan yang tempat memasak
+makanan dengan tempat menghidangkan makanan.
+Makanan jadi diangkut ke tempat penyelenggaraan
+pesta, rapat, pertemuan, dan industri. [1].</p>
+      <p>Dapur Vaganza merupakan catering yang menawarkan
+menu makanan yang bervariasi setiap harinya. Menu
+yang disediakan catering Dapur Vaganza berupa
+makanan khas Indonesia, melayani pemesanan di area
+Surabaya dan dapat diantar ke tempat pemesanan.
+Proses pelayanan pemesanan dan
+promosi masih memakai via WhatsApp, telepon atau
+berkunjung ke lokasi. dan media promosinya masih
+menggunakan promosi konvensional, misal
+menyebarkan brosur, memasang pamflet, Menurut
+pemilik catering cara tersebut kurang efisien. Karena
+orderan sering menurun, komplain pelanggan, dan
+order ketinggalan. Sehingga pihak catering merasa
+perlu memperbaiki metode pemrosesan order dan
+promosinya dalam proses pemesanan makanan.
+Berdasarkan permasalahan tersebut, peneliti
+mengusulkan solusi berupa sistem informasi
+pemesanan dan promosi pada Dapur Vaganza berbasis
+web, sistem diharapkan dapat memperbaiki proses
+pesanan dan memperluas promosi agar bisnis menjadi
+berkembang.</p>
+      <p>Adapun manfaat penelitian dari hasil ini adalah :
+Manfaat dari penelitian ini adalah mempermudah untuk
+mempromosikan catering, mempermudah pelanggan
+untuk melakukan pemesanan memudahkan catering
+untuk mengetahui detail informasi dan laporan
+penjualan per periode, dan memudahkan pelanggan
+melakukan pembayaran.</p>
+      <p>II.</p>
+    </sec>
+    <sec id="sec-3">
+      <title>CATERING DAPUR VAGANSA</title>
+      <sec id="sec-3-1">
+        <title>2.1 Catering Catering merupakan suatu manajemen pengelola makanan oleh perorangan maupun industri yang menyediakan makanan dalam suatu lokasi untuk</title>
+        <p>Information Technology Journal. Vol 7 No 2 Jul - Des 2021, 34 - 48
+memenuhi berbagai kepentingan sesuai pesanan.</p>
+        <p>Catering yaitu makanan yang merupakan kepuasan
+pelanggan disesuaikan dengan kriteria pelanggan
+yang suka dengan makanan tersebut[2].</p>
+      </sec>
+      <sec id="sec-3-2">
+        <title>2.2 Profil Catering Dapur Vaganza</title>
+        <p>Catering Dapur Vaganza merupakan usaha bidang
+kuliner yang berdiri pada tahun 2018, pemilik catering
+UMKM Dapur Vaganza bernama Ibu winarti, Beliau
+sebelumnya hanya sebatas pemilik toko yang
+menjajakan makanan dekat rumahnya. Selama bekerja
+beliau dikenal sebagai orang yang pandai dalam
+memasak dan sering mendapatkan orderan dari
+pelanggan setianya untuk acara tertentu. Sebelum
+memulai usaha catering, beliau bekerja sebagai pemilik
+usaha toko sembako dirumah.</p>
+        <p>Perusahaan catering UMKM Dapur Vaganza dimiliki
+oleh seorang pemilik dan 6 orang karyawan tetap.
+Dalam perusahaan terdapat 1 orang pada bagian
+coowner yang juga merangkap jabatan sebagai marketing,
+satu orang asisten produksi, dan empat juru masak.
+Pemilik perusahaan ini bisa perorangan atau kelompok.
+Pada dasarnya pemilik adalah setiap orang yang
+menjalankan atau menanamkan modal dalam
+perusahaan, pemilik juga dapat disebut sebagai pendiri
+yang memiliki saham dalam perusahaan tersebut.
+Asisten mengelola sekelompok tenaga penjualan dalam
+perusahaan mengatur pesanan, anda harus menjaga diri
+tetap jernih dalam berpikir, mampu mengerjakan
+banyak job sekaligus mempunyai keterampilan
+mengatur orang-orang dengan sesuai.</p>
+        <p>Juru masak adalah orang yang tugasnya membuat
+resep, menentukan dan menakar bahan- bahan
+masakan, memasak, juga menyajikan suatu hidangan
+yang enak rasanya.</p>
+        <p>Marketing bertanggung jawab memesarkan produk
+dalam bentuk promosi yang dan bertanggung jawab
+membuat customer tertarik kepada produk yang
+dipasarkan, Untuk melaksanakan proses ini, perlu harus
+riset market, analis, dan pencarian komsumen,
+informasi dapat dilihat pada Gambar 1.</p>
+      </sec>
+    </sec>
+    <sec id="sec-4">
+      <title>Gambar 1. Strukture Catering Dapur Vaganza</title>
+      <p>Visi perusahaan adalah Menjadi perusahaan terbaik
+catering memiliki khas rasa. Sedangkang misinya
+adalah menjunjung tinggi kepuasan pelanggan.</p>
+      <sec id="sec-4-1">
+        <title>2.3 Promosi</title>
+        <p>Promosi adalah memberitahu atau memasarkan produk
+catering demi tujuan mengajak konsumen untuk
+tertarik, Demi adanya promosi catering diharapkan
+penjualan lebih meningkat. Promosi sebagai
+serangkaian teknik digunakan demi mencapai sasaran
+penjualan, pemasaran dengan menggunakan biaya yang
+efektif untuk menjangkau penjualan lebih
+meningkat[3].</p>
+        <p>Salah satu strategi untuk meningkatkan penjualan,
+dengan memberikan potongan harga 20% berupa
+voucher dengan cara membuat kartu member promosi
+atau mengikuti event promosi setiap hari sabtu,
+diharapkan loyalitas pelanggan catering semakin
+meningkat dan berkembang.</p>
+        <p>
+          Promosi member merupakan program promosi
+yang ditujukan khusus promosi berlaku kepada
+pelanggan yang telah menjadi member.[
+          <xref ref-type="bibr" rid="ref1">4</xref>
+          ]
+Pelanggan catering Dapur Vaganza setiap pembelian
+minimal 40 box akan mendapatkan promosi,
+menentukan perolehan promosi member pelanggan
+bisa menggunakan promosi member dengan mendapat
+potongan 20% dari total transaksi Sebagai contoh
+skema berikut ini:
+Setiap belanja 40 box makanan, pelanggan akan
+mendapatkan potongan 20% yang setara atau senilai
+250 ribu rupiah yang mana merupakan 20% persen dari
+nilai yang sudah dibelanjakan. Dengan penetapan
+potongan ini jadi, ketika pelanggan menghabiskan
+sebesar Rp.1.100.000 dalam melakukan pembelian
+transaksi, maka pelanggan akan memperoleh potongan
+250 ribu rupiah berupa voucher potongan harga.
+Promosi event salah satunya adalah flash sale yaitu
+penjualan melalui promosi event dengan rentang
+waktu setiap hari sabtu hingga 24 jam dengan
+mendapatkan promosi untuk penukaran [5]
+Dalam program flash sale diberikan potongan
+harga sebesar 20% berupa voucher, dengan tanpa
+ada batasan minimum transaksi, baik kepada
+member maupun non member. Sebagai contoh
+skema berikut ini:
+Rp25.000 x 20 box = 500.000
+500.000 x 20% = 100.000
+Mekanisme promosi berlaku untuk semua produk
+makanan yang sudah tersedia. Periode promosi berlaku
+untuk member pelanggan dan event yang ditentukan
+III.
+        </p>
+      </sec>
+    </sec>
+    <sec id="sec-5">
+      <title>METODE</title>
+      <sec id="sec-5-1">
+        <title>3.1 Tahap Penelitian</title>
+        <p>Tahap Penelitian adalah alur dari metode penelitian
+proses pembuatan sistem pemesanan dan promosi
+berbasis web pada catering Dapur Vaganza dapat
+dilihat pada Gambar 2.
+Vol 7 No 2 Jul – Des 2021, 35- 48</p>
+      </sec>
+      <sec id="sec-5-2">
+        <title>Gambar 2. Diagram Alir Penelitian.</title>
+      </sec>
+      <sec id="sec-5-3">
+        <title>3.2 Perumusan Masalah</title>
+        <p>Tahap perumusan masalah ini, melakukan proses
+observasi ke catering Dapur Vaganza. Dari observasi
+tersebut, mendapatkan kendala atau masalah pada
+pengolahan catering mengusulkan solusi pembuatan
+sistem informasi pemesanan dan promosi pada catering
+Dapur Vaganza berbasis web. Oleh sebab itu penulis
+membuat rumusan masalah sesuai output hasil proses
+dari observasi penelitian dan tujuan penelitian tersebut.</p>
+      </sec>
+      <sec id="sec-5-4">
+        <title>3.3 Studi Literatur</title>
+        <p>Tahap studi literatur adalah literatur teori yang relevan
+dengan suatu permasalahan telah ditemukan literatur
+tersebut berisikan tentang: catering, bisnis,
+ecommerce, metode prototyping
+Literatur dapat ditemukan pada jurnal. Hasil dari proses
+pustaka ini adalah kumpulan literatur relevan dengan
+rumusan masalah, sehingga tujuannya adalah untuk
+memperkuat rumusan masalah sekaligus sebagai
+landasan teori untuk melakukan penelitian. “Sistem
+informasi pemesanan dan promosi catering berbasis
+web” pada catering Dapur Vaganza</p>
+      </sec>
+      <sec id="sec-5-5">
+        <title>3.4 Analisa Kebutuhan</title>
+        <p>Berdasarkan hasil dari studi literatur yang telah
+diperoleh, penulis akan menganalis proses kebutuhan
+untuk memulai perancangan sistem informasi
+penjualan dan informasi pemasaran catering. Analisa
+kebutuhan ini dapat dihasilkan dengan melihat studi
+literatur. Dibutuhkan proses sistem yang bisa
+membantu pemesanan dan promosi pada catering.</p>
+      </sec>
+      <sec id="sec-5-6">
+        <title>3.5 Analisa Sistem</title>
+        <p>Proses analis sistem yang dilakukan untuk
+menganalis kebutuhan sistem diperlakukan yaitu alur
+informasi yang didapat dari pelanggan proses analisa
+sistem ini digambarkan dengan DFD level Context
+dapat dilihat pada Gambar 3.</p>
+        <p>Gambar 3. DFD Level Context
+Berdasarkan analisa kebutuhan, sistem informasi
+admin terlebih dahulu menginputkan daftar produk,
+data voucher ke sistem. Lalu pelanggan
+menerima informasi mengenai voucher dari
+sistem, pelanggan akan melakukan transaksi
+dengan menginputkan voucher yang telah
+diterima, data pelanggan, data produk, kemudian
+data pembayaran. Admin akan menerima informasi
+data pelanggan, data produk, data voucher yang
+digunakan pelanggan untuk mendapatkan diskon,
+voucher member atau event senilai 20% potongan
+harga, voucher member adalah pelanggan yang
+sudah menjadi member, sedangkan voucher event
+setiap hari sabtu dapat diterima oleh admin.</p>
+      </sec>
+      <sec id="sec-5-7">
+        <title>3.6 Perancangan Sistem</title>
+        <p>Perancangan sistem, penulis membuat perancangan
+sistem pemesanan dan promosi pada catering berbasis
+web berupa diagram pada alir data yang berhubungan
+antar entity berdasarkan analis proses kebutuhan. Tools
+yang diproses untuk perancangan “Sistem informasi
+penjualan dan informasi pemasaran catering”
+menggunakan Power Designer 16.5. Hasil yaitu berupa
+gambaran rancangan diagram pada alir data hubungan
+antara entity.</p>
+      </sec>
+      <sec id="sec-5-8">
+        <title>3.7 Implementasi</title>
+        <p>Pada tahap ini penulis akan membuat “Perancangan
+Sistem pemesan dan promosi catering berbasis web”
+pada catering Dapur Vaganza, berdasarkan dari
+rancangan sistem yang telah dibuat.
+MengInformation Technology Journal. Vol 7 No 2 Jul - Des 2021, 36 - 48
+implementasikan sistem informasi penjualan dan
+promosi catering Dapur Vaganza memakai PHP
+sebagai proses bahasa database MySQL dan java
+pemrograman. Berdasarkan analis kebutuhan, sistem
+informasi penjualan promosi terdapat menu daftar
+menu dan voucher promosi, dan menampilkan menu
+data promosi dan data pelanggan, menu menu nota
+yang sudah dibayar pelanggan dan diskon promosi,
+menu bukti pembayaran transaksi. Informasi
+penjualan dan informasi pemasaran catering” pada
+catering Dapur Vaganza.</p>
+      </sec>
+      <sec id="sec-5-9">
+        <title>3.8 Pengujian Sistem</title>
+        <p>Tahap pengujian sistem peneliti akan
+melakukan pengujian sistem. Sistem informasi
+penjualan dan informasi pemasaran catering melihat
+hasil proses sistem telah dibuat. Tahap pengujian ini
+memakai Black Box testing untuk uji coba fungsi atau
+kesalahan dari sistem yang telah dibuat.</p>
+      </sec>
+      <sec id="sec-5-10">
+        <title>3.9 Pembuatan Laporan</title>
+        <p>Tahap ini melakukan menyusun laporan hasil proses
+penelitian telah dijalankan sesuai dengan
+penelitian sehingga menghasilkan suatu laporan
+dalam bentuk teks.</p>
+        <p>IV.</p>
+      </sec>
+    </sec>
+    <sec id="sec-6">
+      <title>HASIL DAN PEMBAHASAN</title>
+    </sec>
+    <sec id="sec-7">
+      <title>4.1. Flowchart Proses Bisnis</title>
+      <p>Tahap ini terdapat proses bisnis, yaitu sistem
+informasi pemesanan dan promosi menunjukan detail
+aktivitas, entitas dan terlibat, kebutuhan data, dan
+informasi untuk prosesnya dapat dilihat pada Tabel
+1.</p>
+      <sec id="sec-7-1">
+        <title>Tabel 1. Proses Bisnis</title>
+        <sec id="sec-7-1-1">
+          <title>4.1.1 Flowchart Proses</title>
+        </sec>
+      </sec>
+    </sec>
+    <sec id="sec-8">
+      <title>Makanan Dan Harga</title>
+    </sec>
+    <sec id="sec-9">
+      <title>Bisnis</title>
+      <sec id="sec-9-1">
+        <title>Entry</title>
+      </sec>
+    </sec>
+    <sec id="sec-10">
+      <title>Menu</title>
+      <p>Pada flowchart proses bisnis entry menu makanan
+dan harga. Admin harus login terlebih dahulu,
+Setelah login admin akan mengupload menu
+makanan dan harga yang ingin di masukan ke dalam
+sistem dapat dilihat pada Gambar 4.</p>
+      <p>Gambar 4. Flowchart Proses Bisnis Entry Menu</p>
+      <p>Makanan Dan Harga.</p>
+    </sec>
+    <sec id="sec-11">
+      <title>4.1.2 Flowchart Proses Bisnis Entry Promosi</title>
+      <p>Pada flowchart proses bisnis entry promosi. Admin
+login terlebih dahulu, Setelah login admin akan
+menginput promosi event dan member ke dalam
+sistem dapat dilihat pada Gambar 5.</p>
+      <p>Gambar 5. Flowchart Proses Bisnis Entry promosi.</p>
+    </sec>
+    <sec id="sec-12">
+      <title>4.1.3 Flowchart Proses Bisnis Penggunaan Voucher</title>
+      <p>Pada flowchart proses bisnis penggunaan voucher.
+Pelanggan login terlebih dahulu, Setelah login
+pelanggan akan mengklaim voucher diskon yang
+tersedia, dan memasukkan voucher. Admin
+menerima laporan validasi voucher dan total
+pembayaran dapat dilihat pada Gambar 6.
+Vol 7 No 2 Jul – Des 2021, 37- 48</p>
+      <p>Gambar 6. Flowchart Proses Penggunaan Voucher.</p>
+    </sec>
+    <sec id="sec-13">
+      <title>4.1.4 Flowchart Proses Bisnis Pemesanan Menu</title>
+    </sec>
+    <sec id="sec-14">
+      <title>Makanan</title>
+      <p>Pada flowchart proses bisnis memilih pesanan.
+Pelanggan login terlebih dahulu, Setelah login
+pelanggan langsung melihat tampilan menu makanan,
+pelanggan memilih pesanan yang dipilih. Admin
+menerima hasil pesanan yang sudah direkap pelanggan.
+Pelanggan dapat melihat laporan hasil pesanan
+makanan dan dapat dilihat pada Gambar 7.</p>
+      <p>Gambar 7. Flowchart Proses Bisnis Memilih Pesanan.</p>
+    </sec>
+    <sec id="sec-15">
+      <title>4.1.5 Flowchart Proses Bisnis Laporan Rekap Hasil</title>
+    </sec>
+    <sec id="sec-16">
+      <title>Penjualan</title>
+      <p>Pada flowchart proses bisnis laporan hasil
+penjualan. Melihat laporan hasil penjualan, maka
+owner bisa login ke sistem, Untuk meninjau hasil
+laporan rekap penjualan ujian yang telah dikerjakan
+oleh Admin dapat dilihat pada Gambar 8.</p>
+      <p>Gambar 8. Flowchart Proses Bisnis Laporan Hasil</p>
+      <p>Rekap Penjualan</p>
+    </sec>
+    <sec id="sec-17">
+      <title>4.1.6 Flowchart Proses Bisnis Menerima Data</title>
+    </sec>
+    <sec id="sec-18">
+      <title>Pesanan Pelanggan</title>
+      <p>Pada flowchart proses bisnis menerima data pesanan
+pelanggan. Admin login dan memasukan username dan
+password menerima menu yang dipilih pelanggan dan
+di kirim ke dapur, dapur melihat pesanan dan
+memvalidasi validasi pesanan dan membuat pesanan
+pelanggan dapat dilihat pada Gambar 9.
+Information Technology Journal. Vol 7 No 2 Jul - Des 2021, 38 - 48
+Gambar 9. Flowchart Proses Bisnis Menerima Data</p>
+      <p>Pesanan Pelanggan.</p>
+    </sec>
+    <sec id="sec-19">
+      <title>4.2. Data Flow Diagram Level 1</title>
+      <p>Membuat gambaran rancangan pada DFD level context
+kemudian dijabarkan menjadi DFD level 1 yang
+terdapat beberapa proses yaitu kelola data master,
+pemesanan makanan, Daftar, pembayaran, proses
+memasak, ubah status, dan laporan penjualan dapat
+dilihat pada Gambar 10.</p>
+      <p>Gambar 12. DFD Level 2 Sub proses pembayaran.
+Data Flow diagram level 2 Sub Pemesanan
+Makanan. Pada Proses 1.2.1 yaitu bagaimana
+customer melakukan pemesanan makanan dengan
+melihat produk yang sudah ditampilkan, pada
+proses 1.2.2 customer memasukan data kategori yang
+dipilih, pada proses 1.2.3 customer memasukan data
+produk, pada proses 1.2.4 memasukan data customer,
+pada proses 1.2.5 customer memasukan data kode
+voucher untuk mendapatkan diskon, dan pada
+1.2.6 customer memasukan data transaksi untuk
+bertransaksi Model dapat dilihat pada Gambar 13.</p>
+      <sec id="sec-19-1">
+        <title>Gambar 10. DFD Level 1.</title>
+        <p>Data Flow diagram level 2 Sub Proses Kelola Data
+Master. Pada proses ini yaitu menjelaskan tentang
+bagaimana proses data master. Pada proses 1.1.1
+menginput data mata admin, pada proses 1.1.2 admin
+menginput data transaksi, pada proses 1.1.3 admin
+menginput data produk, pada proses 1.1.4 admin
+menginput data customer, dan pada 1.1.5 admin
+menginput data voucher dapat dilihat pada Gambar 11.</p>
+        <p>Gambar 11. DFD Level 2 Sub Proses kelola Data</p>
+        <p>Master
+Data Flow diagram level 2 Sub Proses
+Pembayaran. Pada proses 1.3.1 yaitu bagaimana
+customer melakukan pembayaran dengan mengklaim
+voucher promosi, pada proses 1.3.2 yaitu proses
+pembayaran dan diskon yang sudah dibayar dan
+keluar hasil invoice pembayaran dapat dilihat pada
+Gambar 12.</p>
+        <p>Gambar 13. DFD Level 2 Sub proses pemesanan
+makanan.</p>
+        <sec id="sec-19-1-1">
+          <title>4.3 Conceptual Data Model (CDM)</title>
+          <p>Merupakan gambaran awal struktur basis data
+yang entitas dan relasi saling berhubungan.
+Berdasarkan sistem informasi penjualan dan promosi
+catering dapur vaganza berbasis web. CDM pada
+sistem ini memiliki 9 entitas dan 9 relasi Model dapat
+dilihat pada Gambar 14.</p>
+          <p>Gambar 14. Conceptual Data Model Sistem</p>
+          <p>Informasi Penjualan dan Promosi.</p>
+        </sec>
+        <sec id="sec-19-1-2">
+          <title>4.4 Physical Data Model (PDM)</title>
+          <p>Berikut adalah hasil rancangan Physical Data
+Model yang merupakan hasil dari generate dari
+Vol 7 No 2 Jul – Des 2021, 39- 48
+Conceptual Data Model, dapat dilihat pada gambar
+15.</p>
+          <p>Gambar 15. Physical Data Model Sistem Model</p>
+          <p>Sistem Informasi Penjualan dan Promosi.</p>
+        </sec>
+      </sec>
+    </sec>
+    <sec id="sec-20">
+      <title>4.5 Flowchart Proses dalam Sistem</title>
+      <p>Algoritma Proses dibuat untuk merepresentasikan
+algoritma atau langkah-langkah instruksi yang
+berurutan dalam suatu sistem.</p>
+      <p>Flowchart Pada Proses promosi voucher pada DFD
+Proses 1.3.1 ditunjukkan pada Gambar 16.</p>
+      <p>Gambar 16. Flowchart Proses Promosi Voucher 1.3.1</p>
+      <p>Flowchart Pada Proses pembayaran pada
+DFD Proses 1.3.2 ditunjukkan pada gambar 17.</p>
+      <p>Gambar 17. Flowchart Proses Pembayaran 1.3.2
+Pada Proses menampilkan produk pada DFD
+1.2.1 ditunjukkan pada gambar 18.</p>
+      <sec id="sec-20-1">
+        <title>Proses Gambar 18. Flowchart Proses Menampilkan Produk 1.2.1</title>
+        <sec id="sec-20-1-1">
+          <title>4.6 User Interface</title>
+          <p>Berikut adalah rancangan user interface pada sistem
+Model sistem informasi penjualan dan promosi. yang
+akan dijabarkan dan dijelaskan sebagai berikut :
+A. Rancangan User Interface Login
+Rancangan ini yaitu halaman login, yang digunakan
+untuk semua user seperti admin, dapur, dan owner, No.
+1 yaitu merupakan logo dari tampilan dapur vaganza
+ini. No. 2 yaitu merupakan untuk memasukan id user
+atau username. No. 3 yaitu untuk memasukan password
+dari user. No.4 yaitu tampilan pilih sebagai admin,
+dapur atau owner No. 5 tombol kembali untuk ke
+halaman awal, No.6 untuk login. Berikut rancangan
+user interface login dapat dilihat pada Gambar 19.
+Information Technology Journal. Vol 7 No 2 Jul - Des 2021, 40 - 48</p>
+          <p>Gambar 19. Rancangan User Interface Login.</p>
+          <p>B. Rancangan User Interface Dashboard Admin
+Pada user interface ini dapat dijabarkan seperti
+berikut. No. 1 merupakan tampilan pada dashboard
+admin. No.2 yaitu merupakan tampilan data kategori.</p>
+          <p>No.3 yaitu tampilan data produk. No.4 yaitu tampilan
+dari kode voucher. No. 5 yaitu tampilan data
+customer. No. 6 tampilan dari data transaksi pesanan.</p>
+          <p>No. 7 tampilan data laporan penjualan No. 8 tampilan
+dari data admin. No. 9 tampilan data dapur. No. 10
+yaitu tampilan owner. No. 11 yaitu tampilan ganti
+password. No. 12 yaitu tampilan untuk logout dapat
+dilihat pada Gambar 20.</p>
+          <p>Gambar 20. Rancangan User Interface Dashboard</p>
+          <p>Admin.</p>
+          <p>C. Rancangan User Interface Home Customer
+Pada user interface ini dapat dijabarkan seperti
+berikut. No. 1 merupakan tampilan pada logo. No.2
+yaitu merupakan tampilan pada pilih kategori. No.3
+yaitu tampilan pada home. No.4 yaitu tampilan pada
+shop No. 5 yaitu tampilan pada login admin. No. 6
+yaitu tampilan pada login/daftar. No. 7 yaitu
+tampilan keranjang pelanggan. No.8 tampilan pada
+nomor telepon admin. No. 9 tampilan header sampul
+pada sistem dapat dilihat pada Gambar 21.</p>
+          <p>Gambar 21. Rancangan User Interface Home</p>
+          <p>Customer.</p>
+          <p>D. Rancangan User Interface Data Kategori
+Pada user interface ini dapat dijabarkan seperti berikut.</p>
+          <p>No. 1 merupakan tampilan pada no kategori. No.2 yaitu
+merupakan tampilan pada nama kategori. No.3 yaitu
+tampilan pada tambah kategori. No.4 yaitu tampilan
+pada searching. No.5 merupakan tampilan edit pada
+kategori. No.6 yaitu tampilan pada hapus kategori dapat
+dilihat pada Gambar 22.</p>
+          <p>Gambar 22. Rancangan User Interface Data Kategori.</p>
+          <p>E. Rancangan User Interface Data Produk
+Pada user interface ini dapat dijabarkan seperti
+berikut.No.1 merupakan tampilan pada judul data
+produk. No.2 yaitu tampilan pada no kategori. No.3
+merupakan tampilan pada nama produk. No.4
+merupakan tampilan dari kategori produk. No.5
+merupakan tampilan dari harga produk. No.6
+merupakan tampilan dari jumlah produk. No.7
+merupakan foto dari produk. No.8 merupakan tambah
+data produk. No. 9 merupakan search dari produk.</p>
+          <p>No.10 merupakan opsi dari produk. No.11 merupakan
+edit dari produk. No.12 merupakan hapus data produk
+dapat dilihat pada Gambar 23.</p>
+          <p>Gambar 23. Rancangan User Interface Data Produk.</p>
+          <p>F. Rancangan User Interface Data Voucher
+Pada user interface ini dapat dijabarkan seperti
+berikut.No.1 merupakan tampilan pada judul data
+voucher. No.2 yaitu tampilan pada no kategori. No.3
+merupakan tampilan pada nama voucher. No.4
+merupakan tampilan pada kode voucher. No. 5
+merupakan tampilan besar diskon. No.6 merupakan
+tampilan pada keterangan voucher. No.7 merupakan
+tampilan pada search voucher. No.8 merupakan
+tampilan pada opsi. No.9 merupakan tampilan pada
+edit dapat dilihat pada Gambar 24.</p>
+          <p>Vol 7 No 2 Jul – Des 2021, 41- 48
+Gambar 24. Rancangan User Interface Data Voucher.</p>
+          <p>G. Rancangan User Interface Data Customer
+Pada user interface ini dapat dijabarkan seperti
+berikut.No.1 merupakan tampilan pada judul data
+customer No.2 yaitu tampilan pada no customer. No.3
+merupakan tampilan pada nama customer. No.4
+merupakan tampilan pada email. No.5 merupakan
+tampilan no hp. No.6 merupakan tampilan pada
+alamat. No.7 merupakan tampilan pada tambah
+customer. No.8 merupakan tampilan pada search.</p>
+          <p>No.9 merupakan tampilan pada opsi. No.10
+merupakan tampilan pada edit. No.11 merupakan
+tampilan pada hapus data customer dapat dilihat pada
+Gambar 25.</p>
+          <p>Gambar 25. Rancangan User Interface Data</p>
+          <p>Customer.</p>
+          <p>H. Rancangan User Interface Data Transaksi
+Pada user interface ini dapat dijabarkan seperti
+berikut.No.1 merupakan tampilan pada judul data
+transaksi pesanan. No.2 yaitu tampilan pada no
+transaksi. No.3 merupakan tampilan pada no.invoice.</p>
+          <p>No.4 merupakan tampilan pada tanggal transaksi.</p>
+          <p>No.5 merupakan tampilan customer transaksi. No.6
+merupakan tampilan pada total bayar transksi. No.7
+merupakan tampilan pada status transaksi. No.8
+merupakan tampilan pada update status. No.9
+merupakan tampilan pada search. No.10 merupakan
+tampilan pada opsi No.11 merupakan tampilan pada
+bukti pembayaran. No.12 merupakan tampilan data
+invoice. No.13 merupakan tampilan hapus data dapat
+dilihat pada Gambar 26.</p>
+          <p>Gambar 26. Rancangan User Interface Data</p>
+          <p>Transaksi.</p>
+        </sec>
+      </sec>
+    </sec>
+    <sec id="sec-21">
+      <title>4.7. Implementasi</title>
+      <p>A. Halaman Login
+Pada tampilan ini, semua user yang akan
+mengakses sistem ini harus memasukan username
+dan password agar dapat masuk ke dalam sistem
+dapat dilihat pada Gambar 27.</p>
+      <sec id="sec-21-1">
+        <title>Gambar 27. halaman login</title>
+        <p>B. Halaman Home Customer
+Pada halaman home customer ini
+menampilkan tampilan data kategori, logo, shop,
+login admin, login customer, keranjang belanja, no
+telepon admin, header sampul dan promosi discount,
+dapat dilihat pada Gambar 28.</p>
+      </sec>
+      <sec id="sec-21-2">
+        <title>Gambar 28. Halaman Home Customer</title>
+        <p>C. Halaman Dashboard Admin
+Pada halaman dashboard admin ini
+menampilkan tampilan data kategori, produk, data
+voucher, data transaksi, laporan penjualan, data
+admin, data dapur, dan data owner, dapat dilihat pada
+Gambar 29.</p>
+        <p>Gambar 29. Halaman Dashboard Admin.
+Information Technology Journal. Vol 7 No 2 Jul - Des 2021, 42 - 48
+D. Halaman Tambah Data Kategori
+Pada halaman menampilkan data kategori terdiri
+dari no, nama, dan opsi dan terdapat tambah untuk
+menambah data kategori dapat dilihat pada Gambar
+30.</p>
+      </sec>
+      <sec id="sec-21-3">
+        <title>Gambar 30. Halaman Data Kategori.</title>
+        <p>E. Halaman Tambah Kategori
+Pada halaman kategori ini menampilkan data tambah
+kategori untuk menambahkan data kategori baru
+tedapat nama, masukan nama kategori yang akan
+diinput ke dalam sistem dan dapat di lihat pada
+Gambar 31.</p>
+        <p>Gambar 31. halaman Tambah Kategori.</p>
+        <p>F. Halaman Data Produk
+Halaman menampilkan data produk terdiri dari no,
+nama produk, kategori, harga, jumlah, foto dan opsi
+terdapat tambah untuk menambah data produk
+dapat dilihat pada Gambar 32.</p>
+      </sec>
+      <sec id="sec-21-4">
+        <title>Gambar 32. Halaman Data Produk.</title>
+        <p>G. Halaman Tambah Produk
+Pada tampilan tambah produk ini
+menampilkan untuk menambahkan data produk,
+terdiri dari nama produk, kategori produk, harga yang
+akan di input ke dalam sistem dapat dilihat pada
+Gambar 33.</p>
+      </sec>
+      <sec id="sec-21-5">
+        <title>Gambar 33. Halaman Tambah Produk.</title>
+        <p>H. Halaman Data Voucher
+Halaman menampilkan data voucher terdiri dari no,
+nama voucher, besar diskon, keterangan diskon
+terdapat opsi untuk mengedit kode voucher baru
+dapat dilihat pada Gambar 34.</p>
+      </sec>
+      <sec id="sec-21-6">
+        <title>Gambar 34. Halaman Data Voucher.</title>
+        <p>I. Halaman Edit Voucher
+Pada tampilan edit voucher ini menampilkan untuk
+mengedit data voucher, terdiri dari nama voucher,
+kode voucher, dan keterangan diskon, diskon
+yang akan di input ke dalam sistem dapat dilihat
+pada Gambar 35.</p>
+      </sec>
+      <sec id="sec-21-7">
+        <title>Gambar 35. Halaman Edit Voucher.</title>
+        <p>J. Halaman Data Customer
+Pada halaman customer menampilkan data customer
+terdiri dari no, nama, email, hp, alamat terdapat
+tambah customer untuk menambah customer baru
+dapat dilihat pada Gambar 36.
+Vol 7 No 2 Jul – Des 2021, 43- 48
+untuk melihat hasil laporan penjualan dari admin
+dapat dilihat pada Gambar 39.</p>
+      </sec>
+      <sec id="sec-21-8">
+        <title>Gambar 36. Halaman Data Customer</title>
+        <p>K. Halaman Tambah Customer
+Pada tampilan Tambah customer ini
+menampilkan untuk mengedit data voucher, terdiri
+dari nama voucher, kode voucher, dan keterangan
+diskon, diskon yang akan di input kedalam sistem
+dapat dilihat pada Gambar 37.</p>
+        <p>Gambar 39. Halaman Laporan Penjualan.</p>
+        <p>N. Halaman Data Admin
+Pada halaman admin menampilkan data admin
+memiliki no, nama, username, foto dan opsi untuk
+mengedit pada admin dapat dilihat pada Gambar
+40.</p>
+        <p>Gambar 37. Halaman Tambah Customer.</p>
+        <p>L. Halaman Data Transaksi
+Pada halaman transaksi menampilkan data transaksi
+menampilkan no, no.invoice tanggal, customer,
+total bayar, status, update status dan opsi untuk
+melihat bukti pembayaran dan print invoice untuk
+cetak data transaksi dari admin dapat dilihat pada
+Gambar 38.</p>
+      </sec>
+      <sec id="sec-21-9">
+        <title>Gambar 38. Halaman Data Transaksi.</title>
+        <p>M. Halaman Data Laporan Penjualan
+Pada halaman laporan menampilkan data laporan
+penjualan memiliki filter laporan untuk memilih
+tanggal, bulan dan tahun, dapat memilih melihat
+tampilan laporan filter, terdiri dari no.invoice tanggal
+masuk, nama, jumlah, status, dan dapat di print</p>
+      </sec>
+      <sec id="sec-21-10">
+        <title>Gambar 40. Halaman Data Admin.</title>
+        <p>O. Halaman Tambah Admin
+Pada tampilan admin ini menampilkan tambah data
+admin untuk menambahkan admin, terdiri dari nama,
+username, password, dan foto dan di input kedalam
+sistem. Dapat dilihat pada Gambar 41.</p>
+      </sec>
+      <sec id="sec-21-11">
+        <title>Gambar 41. Halaman Tambah Admin.</title>
+        <p>P. Halaman Data Dapur
+Pada halaman dapur menampilkan data dapur
+memiliki no, nama, username, foto dan opsi untuk
+mengedit pada admin dapat dilihat pada Gambar
+42.</p>
+      </sec>
+      <sec id="sec-21-12">
+        <title>Gambar 42. Halaman Data Dapur.</title>
+        <p>Information Technology Journal. Vol 7 No 2 Jul - Des 2021, 44 - 48
+Q. Halaman Tambah Dapur
+Pada tampilan dapur ini menampilkan tambah
+data dapur untuk menambahkan dapur, terdiri dari
+nama, username, password, dan foto dan di-input ke
+dalam sistem dapat dilihat pada Gambar 43.</p>
+        <p>U. Halaman Hasil Laporan penjualan
+Pada halaman hasil laporan penjualan menampilkan
+data data laporan penjualan memiliki no, invoice,
+tanggal masuk, nama, jumlah, dan status pada hasil
+laporan sistem dapat dilihat pada Gambar 47.</p>
+      </sec>
+      <sec id="sec-21-13">
+        <title>Gambar 43. Halaman Tambah Dapur.</title>
+        <p>R. Halaman Data Owner
+Pada halaman owner menampilkan data owner
+memiliki no, nama, username, foto dan opsi untuk
+mengedit pada admin dapat dilihat pada Gambar
+44.</p>
+      </sec>
+      <sec id="sec-21-14">
+        <title>Gambar 44. Halaman Data Owner.</title>
+        <p>S. Halaman Tambah Owner
+Pada tampilan owner ini menampilkan tambah
+data owner untuk menambahkan, terdiri dari nama,
+username, password, dan foto ke dalam sistem, dapat
+dilihat pada Gambar 45.</p>
+      </sec>
+      <sec id="sec-21-15">
+        <title>Gambar 45. Halaman Tambah Owner.</title>
+        <p>T. Halaman Laporan penjualan
+Pada halaman laporan owner menampilkan data owner
+memiliki filter laporan bulan dan tahun, terdiri dari no,
+invoice, tanggal masuk, nama, jumlah dan status pada
+sistem dapat dilihat pada Gambar 46.</p>
+        <p>Gambar 46. Laporan Penjualan.
+No</p>
+      </sec>
+      <sec id="sec-21-16">
+        <title>Gambar 47. Laporan Penjualan.</title>
+      </sec>
+    </sec>
+    <sec id="sec-22">
+      <title>4.8. Hasil Uji Coba</title>
+      <p>Pada uji coba ini peneliti melangsungkan proses
+pengujian pada sistem informasi penjualan dan
+promosi dapur vaganza untuk kelayakan dari pada
+sistem yang telah dibuat dan tahapan ini
+menggunakan black box testing untuk menguji
+kinerja dari sistem.</p>
+      <p>A. Tampilan Login
+Hasil dari pengujian untuk tampilan proses login
+dapat dilihat pada tabel 2.</p>
+      <p>Tabel 2. Hasil Pengujian Halaman Login
+No</p>
+      <p>Hasil yang diharapkan
+Vol 7 No 2 Jul – Des 2021, 45- 48
+Menekan tombol
+”Data Customer”
+Menekan tombol
+“Transaksi
+Pesanan”
+Menekan tombol
+“Laporan
+Penjualan”
+Menekan tombol
+“Data Admin”
+Menekan tombol
+“Data Dapur”</p>
+      <p>Sistem menampilkan
+halaman “Data
+Customer”
+Sistem menampilkan
+halaman “Transaksi
+Pesanan”
+Sistem menampilkan
+“Laporan Penjualan”
+Sistem menampilkan
+“Data Admin”
+Sistem menampilkan
+“Data Dapur”
+valid
+C. Halaman Data Kategori
+Hasil dari pengujian untuk tampilan data kategori
+dapat dilihat pada tabel 4.</p>
+      <p>No
+5
+6
+7
+8
+9
+1
+2
+3
+4
+1
+2
+3
+4
+D. Halaman Data Produk
+Hasil dari pengujian untuk tampilan
+dapat dilihat pada tabel 5.</p>
+      <p>data siswa
+No</p>
+      <p>Tabel 5. Hasil Pengujian Tampilan Data Produk.</p>
+      <p>Skenario Hasil yang Kesimpulan</p>
+      <p>Pengujian diharapkan
+Menekan tombol Sistem menampilkan Valid
+“Tambah Produk” halaman “tambah data</p>
+      <p>produk”
+Mengetik kategori Sistem menampilkan valid
+pada “Search” searching nama
+produk yang sesuai
+kategori
+Menekan tombol Sistem menampilkan Valid
+opsi “Edit” halaman “edit data”
+Menekan Tombol Sistem akan valid
+“Hapus” menampilkan
+penghapusan data
+produk
+E. Halaman Data Voucher
+Hasil dari pengujian untuk tampilan data voucher
+dapat dilihat pada tabel 6.
+valid
+valid
+valid
+Information Technology Journal. Vol 7 No 2 Jul - Des 2021, 46 - 48
+Menekan Tombol
+“Print Laporan”</p>
+      <p>Sistem akan
+menampilkan “cetak”
+laporan penjualan</p>
+      <p>Halaman Data Admin
+Hasil dari pengujian untuk tampilan data admin dapat
+dilihat pada tabel 10.</p>
+      <p>No
+valid</p>
+      <p>M. Halaman Data Pesanan Dapur
+Hasil dari pengujian untuk tampilan data menu dapur
+dapat dilihat pada tabel 14.</p>
+      <p>Tabel 14. Hasil Pengujian Tampilan Data Pesanan</p>
+      <p>Dapur.
+4
+1
+2
+3
+1
+2
+3
+4
+valid
+valid
+Valid
+valid
+valid
+Valid
+Valid
+Kesimpulan
+valid
+valid
+Valid
+valid
+valid
+Hasil dari pengujian untuk tampilan data owner dapat
+dilihat pada tabel 12.</p>
+      <p>Tabel 12. Hasil Pengujian Tampilan Data Owner.</p>
+      <p>Skenario</p>
+      <p>Pengujian
+Mengetik tombol
+“Search” nama
+username pada
+owner
+Menekan tombol
+opsi “Edit”
+Menekan tombol
+“Tambah owner”</p>
+      <p>Hasil yang
+diharapkan
+Sistem menampilkan
+searching nama owner
+Sistem menampilkan
+halaman “edit owner”
+Sistem menampilkan
+“tambah data owner”</p>
+      <p>Kesimpulan
+valid
+valid
+Valid
+L. Halaman Data Menu Dapur
+Hasil dari pengujian untuk tampilan data menu dapur
+dapat dilihat pada tabel 13.</p>
+      <p>Tabel 13. Hasil Pengujian Tampilan Data Dapur.</p>
+      <p>Skenario</p>
+      <p>Pengujian
+Mengetik tombol
+“Search” nama
+produk pada dapur</p>
+      <p>Hasil yang
+diharapkan
+Sistem menampilkan
+searching nama dapur</p>
+      <p>Kesimpulan
+valid</p>
+    </sec>
+    <sec id="sec-23">
+      <title>PENUTUP</title>
+    </sec>
+    <sec id="sec-24">
+      <title>5.1. Kesimpulan</title>
+      <p>Berdasarkan dari hasil dan analisa terhadap Sistem
+Informasi Penjualan Dan Promosi Dapur Vaganza
+Berbasis Web dibuat, kesimpulannya sebagai berikut :
+(1) Sistem Penjualan Dan Promosi dapat membantu
+proses penjualan catering dengan baik berdasarkan
+hasil fitur pengolahan penjualan dan diskon promosi
+melalui web. (2) Sistem Penjualan Dan Promosi
+mempermudah proses pembayaran berdasarkan hasil
+fitur laporan transaksi pelanggan yang dapat di lihat di
+web. (3) Sistem dapat menampilkan hasil laporan per
+periode.
+5.2. Saran
+Saran hasil analisis terhadap Sistem Informasi
+Penjualan Dapur Vaganza yang telah dibuat yaitu
+pengembangan Sistem Informasi Penjualan Dapur
+Vaganza Berbasis Web. Pada Sistem Penjualan
+Berbasis Web agar mempermudah penjualan dan
+mempermudah customer melakukan pemesanan dan
+pembayaran secara online tanpa harus datang ke lokasi
+tersebut.
+Vol 7 No 2 Jul – Des 2021, 47- 48</p>
+    </sec>
+    <sec id="sec-25">
+      <title>DAFTAR PUSTAKA</title>
+      <p>
+        [1] R. Sutedja. Imbar and B, Pemrograman pada
+Web-Commerce dengan menggunakan
+Oracle dan ASP. Bandung: Informatika,
+2007.
+[2] Andriansyah, Doni. 2016. Membuat Sistem
+Informasi Penjualan. Jogyakarta: GAVA
+MEDIA.
+[3] Alvan Lovi, 2003. Promosi adalah serangkaian
+teknik yang diproses untuk mencapai
+sasaranpenjualan. Simlidot. Revisi
+[
+        <xref ref-type="bibr" rid="ref1">4</xref>
+        ] Kotler, 2002. Strategi Promosi Penjualan Produk
+Beserta Tujuan dan Klasifikasi, Jurnal
+Manajemenen.
+[5] Sunarto, Andi. 2009. Seluk Beluk E-Commerce.
+      </p>
+      <p>Jogyakarta: Graha Ilmu.
+[6] Al Fatta, Hanif. 2008. Analisa dan Perancangan
+Sistem Informasi. Andi Susilo Publisher :
+Jakarta.
+[7] Widariyanto, Agung. Analisa Pengaruh Atribut
+Kuatiti Jasa Terhadap Kepuasan Produk di
+Maxima Komputer Jakarta (Survei pada CV.
+Maxima Komputer Jakarta). Skripsi (Tidak
+Dipublikasikan).Jakarta: FE UNS, 2002
+[8] Kotler, Philip. Manajemen Pemasaran: Analisis,
+Perencanaan, Implementasi dan Proses
+Kontrol. Jakarta: PT Prenhallindo, 1997.
+[9] Galie Prakoso, 2012. Flowchart disusun pada
+dengan simbol-simbo ditentukan. Simbol
+pakai sebagai proses sarana alat bantu
+menggambarkan, Galiepikun.
+[10] Andre taula, 2019. Tutorial Belajar PHP
+Pengertian Dan Fungsi PHP Pemrograman
+Web, Dunia Komputer.
+[11] Andy nugroho, 2019. XAMPP Lengkap Dengan
+Fungsi Dan Cara Instalasi, PT Qwords
+Company International.
+[12] Effren manula, 2019. Metode prototype,
+perangkat lunak pada proses yang dihasilkan
+kemudian pada presentasikankepada klien,
+Medium.
+[13] Tristin Hartono, Entity Relationship Diagram
+(ERD): PT Dewaweb AKR Tower – 16th Floor</p>
+      <sec id="sec-25-1">
+        <title>Jakarta 11530</title>
+        <p>[Halaman ini dibiarkan kosong]</p>
+      </sec>
+    </sec>
+  </body>
+  <back>
+    <ref-list>
+      <ref id="ref1">
+        <mixed-citation>
+          <article-title>Tabel 4. Hasil Tampilan Data Kategori. Skenario Hasil yang Kesimpulan Pengujian diharapkan</article-title>
+        </mixed-citation>
+      </ref>
+      <ref id="ref2">
+        <mixed-citation>
+          <source>Information Technology Journal. Vol 7 No 2 Jul - Des</source>
+          <year>2021</year>
+          ,
+          <fpage>48</fpage>
+          -
+          <lpage>48</lpage>
+        </mixed-citation>
+      </ref>
+    </ref-list>
+  </back>
+</article>

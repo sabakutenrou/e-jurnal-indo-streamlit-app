@@ -1,0 +1,574 @@
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD v1.0 20120330//EN" "JATS-archivearticle1.dtd">
+<article xmlns:xlink="http://www.w3.org/1999/xlink">
+  <front>
+    <journal-meta>
+      <journal-title-group>
+        <journal-title>e-Proceeding of Engineering :</journal-title>
+      </journal-title-group>
+    </journal-meta>
+    <article-meta>
+      <title-group>
+        <article-title>Klasifikasi Dokumen Menggunakan Metode k-Nearest Neighbor (kNN) dengan Information Gain Document Classification using k-Nearest Neighbor (kNN) Method with Information Gain</article-title>
+      </title-group>
+      <contrib-group>
+        <contrib contrib-type="author">
+          <string-name>Pratama Dwi Nugraha</string-name>
+          <email>1pratamadwinugraha@gmail.com</email>
+          <xref ref-type="aff" rid="aff0">0</xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <string-name>Said Al Faraby</string-name>
+          <xref ref-type="aff" rid="aff0">0</xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <string-name>Adiwijaya</string-name>
+          <email>adiwijaya@telkomuniversity.ac.id</email>
+          <xref ref-type="aff" rid="aff0">0</xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <string-name>Prodi S</string-name>
+          <xref ref-type="aff" rid="aff0">0</xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <string-name>Teknik Informatika</string-name>
+          <xref ref-type="aff" rid="aff0">0</xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <string-name>Fakultas Informatika</string-name>
+          <xref ref-type="aff" rid="aff0">0</xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <string-name>Universitas Telkom</string-name>
+          <xref ref-type="aff" rid="aff0">0</xref>
+        </contrib>
+        <aff id="aff0">
+          <label>0</label>
+          <institution>Kata kunci : Document Classification, K-Nearest Neighbor</institution>
+          ,
+          <addr-line>Information Gain</addr-line>
+        </aff>
+      </contrib-group>
+      <pub-date>
+        <year>2018</year>
+      </pub-date>
+      <volume>5</volume>
+      <issue>1</issue>
+      <fpage>2</fpage>
+      <lpage>11</lpage>
+      <abstract>
+        <p>Pada saat ini, informasi sangatlah penting bagi semua orang, kebutuhan akan informasi semaking meningkat seiring dengan semakin canggihnya teknologi sekarang ini. Informasi yang dibutuhkan saat ini semakin tinggi, baik informasi bersifat umum maupun informasi bersifat khusus. Tapi terkadang informasi yang didapat tidak sesuai dengan apa yang diinginkan. Sehingga muncul sebuah permasalah pada saat pencarian data yang dibutuhkan. Sehingga diperlukan sebuah cara untuk memperoleh data yang valid. Document Classification (Klasifikasi dokumen) dapat membantu dalam proses pencarian sebuah data atau dokumen yang valid sesuai dengan apa yang kita butuhkan. Penggunaan klasifikasi dokumen tidak lain untuk membantu dalam proses pencarian data dengan cepat, tepat dan valid. Klasifikasi dokumen mengelompokan dokumen yang sesuai dengan kategori yang terkandung pada dokumen tersebut. Untuk menyelesaikan permasalahan yang ada, metode yang akan digunakan pada penelitian ini yaitu Metode K-Nearest Neighbot (KNN) dan Information Gain.</p>
+      </abstract>
+    </article-meta>
+  </front>
+  <body>
+    <sec id="sec-1">
+      <title>1. PENDAHULUAN</title>
+      <p>Pada sekarang ini kebutuhan akan informasi semakin meningkat seiring dengan berkembangnya
+teknologi dalam menyebarkan informasi kepada masyarakat. Informasi yang dibutuhkan mengalami banyak
+perkembangan mulai dari informasi yang bersifat umum hingga informasi yang bersifat khusus. Banyaknya
+informasi dan dokumen yang tersedia mendorong pengguna untuk mencari cara lebih cepat dalam mendapatkan
+informasi dan dokumen yang dibutuhkan. Jika waktu pencarian terlalu lama, maka manfaat dari informasi yang
+diperoleh dapat berkurang. Hal ini dikarenakan informasi yang diperoleh sudah masuk waktu yang sudah tidak
+berguna atau tidak valid.</p>
+      <p>Klasifikasi dokumen dapat membantu proses pencarian sebuah dokumen dengan cepat dan tepat.
+Klasifikasi dokumen mengelompokan dokumen yang sesuai dengan katergori yang terkandung pada dokumen
+tersebut. Permasalahan klasifikasi dokumen bisa diselesaikan dengan banyak metode, salah satu diantaranya
+adalah K-Nearest Neighbor (KNN). Algoritma KNN merupakan sebuah metode untuk melakukan klasifikasi
+terhadap objek yang berdasarkan dari data yang jaraknya paling dekat dengan objek tersebut. Algoritma KNN
+merupakan sebuah metode untuk melakukan klasifikasi terhadap objek berdasarkan data pembelajaran yang
+jaraknya paling dekat dengan objek tersebut[6]. Algoritma KNN adalah algoritma yang kompleks, tapi
+membutuhkan proses yang lama dalam pengklasifikasiannya. Karena kompleksitas yang tinggi, oleh karena itu
+dibutuhkan metode untuk meningkatkan performanya kecepatan waktu untuk proses klasifikasinya.</p>
+      <p>Salah satu metode untuk meningkatkannya adalah Information Gain. Dimana pada pemilihan metode ini
+bertujuan untuk menyelesaikan masalah tentang klasifikasi data atau dokumen dimana pada saat metode ini
+berjalan, performasi kecepatan waktu pada saat ada data yang masuk pada proses klasifikasi akan meningkat.
+Sehingga apa yang menjadi masalah tentang klasifikasi data atau dokumen bisa diselesaikan. Information Gain
+adalah ukuran efektifitas suatu attribut dalam menglasifikasikan data. Information gain juga merupakan
+pengurangan yang diharapkan dalam entropy. Dalam machine learning, ini dapat digunakan untuk menentukan
+urutan atribut atau mempersempit atribut yang dipilih.</p>
+      <p>Keterangan :
+ (  ,   )
+(  ), (  )
+(  )
+i,j
+n
+2.7.
+sebagai berikut :</p>
+      <p>[5]</p>
+      <sec id="sec-1-1">
+        <title>Keterangan : c</title>
+        <p>2.1.</p>
+      </sec>
+    </sec>
+    <sec id="sec-2">
+      <title>TINJAUAN PUSTAKA</title>
+    </sec>
+    <sec id="sec-3">
+      <title>Document Classifciation</title>
+      <p>Document Classification (klasifikasi dokumen) adalah sebuah proses untuk
+menanggulangi
+munculnya sebuah masalah sederhana akan jumlah dokumen yang setiap hari semakin bertambah jumlahnya.
+Manfaat dari klasifikasi dokumen adalah untuk pengorganisasian dokumen[2]. Penggunaan klasifikasi
+dokumen tidak lain untuk membantu proses pencarian sebuah dokumen dengan cepat dan tepat. Klasifikasi
+dokumen mengelompokan dokumen yang sesuai dengan katergori yang terkandung pada dokumen tersebut.
+2.2.</p>
+    </sec>
+    <sec id="sec-4">
+      <title>K-Nearest Neighbor</title>
+      <p>KNN adalah salah satu metode dimana metode ini melakukan klasifikasi berdasarkan data training
+atau data pembelajaran dilihat dari jarak yang paling dekat dengan objek berdasarkan nilai k. Metode ini
+bertujuan untuk mengklasifikasikan objek baru berdasarkan atribut dan training sample. Diberikan suatu titik
+query, selanjutnya akan ditemukan sejumlah K objek atau titik training yang paling dekat dengan titik query.
+Nilai prediksi dari query akan ditentukan berdasarkan klasifikasi tetanggaan (Tri, 2010).</p>
+      <p>Sebelum</p>
+      <p>melakukan perhitungan dengan metode K-Nearest Neighbor, terlebih dahulu harus
+menentukan data latih dan data uji. Kemudian akan dilakukan proses perhitungan untuk mencari jarak
+menggunakan Euclidean. Teknik ini sangat sederhana dan mudah diimplementasikan. Mirip dengan teknik
+clustering, yaitu mengelompokkan suatu data baru berdasarkan jarak data baru itu ke beberapa data/tetangga
+terdekat. Pertama sebelum mencari jarak data ke tetangga adalah menentukan nilai K tetangga (neighbor). Lalu,
+untuk mendefinisikan jarak antara dua titik yaitu titik pada data training dan titik pada data testing, maka
+digunakan rumus Euclidean.</p>
+      <p>(    ) =
+√∑ =1 (  (  ) −   (  )) [1]
+2
+: Jarak Euclidean (Euclidean Distance).
+: record ke-i , record ke-j
+: data ke-r
+: dimensi objek[3]</p>
+      <sec id="sec-4-1">
+        <title>Information Gain</title>
+        <p>Informasi Gain dan Entropy adalah fungsi dari distribusi probabilitas yang mendasari teori
+komunikasi. Ini merupakan penurunan diharapkan entropy disebabkan oleh partisi sampel sesuai dengan atribut
+ini[2]. Entropy mengukur suatu ketidakpastian dari suatu variabel acak. Berdasarkan entropy, untuk fitur
+pilihan ukuran yang disebut "Informasi Gain" didefinisikan.[9]</p>
+        <p>Entropy adalah suatu parameter untuk mengukur tingkat keberagaman (heterogenitas) dari kumpulan
+data. Semakin heterogenitas, nilai entropy semakin besar[5]. Fitur yang dipakai dalamFungsi entropy dituliskan
+
+( ) =
+∑ −   log2  
+
+: jumlah proporsi sampe (peluang) untuk kelas i
+Information Gain merupakan ukuran efektifitas suatu attribut dalam menglasifikasikan data.</p>
+        <sec id="sec-4-1-1">
+          <title>Keterangan :</title>
+          <p>A : attribut
+V : nilai mungkin untuk attribut A
+Values(A) : himpunan nilai yang mungkin untuk attribut A
+|  | : jumlah sampel untuk nilai v
+| | : jumlah seluruh sampel data
+Entropy(  ) : Entropy untuk sampel yang memiliki nilai v
+3.</p>
+        </sec>
+      </sec>
+    </sec>
+    <sec id="sec-5">
+      <title>PERANCANGAN SISTEM</title>
+    </sec>
+    <sec id="sec-6">
+      <title>3.1. Dataset</title>
+      <p>Data yang digunakan merupakan data text categorization yang diperoleh dari R8 of Reuters-21578
+Text Categorization Collection Data Set. Berikut ini adalah sampel data yang akan digunakan pada tugas akhir
+ini [14].</p>
+      <p>1. Sampel data training :</p>
+      <p> earn champion products ch approves stock split champion products inc said its board
+of directors approved a two for one stock split of its common shares for shareholders of record as of april the
+company also said its board voted to recommend to shareholders at the annual meeting april an increase in the
+authorized capital stock from five mln to mln shares reuter</p>
+      <sec id="sec-6-1">
+        <title>2. Sampel data testing :</title>
+        <p> interest the unilever spokesman declined to say how much the group expected to receive
+for stauffer chesebrough s footwear and tennis racket businesses are also likely to be disposed of he added
+immediately available financial information on stauffer which is wholly owned was limited he added nine
+month sales to september were about billion dlrs unilever aquired chesebrough for billion dlrs in order to benefit
+from its well known toiletry brands and food products reuter</p>
+        <sec id="sec-6-1-1">
+          <title>Tabel 3.1 Total Dokumen R8 of Reuters-21578</title>
+        </sec>
+        <sec id="sec-6-1-2">
+          <title>Class# train docs Total # docs acq crude</title>
+          <p>earn
+grain
+ship
+trade
+interest
+money-fx
+R8
+# test docs
+1596</p>
+          <p>253
+2840</p>
+          <p>41
+190
+206
+108</p>
+        </sec>
+      </sec>
+    </sec>
+    <sec id="sec-7">
+      <title>Total</title>
+    </sec>
+    <sec id="sec-8">
+      <title>3.2. Alur Pembuatan Model</title>
+      <p>Pada pembuatan sistem ini ada beberapa tahapan alur perancangan sistem yang harus dilakukan
+untuk menjamin bahwa proses pembuatan sistem sesuai dengan kebutuhan. Tahapan dari alur perancangan sistem
+yang akan dibangun pada sistem bisa dilihat pada gambar 3.1.</p>
+      <p>mulai
+dataset
+mencari
+atribut
+information gain
+metode KNN</p>
+      <p>prediksi
+KNN + IG</p>
+      <p>Hasil</p>
+      <sec id="sec-8-1">
+        <title>Selesai</title>
+        <p>Gambar 3.1 Alur Perancangan Sistem [7]</p>
+        <p>Dari alur yang ada diatas, dapat dijelaskan bahwa untuk membangun sebuah sistem dengan kebutuhan
+tertentu diperlukan atau harus melakuka tahapan-tahapan untuk menjamin bahwa proses pembuatan sistem sesuai
+dengan kebutuhan, tahapan-tahapan tersebut terdefinisikan sesuai dengan apa yang dibutuhkan, antara lain :
+1.
+2.</p>
+        <p>Dataset</p>
+        <p>Mencari Atribut
+3. Fitur Seleksi Information Gain</p>
+        <p>Metode KNN
+5. Prediksi KNN dan IG</p>
+        <p>Hasil</p>
+      </sec>
+    </sec>
+    <sec id="sec-9">
+      <title>Hasil Pengujian dan Analisis</title>
+    </sec>
+    <sec id="sec-10">
+      <title>4.1. Skenario</title>
+      <p>Skenario pengujian pada tugas akhir ini meliputi :
+1.
+2.</p>
+      <p>
+        Klasifikasi KNN dengan metode pencarian nilai k pada dataset, menggunakan nilai k yang beragam (
+        <xref ref-type="bibr" rid="ref1 ref2 ref4 ref6">1,3,5,7</xref>
+        ).
+      </p>
+      <p>
+        Klasifikasi KNN dengan metode pencarian nilai k pada dataset, menggunakan nilai k yang beragam (
+        <xref ref-type="bibr" rid="ref1 ref2 ref4 ref6">1,3,5,7</xref>
+        ) dengan featuring selection Information gain.
+      </p>
+      <p>Klasifikasi KNN dengan metode pencarian nilai gain pada dataset, menggunakan nilai gain yang beragam
+dengan featuring selection Information gain.</p>
+    </sec>
+    <sec id="sec-11">
+      <title>4.2. Pengujian Klasifikasi kNN dengan Information Gain</title>
+      <sec id="sec-11-1">
+        <title>Tabel 4.1 Hasil Pengujian Klasifiakasi KNN</title>
+        <p>Berdasarkan tabel 4.1 semua kombinasi pada data training memiliki akurasi lebih tinggi dari pada data
+testing. Berdasarkan hasil dari seluruh percobaan diatas, maka metode KNN tanpa Information Gain memiliki
+rata-rata nilai akurasi yaitu sebesar 93,94438% pada seluruh dokumen training dengan berbagai
+parameterparameter. Pada data hasil diatas, nilai akurasi tertinggi yaitu pada k = 1 sebesar 99,8889 %.</p>
+        <p>Pada data training, nilai akurasi paling tinggi saat k = 1 yaitu 99,8889%, dan nilai akurasi paling rendah
+saat k = 11(nilai k tertinggi) yaitu 91,8889%. Berbeda dengan data testing, nilai akurasi paling tinggi yaitu saat k
+= 5 dan k = 7 yaitu 94% dan nilai akurasi paling rendah saat k = 1 dan k = 11 yaitu 90%.</p>
+        <p>Dari hasil percobaan tabel diatas, metode klasifikai KNN terhadap nilai akurasinya sudah cukup baik, ini
+didukung oleh dataset yang bagus dan juga metode klasifikasi KNN ini sangat cocok untuk data yang noisy
+ataupun data yang jumlahnya cukup besar.</p>
+      </sec>
+    </sec>
+    <sec id="sec-12">
+      <title>4.3 Hasil Perbandingan Pengujian KNN dan KNN+IG Terhadap Tingkat Kecepatan Waktu</title>
+      <p>K = 1
+1014
+236</p>
+      <p>K = 3
+1020
+237</p>
+      <p>K = 5
+1014
+240</p>
+      <p>Berdasarkan hasil dari seluruh percobaan diatas, maka metode KNN tanpa Information Gain memiliki
+rata-rata kecepatan waktu yaitu sebesar 1017(s) pada seluruh dokumen training dengan berbagai
+parameterparameter. Dan dengan menggunakan kombinasi metode KNN dengan Information Gain memiliki rata-rata
+kecepatan waktu sebesar 235,5(s) pada seluruh dokumen training dengan berbagai parameter-parameter. Hal ini
+menunjukan bahwa, kecepatan waktu dalam proses klasifikasi KNN+IG jauh lebih baik dibandingkan hanya
+memakai KNN saja. Ini dipengaruhi oleh pereduksian atribut yang dilakukan saat featuring selection
+menggunakan Information Gain.</p>
+      <p>HASIL PENGUJIAN DATA TESTING NILAI K</p>
+      <p>TERHADAP KECEPATAN WAKTU
+117</p>
+      <p>29
+k = 3
+117
+29
+117</p>
+      <p>28
+k = 5
+117
+28</p>
+      <p>Berdasarkan hasil dari seluruh percobaan diatas, maka metode KNN tanpa Information Gain memiliki
+rata-rata kecepatan waktu yaitu sebesar 118,6667(s) pada seluruh dokumen testing dengan berbagai
+parameterparameter. Dan dengan menggunakan kombinasi metode KNN dengan Information Gain memiliki rata-rata
+kecepatan waktu sebesar 28,5(s) pada seluruh dokumen testing dengan berbagai parameter-parameter. Hal ini
+menunjukan bahwa, kecepatan waktu dalam proses klasifikasi KNN+IG jauh lebih baik dibandingkan hanya
+memakai KNN saja. Ini dipengaruhi oleh pereduksian atribut yang dilakukan saat featuring selection
+menggunakan Information Gain.</p>
+    </sec>
+    <sec id="sec-13">
+      <title>Kesimpulan</title>
+      <p>1.</p>
+      <p>Dari hasil pengujian dan analisis dapat disimpulkan bahwa:
+Berdasarkan hasil pengujian, metode KNN tanpa Information Gain memiliki rata-rata nilai akurasi yaitu
+sebesar 93,94438% pada seluruh dokumen training dengan berbagai parameter-parameter. Dan dengan
+menggunakan kombinasi metode KNN dengan Information Gain memiliki rata-rata nilai akurasi sebesar
+93,4999% pada seluruh dokumen training dengan berbagai parameter-parameter.</p>
+      <p>Berdasarkan hasil pengujian, metode KNN tanpa Information Gain memiliki rata-rata nilai akurasi yaitu
+sebesar 92% pada seluruh dokumen testing dengan berbagai parameter-parameter. Dan dengan
+menggunakan kombinasi metode KNN dengan Information Gain memiliki rata-rata nilai akurasi sebesar
+90,5% pada seluruh dokumen testing dengan berbagai parameter-parameter.</p>
+      <p>Dari dataset yang ada, terdapat 19.985 atribut. Dengan menggunakan featuring selection Information
+Gain atribut direduksi menjadi 3.185, dengan batas gain rata-rata yaitu 0,0025.</p>
+      <p>Penggunaan parameter yang berbeda membuat nilai akurasi dan kecepatan waktu yang dihasilkan
+bervariasi, namun kecepatan waktu pada kombinasi KNN+IG hasilnya jauh lebih baik.</p>
+    </sec>
+    <sec id="sec-14">
+      <title>DAFTAR PUSTAKA</title>
+      <p>[2] Nobertus Krisandi, H. B. (2013). Algoritma KNN dalam klasifikasi data hasil produksi kelapa sawit pada</p>
+      <p>PT.MINAMAS kecamatan parindu, 1-2.
+kembali
+dari</p>
+      <sec id="sec-14-1">
+        <title>Academi.edu:</title>
+        <p>
+          [12] Joko Samodra, S. S. (
+          <xref ref-type="bibr" rid="ref3">2009</xref>
+          ). Klasifikasi Dokumen Teks Berbahasa Indonesia dengan Menggunakan Naive
+        </p>
+        <p>Bayes.
+[13] Shweta Taneja, C. G. (t.thn.). An Enhanced K-Nearest Neighbor Algorithm Using Information Gain and
+Clustering. 1-5.
+[14] Reuters-21578 Text Categorization Collection Datasets for single-label text
+categorization, http://www.cs.umb.edu/~smimarog/textmining/datasets/
+[15] Asriyanti Indah Pratiwi, Adiwijaya. 2018. On The Feature Selection and Classification Based on Information
+Gain for Document Sentiment Analysis, Applied Computational Intelligence and Soft Computing 2018. Hindawi
+[16] Adiwijaya. 2014. Aplikasi Matriks dan Ruang Vektor. Yogyakarta: Graha Ilmu
+[17] Adiwijaya, 2016, Matematika Diskrit dan Aplikasinya, Bandung: Alfabeta
+[18] Mubarok, M.S., Adiwijaya and Aldhi, M.D., 2017. Aspect-based sentiment analysis to review products using
+Naïve Bayes. In AIP Conference Proceedings (Vol. 1867, No. 1, p. 020060). AIP Publishing.
+[19] Aziz, R.A., Mubarok, M.S. and Adiwijaya, A., 2016, September. Klasifikasi Topik pada Lirik Lagu dengan
+Metode Multinomial Naive Bayes. In Indonesia Symposium on Computing (IndoSC) 2016
+[20] Arifin, A.H.R.Z., Mubarok, M.S. and Adiwijaya, A., 2016, September. Learning Struktur Bayesian Networks
+menggunakan Novel Modified Binary Differential Evolution pada Klasifikasi Data. In Indonesia Symposium on
+Computing (IndoSC) 2016.</p>
+      </sec>
+    </sec>
+  </body>
+  <back>
+    <ref-list>
+      <ref id="ref1">
+        <mixed-citation>
+          [1]
+          <string-name>
+            <surname>Avelita</surname>
+            ,
+            <given-names>B.</given-names>
+          </string-name>
+          (
+          <year>2016</year>
+          ). Klasifikasi
+          <string-name>
+            <surname>K-Nearest Neighbor</surname>
+          </string-name>
+          .
+          <volume>1</volume>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref2">
+        <mixed-citation>
+          [3]
+          <string-name>
+            <surname>Indonesia</surname>
+            ,
+            <given-names>U</given-names>
+          </string-name>
+          . (t.thn.).
+          <source>Pemanfaatan dokumen-Literatur. Klasifikasi Dokumen</source>
+          ,
+          <fpage>1</fpage>
+          -
+          <lpage>11</lpage>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref3">
+        <mixed-citation>
+          <string-name>
+            <surname>Suyanto.</surname>
+          </string-name>
+          (
+          <year>2009</year>
+          , November 11).
+          <article-title>Decision Tree Learning</article-title>
+          . Diambil kembali dari http://file.upi.edu/Direktori/FPMIPA/PRODI._ILMU_KOMPUTER/LALA/Materi_Kuliah/Kecerdasan _Buatan/9._Decision_Tree.pdf
+        </mixed-citation>
+      </ref>
+      <ref id="ref4">
+        <mixed-citation>
+          [5]
+          <string-name>
+            <surname>Wikipedia.</surname>
+          </string-name>
+          (
+          <year>2013</year>
+          , Maret 18). Algoritma
+          <string-name>
+            <surname>K-Nearest Neighbor</surname>
+          </string-name>
+          . Diambil kembali dari Wikipedia: https://id.wikipedia.org/wiki/KNN
+        </mixed-citation>
+      </ref>
+      <ref id="ref5">
+        <mixed-citation>
+          [6]
+          <string-name>
+            <surname>Yadi</surname>
+            ,
+            <given-names>N.</given-names>
+          </string-name>
+          (
+          <year>2015</year>
+          ).
+          <article-title>Tugas Akhir Data Mining</article-title>
+          .
+          <source>Iterative Dichotomiser</source>
+          <volume>3</volume>
+          (
+          <issue>ID3</issue>
+          ),
+          <fpage>1</fpage>
+          -
+          <lpage>62</lpage>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref6">
+        <mixed-citation>
+          [7]
+          <string-name>
+            <given-names>Mrs. Leena. H.</given-names>
+            <surname>Patil</surname>
+          </string-name>
+          ,
+          <string-name>
+            <surname>D. M.</surname>
+          </string-name>
+          (
+          <year>2014</year>
+          ).
+          <source>International Jurnal of Advance Research in Artificial ntelligence. A Multistage Feature Selection Model for Document Classification Using Information Gain and Rough Set</source>
+          ,
+          <fpage>1</fpage>
+          -
+          <lpage>7</lpage>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref7">
+        <mixed-citation>
+          [8]
+          <string-name>
+            <surname>Rafael</surname>
+            <given-names>B.</given-names>
+          </string-name>
+          <string-name>
+            <surname>Pereira</surname>
+            ,
+            <given-names>A. P.</given-names>
+          </string-name>
+          (
+          <year>2015</year>
+          ).
+          <source>Journal of Information ad Data Management. Information Gain Featue Selection for Multi-Label Classification</source>
+          ,
+          <fpage>1</fpage>
+          -
+          <lpage>11</lpage>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref8">
+        <mixed-citation>
+          [9]
+          <string-name>
+            <surname>Daniel</surname>
+            <given-names>I.Morariu</given-names>
+          </string-name>
+          ,
+          <string-name>
+            <surname>R. G</surname>
+          </string-name>
+          . (t.thn.).
+          <source>Seleksi Fitur Dokumen klasifikasi</source>
+          ,
+          <fpage>1</fpage>
+          -
+          <lpage>9</lpage>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref9">
+        <mixed-citation>
+          [10]
+          <string-name>
+            <surname>UCI.</surname>
+          </string-name>
+          (
+          <year>2012</year>
+          ,
+          <fpage>10</fpage>
+          <lpage>19</lpage>
+          ).
+          <source>Legal Case Report Data Set. Diambil kembali dari UCI Machine Learning</source>
+          Repository: https://archive.ics.uci.edu/ml/datasets/Legal+Case+Reports#
+        </mixed-citation>
+      </ref>
+      <ref id="ref10">
+        <mixed-citation>
+          [11]
+          <string-name>
+            <surname>Raka</surname>
+            ,
+            <given-names>R. D.</given-names>
+          </string-name>
+          (
+          <year>2016</year>
+          ). Academi.edu. Diambil http://www.academia.edu/7448540/Praproses_data_meliputi [21]
+          <string-name>
+            <surname>Yulietha</surname>
+            ,
+            <given-names>I. M.</given-names>
+          </string-name>
+          ,
+          <string-name>
+            <surname>Faraby</surname>
+            ,
+            <given-names>S. A.</given-names>
+          </string-name>
+          , &amp;
+          <string-name>
+            <surname>Adiwijaya</surname>
+          </string-name>
+          . (
+          <year>2017</year>
+          ).
+          <article-title>Klasifikasi Sentiment Review Film Menggunakan Support Vector Machine</article-title>
+          .
+          <source>EProceeding of Engineering</source>
+          <volume>4</volume>
+          (
+          <issue>3</issue>
+          )
+        </mixed-citation>
+      </ref>
+    </ref-list>
+  </back>
+</article>

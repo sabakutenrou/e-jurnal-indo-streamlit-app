@@ -19,10 +19,14 @@ import joblib
 
 from streamlit_gallery.utils.preprocess import preprocess
 
+def st_header(text, font_size=30, color=st.get_option('theme.primaryColor')):
+    text_style = ' style="color:{color}; font-size:{font_size}px"'.format(color=color, font_size=font_size)
+    st.markdown("<h1{}>{}</h1>".format(text_style, text), unsafe_allow_html=True)
+
 def main():
     # st.set_option('deprecation.showPyplotGlobalUse', False)
     accent_color = st.get_option('theme.primaryColor')
-    st.header("Model Klasifikasi 📑")
+    st_header("Model Klasifikasi 📑")
 
     df = pd.read_csv("dataset.csv")
     df = df[['judul-jurnal','abstrak-jurnal','kategori']]
@@ -130,7 +134,7 @@ def main():
     # svm modelling
 
     st.markdown('---')
-    st.subheader('Support Vector Machine')
+    st_header('Support Vector Machine')
 
     col21, emp, col22 = st.columns([2,0.1,1.5])
     with(col21):

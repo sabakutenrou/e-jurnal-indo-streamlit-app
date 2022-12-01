@@ -132,7 +132,15 @@ def main():
             elif selected == 'tfidf':
                 st.success('tfidf berhasil')
         else: show_card()
-    st.write(db) # db for testing, not really used
+    # st.write(db)
+
+    # test = db.tri() # db for testing, not really used
+
+    # admin = db.tri()
+    # admin.insert({
+    #     "name": "EC_A",
+    #     "title": "grief"
+    # })
     
 if __name__ == "__main__":
     main()

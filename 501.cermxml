@@ -1,0 +1,878 @@
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD v1.0 20120330//EN" "JATS-archivearticle1.dtd">
+<article xmlns:xlink="http://www.w3.org/1999/xlink">
+  <front>
+    <journal-meta>
+      <journal-title-group>
+        <journal-title>Jurnal Manajemen Sistem Informasi</journal-title>
+      </journal-title-group>
+      <issn pub-type="ppub">2528-0082</issn>
+    </journal-meta>
+    <article-meta>
+      <title-group>
+        <article-title>Analisis Dan Perancangan Sistem Informasi Promosi Berbasis Web Pada CV. Golden Property</article-title>
+      </title-group>
+      <contrib-group>
+        <contrib contrib-type="author">
+          <string-name>Roby Setiawan</string-name>
+        </contrib>
+        <contrib contrib-type="author">
+          <string-name>Rusdianto Roestam</string-name>
+        </contrib>
+        <contrib contrib-type="author">
+          <string-name>Magister Sistem Informasi</string-name>
+        </contrib>
+        <contrib contrib-type="author">
+          <string-name>STIKOM Dinamika Bangsa</string-name>
+        </contrib>
+        <contrib contrib-type="author">
+          <string-name>Kota Jambi Jl. Jend. Sudirman No.</string-name>
+        </contrib>
+        <contrib contrib-type="author">
+          <string-name>Thehok Jambi Selatan Kota Jambi</string-name>
+        </contrib>
+        <contrib contrib-type="author">
+          <string-name>Telp/Fax :</string-name>
+        </contrib>
+        <contrib contrib-type="author">
+          <string-name>E-mail:</string-name>
+        </contrib>
+        <contrib contrib-type="author">
+          <string-name>rb.setiawan@gmail.com</string-name>
+        </contrib>
+        <contrib contrib-type="author">
+          <string-name>roesdianto@yahoo.com</string-name>
+        </contrib>
+      </contrib-group>
+      <pub-date>
+        <year>2017</year>
+      </pub-date>
+      <volume>2</volume>
+      <issue>4</issue>
+      <fpage>811</fpage>
+      <lpage>820</lpage>
+      <abstract>
+        <p>Promotion is activities in marketing to offer the product to customers or consumers prospect to informing, reminding and persuading people to accept the products, concepts and ideas. Promotion has two ways, there is electronic and non-electronic. At the CV. Golden Property companies,promotional activitiesdoing by non-electronic with brochures and banners so the promotion information to customers or consumers not prospectly. By designing a web-based information, users and managers expect can simplify the information system as a solution to the problem doesn't prospectly. The method used in the designis promotional mix where a variables can be combined with the companies needs and abilities. This web-based information would be better if next researcher insert value of financial transactions so that will getting any benefit.</p>
+      </abstract>
+      <kwd-group>
+        <kwd>web</kwd>
+        <kwd>promotional mix</kwd>
+        <kwd>golden property</kwd>
+      </kwd-group>
+    </article-meta>
+  </front>
+  <body>
+    <sec id="sec-1">
+      <title>1. Pendahuluan</title>
+      <p>Kemajuan teknologi informasi, mendorong banyak manusia untuk menciptakan inovasi - inovasi baru
+untuk membantu manusia dalam mendapatkan informasi dengan cepat dan mudah, salah satunya yaitu
+internet.Sebuah perusahaan harus dapat membuat layanan informasi dan promosi dengan baik untuk
+menarik perhatian konsumen.Era globalisasi yang semakin dekat di mana perdagangan bebas menjadi
+suatu fenomena yang harus dihadapi dengan kesiapan yang matang dari berbagai faktor-faktor produksi
+yang dimiliki perusahaan.</p>
+      <p>CV. Golden Property merupakan perusahaan yang bergerak dibidang penjualan tanah kavling, rumah
+dan kios. Perusahaan ini memiliki beberapa varian tipe rumah seperti, tipe 36, tipe 45, tipe 48 dan tipe
+54.Sedangkan kios yaitu hanya pada tipe 40 dan 50.Pada Tahun 2016 sekarang ini, Perusahaan memiliki
+jumlah property sebanyak 57 unit dan tanah kavling sebanyak 67 unit.Kondisi seperti itulah yang pada
+akhirnya menyebabkan para pelaku usaha makin gencar berusaha untuk mencari solusi maupun program
+bisnis yang dapat meningkatkan daya saing perusahaan di dalam bisnisnya. Namun demikian, meskipun
+perusahaan telah berusaha bersaing dan memberikan yang terbaik untuk konsumen belum tentu dapat
+menjamin akan berhasilnya usaha pencapaian tujuan perusahaan. Perusahaan menemukan masalah dalam
+promosi, di mana belum adanya promosi yang dilakukan oleh CV. Golden Property, baik dalam promosi
+periklanan televisi atau web membuat perusahaan ini kurang begitu dikenal oleh masyarakat umum.
+Pengolahan data informasi promosi juga tidak terstruktur yaitu perusahaan melakukan penyebaran data
+informasi promosi melalui brosur sebanyak 100 lembar perbulan tetapi hanya terjual 1 sampai 2 unit
+rumah pertiga bulan bahkan lebih. Hal ini tentu akan mengakibatkan dampak yang tidak baik bagi
+perusahaan. Oleh karena itu, hal tersebut perlu di atasi dengan melakukan promosi dan penyediaan
+informasi dengan menggunakan media informasi berbasis web.</p>
+    </sec>
+    <sec id="sec-2">
+      <title>2. Tinjauan Pustaka/Penelitian Sebelumnya</title>
+      <p>Tinjauan pustaka menguraikan hasil-hasil penelitian yang pernah dilakukan oleh peneliti sebelumnya
+yang mempunyai kaitan dengan penelitian ini. Berikut tinjauan pustaka yang terkait dengan penelitian :
+a. Rancang Bangun Website Sebagai Sarana Promosi Properti di Purwokerto.</p>
+      <p>Penulis membaca hasil penelitian dari jurnal yang hampir sama/menyerupai di bidang sistem
+informasi, tetapi terdapat perbedaan dari segi permasalahannya.Seperti penelitian yang pernah
+dilakukandari jurnal dengan judul “Rancang Bangun Website Sebagai Sarana Promosi Properti di
+Purwokerto” yang ditulis oleh Prayoga Pribadi dan Mulyadi. Tahun 2011, dalam penelitian tersebut
+dibahas bagaimana membuat website untuk mempromosikan rumah yang akan dikontrakan, rumah
+dan tanah yang akan dijual di Purwokerto sehingga dapat memberikan informasi yang lengkap dan
+akurat. Penelitian diatas relevan dengan tesis ini, dimana terdapat kesamaan yaitu melakukan
+penelitian terhadap sistem informasi promosi berbasis web. Tapi pada penelitian diatas hanya
+menitik beratkan pada analisa kebutuhan user tanpa adanya prototipe atau pun contoh interface.
+Sedangkan pada tesis ini peneliti melakukan analisis serta merancang contoh interface dan prototipe
+yang disesuaikan pada kebutuhan perusahaan.
+b. Aplikasi Pemasaran Property Berbasis Web Dengan Aplikasi Menggunakan Virtual Reality Unity 3D
+Penelitian ini dilakukan oleh Novita Sari, Eneng Tita Tosida dan Boldson H.S, yang berjudul
+“Aplikasi Pemasaran Property Berbasis Web Dengan Aplikasi Menggunakan Virtual Reality Unity
+3D” yaitu dengan ruang lingkup penelitiannya membangun situs pemasaran Web3D tipe-tipe
+perumahan di PT Graha Setia Pradipta sehingga dapat memudahkan melakukan promosi perumahan.
+Penelitian diatas relevan dengan tesis ini, dimana terdapat kesamaan yaitu melakukan penelitian
+terhadap sistem informasi promosi berbasis web. Perbedaannya adalah jika peneliti diatas
+menggunakan aplikasi Virtual Reality Unity 3D maka pada tesis ini hanya menggunakan gambar dan
+text untuk menampilkan informasi promosi pada web.</p>
+    </sec>
+    <sec id="sec-3">
+      <title>3. Metodologi</title>
+      <sec id="sec-3-1">
+        <title>3.1Alur Penelitian</title>
+        <p>Agar penelitian dapat berjalan dengan baik, maka kita harus memiliki kerangka penelitian yang telah
+disusun sebelumnya. Kerangka penelitian digunakan sebagai acuan atau pedoman dalam agenda
+penelitian yang akan dilakukan agar Penulis dapat melakukan penelitian secara terstruktur dan dapat
+menyelesaikan penelitian tepat pada waktunya, juga agar penelitian dapat berjalan sesuai dengan yang
+diharapkan. Kerangka penelitian yang diterapkan oleh penulis dapat dilihat pada bagan di bawah ini:</p>
+      </sec>
+      <sec id="sec-3-2">
+        <title>Gambar 1. Alur Penelitian</title>
+        <sec id="sec-3-2-1">
+          <title>1. Identifikasi Masalah</title>
+          <p>Identifikasi Masalah merupakan langkah awal yang dilakukan dalam penelitian ini. Pada tahap
+mengidentifikasi masalah dimaksudkan agar dapat memahami masalah yang akan diteliti, sehingga dalam
+tahap analisis dan perancangan tidak keluar dari permasalahan yang diteliti. Output yang dihasilkan dari
+identifikasi masalah adalah daftar masalah yang memerlukan solusi.</p>
+        </sec>
+        <sec id="sec-3-2-2">
+          <title>2. Studi Literatur</title>
+          <p>Studi literatur penulis lakukan untuk tahap ini penulis mempelajari dan memahami teori-teori dan
+konsepkonsep yang relevan dengan masalah yang diteliti dan menjadi dasar teori pada penelitian ini.Studi
+literatur ini bersumber dari buku, jurnal ilmiah dan referensi lainnya.</p>
+        </sec>
+        <sec id="sec-3-2-3">
+          <title>3. Pengumpulan Data</title>
+          <p>Pengumpulan data merupakan tahapan dalam proses yang penting, karena hanya dengan mendapatkan
+data yang tepat maka proses penelitian akan berlangsung sampai peneliti mendapatkan jawaban dari
+perumusan masalah yang sudah ditetapkan. Data yang dicari harus sesuai dengan tujuan penelitian.
+Beberapa metode yang digunakan yaitu :
+a. Observasi
+Pada kegiatan observasi dilakukan pengamatan langsung terhadap kegiatan dan prosespromosi pada
+perusahaan. Hal ini bertujuan untuk melihat kondisi dan juga mengamati bagaimana bentuk proses
+promosi property yang berjalan pada CV. Golden Property.
+b. Wawancara
+Pada kegiatan wawancara, penulis melakukan wawancara kepada beberapa calon pembeli dan beberapa
+karyawan di CV. Golden Property. Hal ini dilakukan untuk mendapatkan informasi atau penjelasan
+langsung dari pihak yang terkait (stakeholder) tentang bagaimana kegiatan dan proses promosi yang
+berjalan di CV. Golden Property selama ini.</p>
+        </sec>
+        <sec id="sec-3-2-4">
+          <title>4. Pengembangan Sistem</title>
+          <p>Pada tahap ini kita melakukan menganalisis serta merancang usulan sistem yang baru, penulis
+menggunakan metode waterfall (air terjun).Waterfall model adalah sebuah metode pengembangan
+perangkat lunakyang bersifat sekuensial dan terdiri dari 5 tahap yang saling terkait atau mempengaruhi
+yaitu Communication, Planning, Modeling, Construction, dan Deployment.</p>
+          <p>Berikut proses dari metode waterfall dapat dilihat pada gambar 2.</p>
+        </sec>
+      </sec>
+      <sec id="sec-3-3">
+        <title>Gambar 2.Medel Waterfall [15]</title>
+        <sec id="sec-3-3-1">
+          <title>5. Laporan Hasil Penelitian Pada tahapan ini yaitu terdapat hasil dokumentasi dari rancangan yang sudah dibuat beserta hasil dari pengujian yang dilakukan.</title>
+        </sec>
+      </sec>
+      <sec id="sec-3-4">
+        <title>3.2 Tahapan Pengembangan Sistem</title>
+        <p>Adapun tahapan pengembangan sistem yang dilakukan penulis sebagai berikut :
+1. Menganalisis sistem yang sedang berjalan.</p>
+        <p>Disini penulis melakukan analisis sistem yang telah berjalan dalam kegiatan promosipada CV. Golden
+Property.
+2. Analisis kebutuhan sistem.</p>
+        <p>Penulis menentukan kebutuhan dari sistem yang lama sehingga sistem yang baru dapat menutupi
+kekurangan dari sistem yang lama.
+3. Analisis proses menggunakan UML (Unified Model Language).</p>
+        <p>Disini penulis menjelaskan proses sistem lama yang berjalan dan membandingkan dengan proses sistem
+baru.
+4. Melakukan pengembangan terhadap sistem.</p>
+        <p>Penulis melakukan perancangan menu atau modul-modul yang baru untuk dimasukan pada sistem lama.
+5. Melakukan pengujian dan implementasi terhadap sistem yang telah dikembangkan.
+Penulis melakukan pengujian sistem yang baru dan mengimplementasikan kepada user yang
+menggunakan.</p>
+      </sec>
+    </sec>
+    <sec id="sec-4">
+      <title>4. Hasil dan Pembahasan</title>
+      <sec id="sec-4-1">
+        <title>4.1Analisis Sistem Yang Berjalan</title>
+        <p>Sistem promosi yang berjalan di CV. Golden Property masih menggunakan cara konvensional dimana
+penyebaran data informasi promosi disebarkan dengan pemasangan spanduk didaerah tertentu,
+penyebaran brosur atau menggunakan metode dari mulut ke mulut. Informasi yang terkait dalam
+ketersedian property baik jumlah, lokasi dan lainnya tidak tersimpan dengan terstruktur sehingga
+menyulitkan prospek customers dalam mendapatkan informasi yang up to date.</p>
+        <p>Setelah peneliti melakukan analisis terhadap sistem yang sedang berjalan, maka ditemukan beberapa
+kelemahan-kelemahan dalam menjalankan aktivitas-aktivitas di CV. Golden Property diantaranya yaitu:
+1. Penyebaran data informasi promosi disebarkan ke prospek costumer secara manual melalui brosur,
+pemasangan spanduk dan lain-lain sehingga berpotensi menimbulkan masalah yaitu data promosi tidak
+tersampaikan ke prospek costumer dengan baik.
+2. Data terkait dengan ketersedian property baik jumlah, lokasi dan lainnya tidak tersimpan secara
+terstruktur sehingga menimbulkan masalah didalam mempresentasikan kembali.</p>
+      </sec>
+      <sec id="sec-4-2">
+        <title>4.2 Analisis Kebutuhan Sistem</title>
+        <p>Berdasarkan hasil analisis terhadap sistem yang sedang berjalan, maka usulan solusi atas masalah yang
+dihadapi adalah mengembangkan sistem informasi promosi berbasis web sebagai solusi bagaimana
+mengatasi permasalahan tidak tersampaikannya data informasi promosi ke customers prospect dengan
+baik.</p>
+      </sec>
+      <sec id="sec-4-3">
+        <title>4.3 Analisis Proses</title>
+      </sec>
+      <sec id="sec-4-4">
+        <title>1. Use case diagram</title>
+        <p>Use case diagram dari sistem informasi promosi berbasis web pada CV. Golden Property ini menjelaskan
+interaksi aktor dengan sistem baru yang dikembangkan.</p>
+        <sec id="sec-4-4-1">
+          <title>Aktor Administrator</title>
+        </sec>
+        <sec id="sec-4-4-2">
+          <title>Staff marketing</title>
+        </sec>
+        <sec id="sec-4-4-3">
+          <title>Calon konsumen</title>
+        </sec>
+      </sec>
+      <sec id="sec-4-5">
+        <title>Gambar 3.Use Case Diagram Tabel 1.Deskripsi list item aktor yang digunakan</title>
+        <p>Add
+book
+Guess book</p>
+        <sec id="sec-4-5-1">
+          <title>Berikut adalah pengambaran class diagram :</title>
+        </sec>
+      </sec>
+      <sec id="sec-4-6">
+        <title>Gambar 4.Class Diagram</title>
+      </sec>
+      <sec id="sec-4-7">
+        <title>4.4 Struktur Data</title>
+        <p>Adapun tabel struktur data dari sistem informasi promosi berbasis web yang dikembangkan adalah
+sebagai berikut :
+1. Tabel Login</p>
+        <sec id="sec-4-7-1">
+          <title>2. Tabel Halaman Home</title>
+        </sec>
+        <sec id="sec-4-7-2">
+          <title>3. Tabel Halaman About Us</title>
+        </sec>
+      </sec>
+    </sec>
+    <sec id="sec-5">
+      <title>Nama Item</title>
+      <p>Nama
+Password
+Level</p>
+    </sec>
+    <sec id="sec-6">
+      <title>Nama Item</title>
+      <p>HM_Gambar
+HM_Pengantar</p>
+    </sec>
+    <sec id="sec-7">
+      <title>Nama Item</title>
+      <p>AU_Sejarah
+AU_Profile
+AU_Visi
+AU_Misi</p>
+    </sec>
+    <sec id="sec-8">
+      <title>Nama Item</title>
+      <p>PJ_ID
+PJ_Status</p>
+      <sec id="sec-8-1">
+        <title>4. Tabel Halaman Project</title>
+      </sec>
+    </sec>
+    <sec id="sec-9">
+      <title>Type</title>
+      <p>Varchar
+Varchar
+Varchar</p>
+      <sec id="sec-9-1">
+        <title>5. Tabel Halaman Promotion PJ_GambarKsp PJ_Nama PJ_Alamat</title>
+        <p>PJ_Siteplan
+PJ_RmhCth
+PJ_Spesifikasi</p>
+      </sec>
+    </sec>
+    <sec id="sec-10">
+      <title>Nama Item</title>
+      <p>PR_ID
+PR_Status
+PR_GambarKsp
+PR_Nama
+PR_Keterangan</p>
+    </sec>
+    <sec id="sec-11">
+      <title>Nama Item</title>
+      <p>CU_Nama
+CU_Alamat
+CU_Email
+CU_NoTelp</p>
+    </sec>
+    <sec id="sec-12">
+      <title>Nama Item</title>
+      <p>GB_ID
+GB_Nama
+GB_Email
+GB_Pesan</p>
+      <sec id="sec-12-1">
+        <title>6. Tabel Halaman Contact Us</title>
+      </sec>
+      <sec id="sec-12-2">
+        <title>7. Tabel Halaman Guess Book</title>
+      </sec>
+      <sec id="sec-12-3">
+        <title>Blob</title>
+      </sec>
+      <sec id="sec-12-4">
+        <title>Varchar Varchar Blob Blob</title>
+        <p>Varchar</p>
+      </sec>
+      <sec id="sec-12-5">
+        <title>Blob Varchar Varchar</title>
+        <sec id="sec-12-5-1">
+          <title>Tabel 6.Rancangan Tabel Promotion</title>
+        </sec>
+      </sec>
+    </sec>
+    <sec id="sec-13">
+      <title>Type Field Size</title>
+      <p>Int 6
+Boolean True / False
+15
+30
+200
+15
+30
+False = NonAktif
+Gambar
+Perumahan
+Nama Project
+Lokasi Prokect
+Gambar Siteplan
+Gambar Rumah Contoh
+Spesifikasi detail rumah</p>
+      <sec id="sec-13-1">
+        <title>Konsep</title>
+      </sec>
+    </sec>
+    <sec id="sec-14">
+      <title>Keterangan</title>
+      <p>Kode Promosi
+True =
+False = NonAktif
+Gambar Konsep Promosi
+Nama Promosi
+Deskripsi
+Promosi</p>
+      <sec id="sec-14-1">
+        <title>Tentang</title>
+      </sec>
+      <sec id="sec-14-2">
+        <title>Aktif,</title>
+        <sec id="sec-14-2-1">
+          <title>Tabel 7.Rancangan Tabel Contact Us</title>
+        </sec>
+      </sec>
+    </sec>
+    <sec id="sec-15">
+      <title>Type Field Size</title>
+      <p>Varchar 15
+Varchar 30
+Varchar 30
+Varchar 12</p>
+      <sec id="sec-15-1">
+        <title>Tabel 8.Racangan Tabel Guess Book</title>
+      </sec>
+    </sec>
+    <sec id="sec-16">
+      <title>Type Field Size</title>
+      <p>Int 6
+Varchar 15
+Varchar 30
+Varchar 50</p>
+    </sec>
+    <sec id="sec-17">
+      <title>Keterangan</title>
+      <p>Nama Perusahaan
+Alamat Perusahaan
+Email Perusahaan
+No Telp Perusahaan</p>
+    </sec>
+    <sec id="sec-18">
+      <title>Keterangan</title>
+      <p>Kode Tamu
+Nama Tamu
+Email Tamu
+Komentar atau saran</p>
+      <sec id="sec-18-1">
+        <title>4.5 Perancangan Antar Muka</title>
+        <p>Berikut ini adalah disain tampilan-tampilan halaman yang akan dirancang dalam sistem informasi
+promosi berbasis web pada CV. Golden Property.
+1. Halaman Login</p>
+        <sec id="sec-18-1-1">
+          <title>2. Halaman Home</title>
+        </sec>
+      </sec>
+      <sec id="sec-18-2">
+        <title>Gambar 5.Menu Login</title>
+        <sec id="sec-18-2-1">
+          <title>3. Halaman About Us</title>
+        </sec>
+      </sec>
+      <sec id="sec-18-3">
+        <title>Gambar 6.Menu Home</title>
+        <sec id="sec-18-3-1">
+          <title>4. Halaman Project</title>
+        </sec>
+        <sec id="sec-18-3-2">
+          <title>Gambar 7. Menu About Us</title>
+          <p>5. Halaman Promotion Gambar 8.Menu Project</p>
+        </sec>
+      </sec>
+    </sec>
+    <sec id="sec-19">
+      <title>Jurnal Manajemen Sistem Informasi Vol. 2, No. 4, Desember 2017</title>
+      <sec id="sec-19-1">
+        <title>6. Halaman Contact Us</title>
+      </sec>
+      <sec id="sec-19-2">
+        <title>Gambar 9.Menu Promotion</title>
+      </sec>
+      <sec id="sec-19-3">
+        <title>7. Halaman Guess Book</title>
+      </sec>
+      <sec id="sec-19-4">
+        <title>Gambar 10.Menu Contact Us</title>
+      </sec>
+      <sec id="sec-19-5">
+        <title>Gambar 11. Menu Guess Book</title>
+      </sec>
+    </sec>
+    <sec id="sec-20">
+      <title>5. Penutup</title>
+      <sec id="sec-20-1">
+        <title>5.1 Simpulan</title>
+        <p>Dari berbagai penjelasan yang telah diuraikan dalam laporan ini, maka dapat disimpulkan
+beberapa hal sebagai berikut :
+1. Dengan adanya sistem informasi promosi berbasis web pada CV. Golden Property
+mempermudah proses promosi sebagai solusi terhadap masalah tidak tersampainya data
+informasi promosi kepada customers prospect.
+2. Penelitian ini menghasilkan prototipe yang menyediakan gambar dan detail lengkap dari
+informasi perusahaan, property serta program promo yang diadakan perusahaan.
+3. Pada prototipe ini terdapat halaman guess book yang nantinya Customers prospect bisa
+dapat memberikan saran atau kritik, sehingga perusahaan dapat membangun atau memberi
+ide untuk strategi marketing bisnis kedepan.
+4. Dengan sistem informasi promosi berbasis web ini, pihak perusahaan dapat mengelola data
+informasi property atau promosi dengan baik dan terstruktur.</p>
+      </sec>
+      <sec id="sec-20-2">
+        <title>5.2 Saran</title>
+        <p>Adapun saran yang dapat penulis berikan untuk penelitian selanjutnya apa bila ingin mengembangkan
+lagi sistem ini antara lain :
+1. Untuk peneliti selanjutnya diharapkan dapat mengembangkan sistem informasi promosi berbasis web
+ini dengan berbasis android atau IOS sehingga lebih memudahkan calon konsumen untuk mendapat
+informasi promosi perusahaan.
+2. Untuk peneliti selanjutnya diharapkan dapat mengembangkan sistem informasi promosi berbasis web
+pada CV. Golden Property yang di dalamnya terdapat nilai-nilai transaksi keuangan, seperti booking
+fee atau lainnya.
+3. Diharapkan sistem informasi promosi berbasis web ini dikembangkan menggunakan email broadcast
+otomatis yang datanya mengacu pada buku tamu agar apabila perusahaan mempunyai program
+khusus penjualan seperti hari besar, informasi promosi penjualan dapat lansung dikirim kepada
+customers prospect
+4. Untuk pihak perusahaan sebaiknya menggunakan informasi promosi berbasis web ini sebagai sarana
+untuk menentukan strategi promosi yang baik yang data nya diambil dari kritik dan saran dihalaman
+guessbook</p>
+      </sec>
+    </sec>
+    <sec id="sec-21">
+      <title>6. Daftar Rujukan</title>
+    </sec>
+  </body>
+  <back>
+    <ref-list>
+      <ref id="ref1">
+        <mixed-citation>
+          [1]
+          <string-name>
+            <surname>Andri</surname>
+          </string-name>
+          , Kusrini.
+          <year>2007</year>
+          .
+          <article-title>Tuntunan Praktis Membangun Sistem Informasi Akutansi Dengan Visual Basic dan Micrasoft SQL Server</article-title>
+          .
+          <article-title>Yogyakarta : CV Andi Offset</article-title>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref2">
+        <mixed-citation>
+          [2]
+          <string-name>
+            <surname>Arief.R.M.</surname>
+          </string-name>
+          <year>2011</year>
+          .
+          <article-title>Pemrograman Web Dinamis Menggunakan PHP dan MySQL</article-title>
+          . Yogyakarta : CV. Andi Offset.
+        </mixed-citation>
+      </ref>
+      <ref id="ref3">
+        <mixed-citation>
+          [3]
+          <string-name>
+            <surname>Dennis</surname>
+          </string-name>
+          , Alan; Wixom, Haley Barbara: &amp;
+          <string-name>
+            <surname>Tegarden</surname>
+          </string-name>
+          , David.
+          <year>2005</year>
+          .
+          <article-title>Systems Analysis and Design with UML Version 2</article-title>
+          .0 :
+          <string-name>
+            <given-names>An</given-names>
+            <surname>Object-Oriented Approach</surname>
+          </string-name>
+          .Second Edition. United States of America : John Wiley &amp; Sons, Inc.
+        </mixed-citation>
+      </ref>
+      <ref id="ref4">
+        <mixed-citation>
+          [4]
+          <string-name>
+            <given-names>Hanif</given-names>
+            <surname>Al Fatta</surname>
+          </string-name>
+          .
+          <year>2007</year>
+          .
+          <article-title>Analisis dan Perancangan Sistem Informasi Untuk Keunggulan Bersaing Perusahaan dan Organisasi Modern. Yogyakarta : CV Andi Offset</article-title>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref5">
+        <mixed-citation>
+          [5]
+          <string-name>
+            <surname>Ichwan. M .</surname>
+          </string-name>
+          <year>2011</year>
+          .
+          <article-title>Pemograman Basis Data Delphi 7 dan My SQL</article-title>
+          . Bandung : Informatika.
+        </mixed-citation>
+      </ref>
+      <ref id="ref6">
+        <mixed-citation>
+          [6]
+          <string-name>
+            <surname>Indrajani</surname>
+          </string-name>
+          .
+          <year>2009</year>
+          .
+          <article-title>Sistem Basis Data Dalam Paket Five In One</article-title>
+          . Jakarta : PT. Elex Media Komputindo.
+        </mixed-citation>
+      </ref>
+      <ref id="ref7">
+        <mixed-citation>
+          [7]
+          <string-name>
+            <surname>Joshi</surname>
+          </string-name>
+          , Manmohan.
+          <year>2012</year>
+          . Essential of Marketing. Ventus Publishing ApS.
+        </mixed-citation>
+      </ref>
+      <ref id="ref8">
+        <mixed-citation>
+          [8]
+          <string-name>
+            <surname>Kadir</surname>
+          </string-name>
+          , Abdul.
+          <year>2014</year>
+          .
+          <article-title>Pengenalan Sistem Informasi</article-title>
+          .
+          <article-title>Yogyakarta : CV Andi Offset</article-title>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref9">
+        <mixed-citation>
+          [9]
+          <string-name>
+            <surname>McLeod</surname>
+          </string-name>
+          , Jr. Raymond; &amp; P. Schell, George.
+          <year>2007</year>
+          .
+          <source>Management Information Systems. Tenth Edition</source>
+          . New Jersey, United States of America : Pearson Prentice Hall.
+        </mixed-citation>
+      </ref>
+      <ref id="ref10">
+        <mixed-citation>
+          [9]
+          <string-name>
+            <surname>Nugroho</surname>
+          </string-name>
+          , Adi.
+          <year>2009</year>
+          .
+          <article-title>Rekayasa Perangkat Lunak menggunakan UML dan Java</article-title>
+          .
+          <article-title>Yogyakarta : CV Andi Offset</article-title>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref11">
+        <mixed-citation>
+          [10]
+          <string-name>
+            <surname>Pressman</surname>
+          </string-name>
+          , Roger.
+          <year>2012</year>
+          .
+          <article-title>Rekayasa Perangkat Lunak</article-title>
+          . Yogyakarta : Andi Offset.
+        </mixed-citation>
+      </ref>
+      <ref id="ref12">
+        <mixed-citation>
+          [11]
+          <string-name>
+            <surname>Pribadi</surname>
+          </string-name>
+          , Proyoga; &amp;
+          <string-name>
+            <surname>Mulyadi</surname>
+          </string-name>
+          .
+          <year>2011</year>
+          .
+          <article-title>Rancang Bangun Website Sebagai Sarana Promosi Properti di Purwokerto</article-title>
+          .
+          <source>Purwokerto : STIMIK AMIKOM.</source>
+        </mixed-citation>
+      </ref>
+      <ref id="ref13">
+        <mixed-citation>
+          [12]
+          <string-name>
+            <surname>Roger</surname>
+            <given-names>S.</given-names>
+          </string-name>
+          <year>2012</year>
+          .
+          <article-title>Rekayasa Perangkat Lunak</article-title>
+          .
+          <article-title>Yogyakarta : CV Andi Offset</article-title>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref14">
+        <mixed-citation>
+          [13]
+          <string-name>
+            <surname>Sari</surname>
+          </string-name>
+          , Novita; Tita Tosida, Eneng; &amp;
+          <string-name>
+            <surname>Boldson</surname>
+          </string-name>
+          .
+          <year>2016</year>
+          .
+          <article-title>Aplikasi Pemasaran Property Berbasis Web Dengan Aplikasi Menggunakan Virtual Reality Unity 3D</article-title>
+          .
+          <source>Bogor : FMIPA Universitas Pakuan Bogor</source>
+        </mixed-citation>
+      </ref>
+      <ref id="ref15">
+        <mixed-citation>
+          [14]
+          <string-name>
+            <surname>Shalahuddin</surname>
+          </string-name>
+          ,
+          <string-name>
+            <surname>Rosa A.S-M.</surname>
+          </string-name>
+          ,
+          <year>2014</year>
+          ,
+          <string-name>
+            <given-names>Rekayasa</given-names>
+            <surname>Perangkat</surname>
+          </string-name>
+          <article-title>Lunak (Terstruktur dan Berorintasi Objek)</article-title>
+          .
+          <source>Bandung : Modula</source>
+        </mixed-citation>
+      </ref>
+      <ref id="ref16">
+        <mixed-citation>
+          [15]
+          <string-name>
+            <surname>Sholiq</surname>
+          </string-name>
+          .
+          <year>2006</year>
+          .
+          <article-title>Pemodelan Sistem Informasi Berorientasi Objek dengan UML</article-title>
+          .Yogyakarta : Graha Ilmu.
+        </mixed-citation>
+      </ref>
+      <ref id="ref17">
+        <mixed-citation>
+          [16]
+          <string-name>
+            <surname>Sholiq</surname>
+          </string-name>
+          .
+          <year>2010</year>
+          .
+          <article-title>Analisis Dan Perancangan Berorientasi Obyek</article-title>
+          . Yogyakarta : Graha Ilmu.
+        </mixed-citation>
+      </ref>
+      <ref id="ref18">
+        <mixed-citation>
+          [17]
+          <string-name>
+            <surname>Sukotjo</surname>
+          </string-name>
+          , Hendri; &amp;
+          <string-name>
+            <surname>A. Radix</surname>
+          </string-name>
+          , Sumanto.
+          <year>2010</year>
+          .
+          <article-title>Analisa Marketing Mix-7P (Produk, Price</article-title>
+          , Promotion, Place, Partisipant, Process, dan Physical Evidence)
+          <article-title>terhadap Keputusan Pembelian Produk Klinik Kecantikan Teta di Surabaya</article-title>
+          .
+          <source>Jurnal Mitra Ekonomi dan Manajemen Bisnis</source>
+          , Vol.
+          <volume>1</volume>
+          , No.
+          <volume>2</volume>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref19">
+        <mixed-citation>
+          [18]
+          <string-name>
+            <surname>Sunyoto</surname>
+          </string-name>
+          , Danang.
+          <year>2014</year>
+          .
+          <article-title>Sistem Informasi Manajemen Perspekif Organisasi</article-title>
+          . Yogyakarta : CAPS.
+        </mixed-citation>
+      </ref>
+      <ref id="ref20">
+        <mixed-citation>
+          [19]
+          <string-name>
+            <surname>Supardi</surname>
+          </string-name>
+          , Yuniar.
+          <year>2010</year>
+          .
+          <article-title>Semua Bisa Menjadi Programer Java</article-title>
+          .Jakarta : PT. Elex Media Komputindo.
+        </mixed-citation>
+      </ref>
+      <ref id="ref21">
+        <mixed-citation>
+          [20]
+          <string-name>
+            <surname>Sutabri</surname>
+          </string-name>
+          , Tata.
+          <year>2012</year>
+          .
+          <article-title>Konsep Sistem Informasi</article-title>
+          .
+          <article-title>Yogyakarta : CV Andi Offset</article-title>
+          .
+        </mixed-citation>
+      </ref>
+      <ref id="ref22">
+        <mixed-citation>
+          [21]
+          <string-name>
+            <given-names>Wahyu</given-names>
+            <surname>Wing</surname>
+          </string-name>
+          .
+          <year>2006</year>
+          .
+          <article-title>Menajemen Proyek Sistem Informasi</article-title>
+          . Yogyakarta : UPP.
+        </mixed-citation>
+      </ref>
+      <ref id="ref23">
+        <mixed-citation>
+          [22]
+          <string-name>
+            <surname>Whitten</surname>
+            ,
+            <given-names>L</given-names>
+          </string-name>
+          . Jeffery; Bentley,
+          <string-name>
+            <given-names>D.</given-names>
+            <surname>Lonnie</surname>
+          </string-name>
+          ; &amp;
+          <string-name>
+            <surname>Dittman</surname>
+            ,
+            <given-names>C. Kevin. 2004. Systems</given-names>
+          </string-name>
+          <string-name>
+            <surname>Analysis</surname>
+          </string-name>
+          &amp; Design
+          <string-name>
+            <surname>Methods</surname>
+          </string-name>
+          .
+          <source>Sixth Edition</source>
+          . New York, United States of America :
+          <article-title>The McGraw Hill Companies</article-title>
+          , Inc.
+        </mixed-citation>
+      </ref>
+      <ref id="ref24">
+        <mixed-citation>
+          [23]
+          <string-name>
+            <surname>Widagdo</surname>
+          </string-name>
+          ,Herry.
+          <year>2011</year>
+          .
+          <article-title>Analisis Pengaruh Kualitas Layanan Dan Promosi Terhadap Keputusan Konsumen Membeli Komputer Pada PT</article-title>
+          .
+          <source>XYZ Palembang. Jurnal Ilmiah STIE MDP</source>
+          , Vol.
+          <volume>1</volume>
+          , No.
+          <volume>1</volume>
+          .
+        </mixed-citation>
+      </ref>
+    </ref-list>
+  </back>
+</article>

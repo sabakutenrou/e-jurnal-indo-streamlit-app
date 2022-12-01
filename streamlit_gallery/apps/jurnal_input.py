@@ -62,6 +62,8 @@ def parse_hasil_cermine(file_path):
     judul = "".join([judul.text for judul in root.iter('article-title')])
     # judul = "".join(judul)
     abstract = "".join([abstract[0].text for abstract in root.iter('abstract')])
+
+    
     # for abstract in root.iter('abstract'):
     #     #1
     #     # abstract>p tag
@@ -77,6 +79,7 @@ def parse_hasil_cermine(file_path):
     #         if add == None: add = ""
     #         abstract = abstract + add
     # # st.write(abstract)
+
 
     if abstract == "":
         from abstrak import pdfparser
@@ -104,6 +107,13 @@ def delete_files():
 def st_progress(progress, percent, empty, message):
     progress.progress(percent)
     empty.write(message)
+
+def show_pdf(file_path):
+    import base64
+    with open(file_path,"rb") as f:
+        base64_pdf = base64.b64encode(f.read()).decode('utf-8')
+    pdf_display = f'<iframe src="data:application/pdf;base64,{base64_pdf}" width="100%" height="800"></iframe>'
+    st.markdown(pdf_display, unsafe_allow_html=True)
 
 def main():
     # reload data
@@ -152,33 +162,43 @@ def main():
                 # for file_pdf in file_list:
                 java = subprocess.call('java -cp cermine-impl-1.13-jar-with-dependencies.jar pl.edu.icm.cermine.ContentExtractor -path tempDir -outputs jats')
                 xml_list = [os.path.join("tempDir", file) for file in os.listdir("tempDir") if file.endswith(".cermxml")]
-                
+                pdf_list = [os.path.join("tempDir", file) for file in os.listdir("tempDir") if file.endswith(".pdf")]
                 hasil_abstract = [parse_hasil_cermine(xml) for xml in xml_list]
                 
+                hasil_jurnal = zip(hasil_abstract,pdf_list)
                 message.empty()
 
             # show_lottie_json("square-loading.json")
         with area_hasil:
             # st.write(hasil_abstract)
+            st.write(" ")
             st.button('download hasil (.csv)')
             hasil_md = """
-            <div class="column_1" style="background: {bgcolor}; padding: 20px; border-radius: 5px; margin-top: 20px; width: 75%; float: left;">
-                <h1 style="color:{color}; font-size:20px">{}</h1>
-                <p>author</p>
-                <p>kata kunci</p>
-                <p>pub date</p>
-                <p>jurnal</p>
-                <div style="background: {color}26; padding: 20px; border: 1px solid {color}33; border-radius: 5px;">
-                    <p style="color:{color}; font-size:15px">{}</p>
+            <div style="border-width: 1px; border-style: solid; border-color: #3A3B3C; border-radius: 5px; float: left; margin-top: 50px">
+                <div class="column_1" style="background: {color}26; border-right: 1px solid #3A3B3C; padding: 20px; width: 75%; float: left;">
+                    <h1 style="font-size:20px">{}</h1>
+                    <p>author</p>
+                    <p>kata kunci</p>
+                    <p>pub date</p>
+                    <p>jurnal</p>
+                    <div style="background: {color}26; padding: 20px; border: 1px solid {color}33; border-radius: 5px;">
+                        <p style="color:{color}; font-size:15px">{}</p>
+                    </div>
                 </div>
-            </div>
-            <div class="column_2" style="padding: 20px; border-radius: 5px; width: 23%; float: left;">
-                <h1 style="color:{textcolor}; text-align: center;">pengolahan citra</h1>
+                <div class="column_2" style="padding-top: 50px; width: 24%; float: left;">
+                    <h2 style="text-align: center; font-size:20px;">Kategori:</h2>
+                    <h3 style="color:{textcolor}; text-align: center;">pengolahan citra</h3>
+                </div>
             </div>"""
             
-            for hasil in hasil_abstract:
-                st.markdown(hasil_md.format(hasil[0], hasil[1][0], color=text_color, bgcolor=scnd_background_color, textcolor=accent_color), unsafe_allow_html=True)
-
+            for hasil in hasil_jurnal:
+                # st.markdown('---')
+                st.markdown(hasil_md.format(hasil[0][0], hasil[0][1], color=text_color, bgcolor=scnd_background_color, textcolor=accent_color), unsafe_allow_html=True)
+                # st.write(list(hasil)) # debug
+                with st.expander("lihat pdf"):
+                    # if st.button("baca"):
+                    show_pdf(hasil[1])
+                        # st.write()
 
         # for uploaded in files:
         #     with tempfile.NamedTemporaryFile(delete=False) as tmp_file:
@@ -217,5 +237,5 @@ def main():
 
 
 if __name__ == "__main__":
-    st.set_page_config(page_title="E-Jurnal Indonesia", page_icon="🎈", layout="wide")
+    # st.set_page_config(page_title="E-Jurnal Indonesia", page_icon="🎈", layout="wide")
     main()

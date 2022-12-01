@@ -32,6 +32,8 @@ def remove_singl_char(text):
 def word_tokenize_wrapper(text):
     return word_tokenize(text)
 
+
+# ALL PROCESSES TOGETHER
 def preprocess(text):
     # remove tab, new line, ans back slice
     text = text.replace('\\t'," ").replace('\\n'," ").replace('\\u'," ").replace('\\',"")
@@ -41,11 +43,11 @@ def preprocess(text):
     text = ' '.join(re.sub("([@#][A-Za-z0-9]+)|(\w+:\/\/\S+)"," ", text).split())
     # remove incomplete URL
     text = text.replace("http://", " ").replace("https://", " ")
-    text = re.sub(r"\d+", "", text)
-    text = text.translate(str.maketrans("","",string.punctuation))
-    text = text.strip()
-    text = re.sub('\s+',' ',text)
-    text = re.sub(r"\b[a-zA-Z]\b", "", text)
+    text = re.sub(r"\d+", "", text) # remove_number(text)
+    text = text.translate(str.maketrans("","",string.punctuation)) # remove_punctuation(text)
+    text = text.strip() # remove_whitespace_LT(text)
+    text = re.sub('\s+',' ',text) # remove_whitespace_multiple(text)
+    text = re.sub(r"\b[a-zA-Z]\b", "", text) # remove_singl_char(text)
     # text = word_tokenize_wrapper(text)
     return text
 

@@ -112,6 +112,7 @@ def main():
         )
         # fig.show()
         st.info('jumlah data: ' + str(val))
+        st.write("persentase:")
         st.plotly_chart(fig, use_container_width=True)
 
         # f = fig.full_figure_for_development(warn=False)
@@ -146,7 +147,7 @@ def main():
     grid_options = gb.build()
     data = AgGrid(df, 
         gridOptions=grid_options,
-        theme='balham', # streamlit, alpine, balham, material
+        theme='streamlit', # streamlit, alpine, balham, material
         # enable_enterprise_modules=True, 
         allow_unsafe_jscode=True, 
         update_mode=GridUpdateMode.SELECTION_CHANGED,
@@ -188,5 +189,5 @@ def main():
             selected_data.text_area('abstrak',value=str(data['selected_rows'][0]['abstrak-jurnal']),disabled=False, height=250)
 
 if __name__ == "__main__":
-    st.set_page_config(page_title="E-Jurnal Indonesia", page_icon="🎈", layout="wide")
+    # st.set_page_config(page_title="E-Jurnal Indonesia", page_icon="🎈", layout="wide")
     main()

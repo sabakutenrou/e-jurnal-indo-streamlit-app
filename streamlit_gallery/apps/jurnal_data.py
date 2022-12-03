@@ -10,10 +10,12 @@ from streamlit_gallery.utils.streamlit_prop import get_theme_colors
 
 import pandas as pd
 import plotly.express as px
+from streamlit_gallery.utils.database import fetch_jurnal_indo
 
 def main():
 
-    df = st.session_state.df
+    data = fetch_jurnal_indo()
+    df = pd.DataFrame.from_dict(data)
     freq = df['kategori'].value_counts()
     total = len(df.index)
     # st.write(total)
@@ -38,23 +40,10 @@ def main():
         )
 
     with col2:
-        ht_welcome = """
-            <div>
-                <h1 style="text-align: center; color:{color}; font-size:24px">{}</h1>
-            </div>"""
-
-                # <strong style="color:{color}; font-size:28px">{}<br><br></strong>
-                # <div style="background: {color}26; padding: 20px; border: 1px solid {color}33; border-radius: 5px;">
-                #     <p style="color:{color}; font-size:15px">{}</p>
-                # </div>
-
         from streamlit_gallery.utils.labels import get_labels
 
-        # st.markdown(ht_welcome.format(selected, color=accent_color), unsafe_allow_html=True)
         data_df = {'labels': get_labels().values(), 'values': freq}
-        
         data_df = pd.DataFrame(data_df)
-        # st.write(get_labels().values())
         
         default_color = background_color
         colors = {selected: accent_color}
@@ -111,7 +100,8 @@ def main():
             # paper_bgcolor="LightSteelBlue",
         )
         # fig.show()
-        st.info('jumlah data: ' + str(val))
+        st.write("jumlah data:")
+        st.info(str(val) + " jurnal")
         st.write("persentase:")
         st.plotly_chart(fig, use_container_width=True)
 
@@ -135,8 +125,8 @@ def main():
 
     
     gb = GridOptionsBuilder.from_dataframe(df)
-    gb.configure_column('judul-jurnal', maxWidth=250)
-    gb.configure_column('abstrak-jurnal', maxWidth=500)
+    gb.configure_column('key', maxWidth=250)
+    gb.configure_column('abstrak', maxWidth=500)
     gb.configure_column('kategori', maxWidth=150)
     gb.configure_default_column(**defaultColDef)
     # gb.configure_selection(selection_mode="multiple", use_checkbox=True)
@@ -153,7 +143,7 @@ def main():
         update_mode=GridUpdateMode.SELECTION_CHANGED,
         # update_mode=GridUpdateMode.VALUE_CHANGED,
         height=800,
-        fit_columns_on_grid_load=True,
+        # fit_columns_on_grid_load=True,
         # try_to_convert_back_to_original_types=True,
         enable_enterprise_modules=False,
         # custom_css=custom_css,
@@ -161,33 +151,30 @@ def main():
         )
 
     data_length = len(data['selected_rows'])
+    # st.write(data['selected_rows']) #debug
 
     if data_length != 0:
         with col1:
             selected_data = st.container()
-        with col3:
-            # atau html
-            # st.markdown('---')
-            st.success("kategori: KAMEHAMEHA")
-            st.info("author: dianasAC")
-            # st.write("jurnal: Teknologi")
-            # st.write("kata kunci: keywords")
-            # st.write("tahun: 100 SM")
-            welcome_card_md = """
-                <div style="background: {color}26; padding: 20px; border: 1px solid {color}33; border-radius: 5px;">
-                    <p style="color:{color}; font-size:15px">jurnal: {}<br></p>
-                    <p style="color:{color}; font-size:15px">kata kunci: {}<br></p>
-                    <p style="color:{color}; font-size:15px">tahun: {}</p>
-                </div>"""
-            st.markdown(welcome_card_md.format("Teknologi", "keywords", "100 SM", color=accent_color), unsafe_allow_html=True)
-
-            st.markdown('---')
+            # if cookie:
             simpan = st.button('simpan')
             hapus = st.button('hapus')
-            selected_data.text_area('judul',value=str(data['selected_rows'][0]['judul-jurnal']),disabled=False)
-            # selected_data.text(data['selected_rows'][0]['abstrak-jurnal'])
-            selected_data.text_area('abstrak',value=str(data['selected_rows'][0]['abstrak-jurnal']),disabled=False, height=250)
+        with col3:
+            st.success("Kategori: " + data['selected_rows'][0]['kategori'])
+            st.info("Author: " + data['selected_rows'][0]['author'])
+            welcome_card_md = """
+                <div style="background: {color}26; padding: 20px; border: 1px solid {color}33; border-radius: 5px; margin-bottom: 50px">
+                    <p style="font-size:15px">Jurnal: {}<br></p>
+                    <p style="font-size:15px">Kata kunci: {}<br></p>
+                    <p style="font-size:15px">Tahun: {}</p>
+                </div>"""
+            st.markdown(welcome_card_md.format(data['selected_rows'][0]['nama_jurnal'],
+                                                data['selected_rows'][0]['keyword'], 
+                                                data['selected_rows'][0]['tahun'],
+                                                color=accent_color), unsafe_allow_html=True)
+
+            selected_data.text_area('judul',value=str(data['selected_rows'][0]['key']),disabled=False)
+            selected_data.text_area('abstrak',value=str(data['selected_rows'][0]['abstrak']),disabled=False, height=250)
 
 if __name__ == "__main__":
-    # st.set_page_config(page_title="E-Jurnal Indonesia", page_icon="🎈", layout="wide")
     main()

@@ -33,8 +33,6 @@ authenticator = stauth.Authenticate(
                 30
             )    
 
-
-
 def main():
     image = Image.open('e-jurnal_logo.png')
     page = page_group("p")
@@ -80,14 +78,15 @@ def main():
         # judul, nama, abstrak, kategori = zip(*data)
         # kategori = list(kategori)
         # st.write(type(kategori))
-        # st.write(kategori)
+        
         step = 25
         output = [data[i:i + step] for i in range(0, len(data), step)]
         
         
         from streamlit_gallery.utils import database
         
-        st.write(len(data))
+        #FUNGSI BATCH DETA
+        # st.write(len(data)) # debug
         # import time
         # for trip in output:
         #     database.data_set.put_many(trip)
@@ -109,6 +108,22 @@ def main():
 
         # end dummy
 
+        def filter_csv():
+            from streamlit_gallery.utils.lang_detection import language_detection
+            lines = list()
+            # memberName = input("Please enter a member's name to be deleted.")
+            with open('dataset.csv', 'r') as readFile:
+                reader = csv.reader(readFile)
+                for row in reader:
+                    lines.append(row)
+                    for field in row:
+                        if language_detection(field) != 'id':
+                            lines.remove(row)
+            with open('mycsv.csv', 'w') as writeFile:
+                writer = csv.writer(writeFile)
+                writer.writerows(lines)
+        
+        # filter_csv()
 
         with st.expander("✨ KLASIFIKASI", True):
             page.item("Home", apps.home, default=True)
@@ -120,10 +135,9 @@ def main():
             page.item("Model klasifikasi", data_apps.model)
 
         with st.expander("⭐ LAINNYA", False):
-            st.write('Tentang Aplikasi')
-            st.write('aplikasi ini di buat oleh Dian Mahesa')
-
-        # st.write(st.session_state) #debug
+            st.write('developed by -Dian Mahesa-')
+            st.write("NPM - 065116239")
+            st.write("ILKOM UNPAK")
         
     page.show()
 

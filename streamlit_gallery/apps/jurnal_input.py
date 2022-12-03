@@ -20,6 +20,7 @@ import glob
 from streamlit_lottie import st_lottie_spinner
 
 from streamlit_gallery.utils.streamlit_prop import get_theme_colors
+from streamlit_gallery.utils.model import predict
 
 def save_uploadedfile(uploadedfile):
     with open(os.path.join("tempDir",uploadedfile.name),"wb") as f:
@@ -59,10 +60,31 @@ def parse_hasil_cermine(file_path):
 
     # st.write(text)
 
-    judul = "".join([judul.text for judul in root.iter('article-title')])
-    # judul = "".join(judul)
-    abstract = "".join([abstract[0].text for abstract in root.iter('abstract')])
+    # judul = "".join([judul.text for judul in root.iter('article-title')])
+    # # judul = "".join(judul)
+    # abstract = "".join([abstract[0].text for abstract in root.iter('abstract')])
+    # judul
+    for elm in root.findall("./front/article-meta/title-group/article-title"):          # for elm in root.findall("./body/sec[@id='sec-1']/p"):
+        st.write()                                                              #     st.write(elm.text)
+        st.write()                                                                      # not this as abstract is like this too
 
+    # judul
+    list_judul = [elm.text for elm in root.findall("./front/article-meta/title-group/article-title")]
+
+    # tahun
+    list_tahun = [elm1.text for elm1 in root.findall("./front/article-meta/pub-date/year")]
+
+    # abstrak
+    list_abstract = [elm.text for elm in root.findall("./front/article-meta/abstract/p")]
+
+    # author
+    list_author = [elm.text for elm in root.findall("./front/article-meta/contrib-group/contrib[@contrib-type='author']/string-name")]
+
+    # nama jurnal
+    list_nama_jurnal = [elm.text for elm in root.findall("./front/journal-meta/journal-title-group/journal-title")]
+
+    # keyword
+    list_kwd = [elm.text for elm in root.findall("./front/article-meta/kwd-group/kwd")]
     
     # for abstract in root.iter('abstract'):
     #     #1
@@ -79,16 +101,24 @@ def parse_hasil_cermine(file_path):
     #         if add == None: add = ""
     #         abstract = abstract + add
     # # st.write(abstract)
+    from streamlit_gallery.utils.lang_detection import language_detection
 
 
-    if abstract == "":
+    if len(list_abstract) == 0 or language_detection(list_abstract[0]) != 'id':
         from abstrak import pdfparser
         file_path = file_path.replace('cermxml', 'pdf')
         parsed = pdfparser(file_path)
         pattern = re.compile('(?<=abstrak)(.*)(?=kata kunci)', re.IGNORECASE)
-        abstract = re.findall(pattern, parsed)
+        list_abstract = re.findall(pattern, parsed)
+        list_abstract = [abstract.strip() for abstract in list_abstract]
     
-    return judul, abstract
+    return {"judul":list_judul,
+            "tahun":list_tahun,
+            "abstrak":list_abstract,
+            "author":list_author,
+            "nama_jurnal":list_nama_jurnal,
+            "kwd":list_kwd
+            }
 
 def delete_files():
     import os, shutil
@@ -168,7 +198,6 @@ def main():
                 hasil_jurnal = zip(hasil_abstract,pdf_list)
                 message.empty()
 
-            # show_lottie_json("square-loading.json")
         with area_hasil:
             # st.write(hasil_abstract)
             st.write(" ")
@@ -177,29 +206,56 @@ def main():
             <div style="border-width: 1px; border-style: solid; border-color: #3A3B3C; border-radius: 5px; float: left; margin-top: 50px">
                 <div class="column_1" style="background: {color}26; border-right: 1px solid #3A3B3C; padding: 20px; width: 75%; float: left;">
                     <h1 style="font-size:20px">{}</h1>
-                    <p>author</p>
-                    <p>kata kunci</p>
-                    <p>pub date</p>
-                    <p>jurnal</p>
+                    <p>author: {}</p>
+                    <p>kata kunci: {}</p>
+                    <p>tahun: {}</p>
+                    <p>jurnal: {}</p>
                     <div style="background: {color}26; padding: 20px; border: 1px solid {color}33; border-radius: 5px;">
                         <p style="color:{color}; font-size:15px">{}</p>
                     </div>
                 </div>
-                <div class="column_2" style="padding-top: 50px; width: 24%; float: left;">
+                <div class="column_2" style="padding-top: 50px; padding-left: 10px; width: 24%; float: left;">
                     <h2 style="text-align: center; font-size:20px;">Kategori:</h2>
-                    <h3 style="color:{textcolor}; text-align: center;">pengolahan citra</h3>
+                    <h3 style="color:{textcolor}; text-align: center;">{}</h3>
                 </div>
             </div>"""
             
+            deta_jurnal = []
             for hasil in hasil_jurnal:
-                # st.markdown('---')
-                st.markdown(hasil_md.format(hasil[0][0], hasil[0][1], color=text_color, bgcolor=scnd_background_color, textcolor=accent_color), unsafe_allow_html=True)
-                # st.write(list(hasil)) # debug
-                with st.expander("lihat pdf"):
-                    # if st.button("baca"):
-                    show_pdf(hasil[1])
-                        # st.write()
+                predicted_text = predict(".".join([
+                    "%s" % ", ".join(hasil[0]["judul"]),
+                    hasil[0]["abstrak"][0]]))
 
+                jurnal = dict(
+                    judul="%s" % ", ".join(hasil[0]["judul"]).lower().strip(), 
+                    author="%s" % ", ".join(hasil[0]["author"]).lower().strip(),
+                    kwd="%s" % ", ".join(hasil[0]["kwd"]).lower().strip(),
+                    tahun="%s" % ", ".join(hasil[0]["tahun"]).lower().strip(),
+                    nama_jurnal="%s" % ", ".join(hasil[0]["nama_jurnal"]).lower().strip(),
+                    abstrak=hasil[0]["abstrak"][0].lower().strip(),
+                    kategori=predicted_text["label"].lower().strip()
+                )
+
+                st.markdown(hasil_md.format(
+                            jurnal["judul"],
+                            jurnal["author"],
+                            jurnal["kwd"],
+                            jurnal["tahun"],
+                            jurnal["nama_jurnal"],
+                            jurnal["abstrak"],
+                            jurnal["kategori"],
+                            color=text_color, bgcolor=scnd_background_color, textcolor=accent_color), unsafe_allow_html=True)
+                # st.write(list(hasil)) # debug
+
+                deta_jurnal.append(jurnal)
+                
+                with st.expander("lihat pdf"):
+                    show_pdf(hasil[1])
+            
+            from streamlit_gallery.utils.database import insert_jurnal_indo
+            
+            for jurnal in deta_jurnal:
+                insert_jurnal_indo(jurnal)
         # for uploaded in files:
         #     with tempfile.NamedTemporaryFile(delete=False) as tmp_file:
         #         fp = Path(tmp_file.name)
@@ -230,12 +286,10 @@ def main():
         #         # $ java -cp cermine-impl-1.13-jar-with-dependencies.jar pl.edu.icm.cermine.ContentExtractor -path cermine-pdfs
     else:
         with col3:
-            lottie_url_download = "https://assets10.lottiefiles.com/packages/lf20_voi0gxts.json"
-            lottie_show(lottie_url_download)
-    
-    # st_lottie(lottie_download, key="hello")
+            # lottie_url_download = "https://assets10.lottiefiles.com/packages/lf20_voi0gxts.json"
+            # lottie_show(lottie_url_download)
+            show_lottie_json("87012-plane.json")
 
 
 if __name__ == "__main__":
-    # st.set_page_config(page_title="E-Jurnal Indonesia", page_icon="🎈", layout="wide")
     main()

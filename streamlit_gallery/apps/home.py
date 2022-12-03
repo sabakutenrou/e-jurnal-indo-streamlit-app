@@ -18,6 +18,8 @@ import streamlit_gallery.utils.database as db
 from streamlit_gallery.utils.lang_detection import language_detection
 import re
 
+from streamlit_gallery.utils.preprocess import preprocess, remove_stopwordss, stemming
+
 def main():
     def st_header(text, font_size=30, color=st.get_option('theme.primaryColor')):
         text_style = ' style="color:{color}; font-size:{font_size}px"'.format(color=color, font_size=font_size)
@@ -41,7 +43,7 @@ def main():
     def get_matching_pattern(list):            ## Function name changed
         for item in list:
             match = re.search('id', str(item), re.IGNORECASE)
-            st.write(match)   ## Use re.search method
+            # st.write(match)   ## Use re.search method
             if match:                              ## Correct the indentation of if condition
                 return match                       ## You also don't need an else statement
 
@@ -102,7 +104,7 @@ def main():
         valid["abstrak"] = validasi_kata(abstrak, 10, 'abstrak')
         abstrak = ".".join([judul,abstrak]) if judul != '' else abstrak
         st.session_state['teks_abstrak'] = abstrak
-        st.write(language_detection(abstrak, "multiple")) if len(abstrak) != 0 else st.write()
+        # st.write(language_detection(abstrak, "multiple")) if len(abstrak) != 0 else st.write() # debug
         classify = st.button(label='Klasifikasi')
 
 # in range(100,500)
@@ -110,7 +112,7 @@ def main():
         if classify: 
             st.session_state['classify'] = True
         if st.session_state['classify'] and valid["abstrak"] and valid['judul']:
-            selected = option_menu('HASIL', ["kelas", "preprocess", "tfidf"], 
+            selected = option_menu('HASIL', ["kelas", "preprocess"], 
             icons=['house', 'cloud-upload', "list-task", 'gear'], 
             # menu_icon="cast", 
             default_index=0, 
@@ -124,13 +126,32 @@ def main():
             )
             if selected == 'kelas':
                 predicted_text = predict(st.session_state['teks_abstrak'])
-                st.success('Prediksi : ' + predicted_text['label'])
                 plot_radar(predicted_text["decision"][0])
-                st.write(predicted_text)
+                st.success('Kelas Prediksi : ' + predicted_text['label'])
+                # st.write(predicted_text) # debug
             elif selected == 'preprocess':
-                st.success('Preprocess berhasil')
-            elif selected == 'tfidf':
-                st.success('tfidf berhasil')
+                st.write("Teks:")
+                cleaned = preprocess(st.session_state['teks_abstrak'])
+                st.warning(cleaned)
+                st.write("Hapus stopwords:")
+                stopword_removed = remove_stopwordss(cleaned)
+                st.info(stopword_removed)
+                st.write("Stemming:")
+                stem = stemming(stopword_removed)
+                st.success(stem)
+
+
+                from streamlit_gallery.utils.preprocess import readkamus, penemuan_kata_dasar
+                kamus = readkamus('kata-dasar.txt')
+                kalimat = stopword_removed
+                listkalimat = [str(i) for i in kalimat.split()]
+                kalimatdasar = []
+                strkalimatdasar = ''
+                for i in listkalimat:
+                    i = penemuan_kata_dasar(i,kamus)
+                    kalimatdasar.append(i)
+                    strkalimatdasar = strkalimatdasar + ' ' + i
+                st.write(strkalimatdasar)
         else: show_card()
     # st.write(db)
 

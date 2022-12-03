@@ -40,15 +40,47 @@ def fetch_jurnal_bucket():
     res = jurnal_bucket.fetch()
     return res.items
 
-def insert_jurnal_indo(username, name, password):
-    return jurnal_indo.put({"key": username, "name": name, "password": password})
+def insert_jurnal_indo(data):
+    # return jurnal_indo.put({"key": username, "name": name, "password": password})
+    return jurnal_indo.put({
+                            "key":data["judul"],
+                            "abstrak":data["abstrak"],
+                            "author":data["author"],
+                            "keyword":data["kwd"],
+                            "tahun":data["tahun"],
+                            "nama_jurnal":data["nama_jurnal"],
+                            "kategori":data["kategori"]
+                            })
 
-def insert_jurnal_bucket(username, name, password):
-    return jurnal_bucket.put({"key": username, "name": name, "password": password})
+# def insert_jurnal_bucket(username, name, password):
+    # return jurnal_bucket.put({"key": username, "name": name, "password": password})
 
-def update_jurnal_indo(username, updates):
+def insert_jurnal_bucket(data):
+    return jurnal_indo.put({
+                            "key":data["judul"],
+                            "abstrak":data["abstrak"],
+                            "author":data["author"],
+                            "keyword":data["kwd"],
+                            "tahun":data["tahun"],
+                            "nama_jurnal":data["nama_jurnal"],
+                            "kategori":data["kategori"]
+                            })
+
+# def update_jurnal_indo(username, updates):
+#     """returns None if updated, if not raised exception"""
+#     return admin.update(updates, username)
+
+def update_jurnal_indo(data):
     """returns None if updated, if not raised exception"""
-    return admin.update(updates, username)
+    return admin.update({
+                        "key":data["judul"],
+                        "abstrak":data["abstrak"],
+                        "author":data["author"],
+                        "keyword":data["kwd"],
+                        "tahun":data["tahun"],
+                        "nama_jurnal":data["nama_jurnal"],
+                        "kategori":data["kategori"]
+                        }, data["key"])
 
 def delete_jurnal_indo(username):
     """always returns None (even if the key doesn't exist)"""

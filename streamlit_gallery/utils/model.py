@@ -15,8 +15,11 @@ df['abstrak-jurnal'] = df['abstrak-jurnal'].apply(preprocess)
 X = df['abstrak-jurnal']
 y = df['kategori']
 
+df['judul-abstrak'] = df['judul-jurnal'] + df["abstrak-jurnal"]
+X = df['judul-abstrak']
+
 def load_data():
-    return df
+    return df[['judul-abstrak','kategori']]
 
 def predict(text):
     df = load_data()

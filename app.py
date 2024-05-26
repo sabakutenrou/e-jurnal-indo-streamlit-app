@@ -32,6 +32,13 @@ st.set_page_config(page_title="E-Jurnal Indonesia", page_icon="🎈", layout="wi
 # hashed_password = stauth.Hasher(["admin"]).generate()
 # insert_user("admin", "Dian Mahesa", "dianmahes@gmail.com", hashed_password[0])
 
+st.markdown(f'''
+    <style>
+        section[data-testid="stSidebar"] .css-ng1t4o {{width: 14rem;}}
+        section[data-testid="stSidebar"] .css-1d391kg {{width: 14rem;}}
+    </style>
+''',unsafe_allow_html=True)
+
 usernames = fetch_all_users()
 
 authenticator = stauth.Authenticate(

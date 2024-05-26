@@ -48,3 +48,19 @@ def predict(text):
 
     return {"text": text, "label":label, "decision":decision_func}
 
+def con():
+    from sklearn.calibration import CalibratedClassifierCV
+    svm = LinearSVC()
+    clf = CalibratedClassifierCV(svm) 
+    # clf.fit(X_test_vect, y_train)
+    # y_proba = clf.predict_proba(X_test)
+
+
+
+
+
+
+
+
+
+    return [261852, 341913, 478837, 181540, 299514, 461686, 200163, 366967, 253917, 372347, 4576188]

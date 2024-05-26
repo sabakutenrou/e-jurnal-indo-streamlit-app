@@ -1,7 +1,7 @@
 # Streamlit
-.streamlit/*
-!.streamlit/config.toml
-!*/frontend/.env
+# .streamlit/*
+# !.streamlit/config.toml
+# !*/frontend/.env
 
 # Visual Studio Code
 .vscode/*

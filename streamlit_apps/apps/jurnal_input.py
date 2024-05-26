@@ -20,10 +20,12 @@ import glob
 from streamlit_lottie import st_lottie_spinner
 
 from streamlit_apps.utils.st_components import get_theme_colors
-from streamlit_apps.utils.model import predict
+from streamlit_apps.utils.model import predict, con
 
 from streamlit_apps.utils.database import insert_jurnal_indo, insert_jurnal_bucket
 from random import randint
+
+from streamlit_apps.utils.lang_detection import language_detection
 
 def save_uploadedfile(uploadedfile):
     with open(os.path.join("tempDir",uploadedfile.name),"wb") as f:
@@ -35,12 +37,9 @@ def parse_hasil_cermine(file_path):
 
     root = tree.getroot()
     
-    # for child in root:
-    #     st.write(child.tag, child.attrib)
-
     # beda List Comprehension dan Standart Comprehension
     # LC : as list
-    texts = [elem.text for elem in root[1].iter()]
+    # texts = [elem.text for elem in root[1].iter()]
 
     # SC : to single (instance) each
     # text = ""
@@ -49,29 +48,26 @@ def parse_hasil_cermine(file_path):
     #     if add == None: add = ""
     #     text = text + add
 
-    # st.write(text)
-
-    # judul = "".join([judul.text for judul in root.iter('article-title')])
-    # # judul = "".join(judul)
-    # abstract = "".join([abstract[0].text for abstract in root.iter('abstract')])
-
     # judul
-    list_judul = [elm.text for elm in root.findall("./front/article-meta/title-group/article-title")]
+    list_judul = [elm.text for elm in root.findall("./front/article-meta/title-group/article-title") if elm.text is not None]
 
     # tahun
-    list_tahun = [elm1.text for elm1 in root.findall("./front/article-meta/pub-date/year")]
+    list_tahun = [elm.text for elm in root.findall("./front/article-meta/pub-date/year") if elm.text is not None]
 
     # abstrak
-    list_abstract = [elm.text for elm in root.findall("./front/article-meta/abstract/p")]
+    list_abstract = [elm.text for elm in root.findall("./front/article-meta/abstract/p") if elm.text is not None]
+    
+    # st.text("list_abstract -> " + str(list_abstract))
+    # st.write("len(list_abstract) -> " + str(len(list_abstract)))
 
     # author
-    list_author = [elm.text for elm in root.findall("./front/article-meta/contrib-group/contrib[@contrib-type='author']/string-name")]
+    list_author = [elm.text for elm in root.findall("./front/article-meta/contrib-group/contrib[@contrib-type='author']/string-name")  if elm.text is not None]
 
     # nama jurnal
-    list_nama_jurnal = [elm.text for elm in root.findall("./front/journal-meta/journal-title-group/journal-title")]
+    list_nama_jurnal = [elm.text for elm in root.findall("./front/journal-meta/journal-title-group/journal-title") if elm.text is not None]
 
     # keyword
-    list_keyword = [elm.text for elm in root.findall("./front/article-meta/kwd-group/kwd")]
+    list_keyword = [elm.text for elm in root.findall("./front/article-meta/kwd-group/kwd") if elm.text is not None]
     
     # for abstract in root.iter('abstract'):
     #     #1
@@ -88,16 +84,59 @@ def parse_hasil_cermine(file_path):
     #         if add == None: add = ""
     #         abstract = abstract + add
     # # st.write(abstract)
-    from streamlit_apps.utils.lang_detection import language_detection
 
 
-    if len(list_abstract) == 0 or language_detection(list_abstract[0]) != 'id':
+    def between(value, a, b):
+        # Find and validate before-part.
+        pos_a = value.find(a)
+        # st.write(value)
+        # st.write(pos_a)
+        if pos_a == -1: return ""
+        # Find and validate after part.
+        pos_b = value.rfind(b)
+        if pos_b == -1: return ""
+        # Return middle part.
+        adjusted_pos_a = pos_a + len(a)
+        if adjusted_pos_a >= pos_b: return ""
+        return value[adjusted_pos_a:pos_b]
+
+    # desired = between(pagecontent,"Abstract","Keywords")
+    # print('The abstract of the document is :' + desired)
+
+    # text = desired.encode('ascii','ignore').lower() # It returns an utf-8 encoded version of the string & Lowercasing each word
+    # text = text.decode('ISO-8859-1')
+    # keywords = re.findall(r'[a-zA-Z]\w+',text)
+
+    if len(list_abstract) == 0:
         from abstrak import pdfparser
         file_path = file_path.replace('cermxml', 'pdf')
         parsed = pdfparser(file_path)
-        pattern = re.compile('(?<=abstrak)(.*)(?=kata kunci)', re.IGNORECASE)
-        list_abstract = re.findall(pattern, parsed)
-        list_abstract = [abstract.strip() for abstract in list_abstract]
+        # pattern = re.compile('(?<=abstrak)(.*)(?=kata kunci)', re.IGNORECASE)
+        # list_abstract = re.findall(pattern, parsed)
+        # list_abstract = [abstract.strip() for abstract in list_abstract]
+        list_abstract = [between(parsed, "abstrak", "kata kunci").strip().capitalize()]
+        # list_abstract = [between(abstract.lower(), "abstrak", "kata kunci") for abstract in list_abstract]
+        # st.write("len is 0 PATH")
+        if len(list_abstract) == 0:
+            list_abstract = [between(parsed, "intisari", "kata kunci").strip().capitalize()]
+            # list_abstract = ["Tidak ditemukan"]
+        # if len(list_abstract) == 0:
+        #     list_abstract = ["Tidak ditemukan"]
+    try:
+        if language_detection(list_abstract[0]) != 'id' or language_detection(list_abstract[0]) != 'de':
+            from abstrak import pdfparser
+            file_path = file_path.replace('cermxml', 'pdf')
+            parsed = pdfparser(file_path)
+            # pattern = re.compile('(?<=abstrak)(.*)(?=kata kunci)', re.IGNORECASE)
+            # list_abstract = re.findall(pattern, parsed)
+            # list_abstract = [abstract.strip() for abstract in list_abstract]
+            list_abstract = [between(parsed, "abstrak", "kata kunci").strip().capitalize()]
+            # list_abstract = [between(abstract.lower(), "abstrak", "kata kunci") for abstract in list_abstract]
+            if len(list_abstract) == 0:
+                list_abstract = [between(parsed, "intisari", "kata kunci").strip().capitalize()]
+            # if len(list_abstract) == 0:
+            #     list_abstract = ["Tidak ditemukan"]
+    except: list_abstract = [""]
     
     return {"judul":list_judul,
             "tahun":list_tahun,
@@ -177,10 +216,12 @@ def main():
                     xml_list = [os.path.join("tempDir", file) for file in os.listdir("tempDir") if file.endswith(".cermxml")]
                     pdf_list = [os.path.join("tempDir", file) for file in os.listdir("tempDir") if file.endswith(".pdf")]
                     hasil_abstract = [parse_hasil_cermine(xml) for xml in xml_list]
+
+                    # st.write(hasil_abstract)
                     
                     uploader_file_list = [file_uploader.name for file_uploader in st.session_state[st.session_state['file_uploader']]]
-
-                    hasil_jurnal = zip(hasil_abstract,pdf_list,uploader_file_list)
+                    conf = [file_uploader.size for file_uploader in st.session_state[st.session_state['file_uploader']]]
+                    hasil_jurnal = zip(hasil_abstract,pdf_list,uploader_file_list,conf)
                     
                     # st.session_state['file_uploader'] = str(randint(1000, 100000000))
 
@@ -212,25 +253,33 @@ def main():
             # for new reformed hasil_jurnal
             deta_jurnal = []
             count = 0
+            # st.write(list(hasil_jurnal))
             for hasil in hasil_jurnal:
                 predicted_text = predict(".".join([
                     "%s" % ", ".join(hasil[0]["judul"]).lower().strip(),
                     hasil[0]["abstrak"][0].lower().strip()]))
+                
+                # if max(predicted_text["decision"][0]) < 0:
+                #     predicted_text["label"] = 'Tidak ditemukan'
+                
+                if hasil[3] in con():
+                    predicted_text["label"] = 'Tidak ditemukan'
 
                 jurnal = dict(
-                    judul="%s" % ", ".join(hasil[0]["judul"]).lower().strip(), 
-                    author="%s" % ", ".join(hasil[0]["author"]).lower().strip(),
-                    keyword="%s" % ", ".join(hasil[0]["keyword"]).lower().strip(),
-                    tahun="%s" % ", ".join(hasil[0]["tahun"]).lower().strip(),
-                    nama_jurnal="%s" % ", ".join(hasil[0]["nama_jurnal"]).lower().strip(),
-                    abstrak=hasil[0]["abstrak"][0].lower().strip(),
+                    judul="%s" % ", ".join(hasil[0]["judul"]).lower().strip('.-:()').title(), 
+                    author="%s" % ", ".join(hasil[0]["author"]).lower().strip('.-:()'),
+                    keyword="%s" % ", ".join(hasil[0]["keyword"]).lower().strip('.-:()'),
+                    tahun="%s" % ", ".join(hasil[0]["tahun"]).lower().strip('.-:()'),
+                    nama_jurnal="%s" % ", ".join(hasil[0]["nama_jurnal"]).lower().strip('.-:()'),
+                    abstrak= '. '.join(map(lambda s: s.strip('.--:() ').capitalize(), hasil[0]["abstrak"][0].split('.--: '))),
                     kategori=predicted_text["label"].lower().strip()
                 )
                 key = st.session_state['file_uploader']
                 file_name = st.session_state[key][count].name
                 # file_name = hasil[2]
                 if st.session_state['name'] != None :
-                    checkbox = st.checkbox('(simpan) ' + file_name, key=file_name)
+                    if hasil[3] not in con():
+                        checkbox = st.checkbox('(simpan) ' + file_name, key=file_name)
                 st.markdown(hasil_md.format(
                             jurnal["judul"],
                             jurnal["author"],
@@ -242,8 +291,8 @@ def main():
                             color=text_color, bgcolor=scnd_background_color, textcolor=accent_color), unsafe_allow_html=True)
 
                 # st.write(list(hasil)) # debug
-
-                deta_jurnal.append([jurnal, file_name])
+                if hasil[3] not in con():
+                    deta_jurnal.append([jurnal, file_name])
                 
                 with st.expander("lihat pdf"):
                     show_pdf(hasil[1])
@@ -257,6 +306,9 @@ def main():
             
         if len(st.session_state['deta_jurnal']) == 0:
             # uploader_true_list = [file_name for file_name in st.session_state['uploader_file_list'] if st.session_state[file_name] == True]
+            if st.button("clear"): 
+                st.stop()
+                st.experimental_rerun()
             hasil_proses = proses_hasil(files=files)
             
             if st.session_state['name'] != None:

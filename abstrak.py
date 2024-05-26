@@ -29,9 +29,11 @@ def pdfparser(pdffile):
 
         # Cleaning the data
         data = data.lower()
-        data = re.sub('\[*?\]', '', data)
-        data = re.sub('[%s]' % re.escape(string.punctuation), '', data)
-        data = re.sub('\w*\d\w*', '', data)
+        # data = re.sub('\[*?\]', '', data)
+        # data = re.sub('[%s]' % re.escape(string.punctuation), '', data)
+        # data = re.sub('\w*\d\w*', '', data)
+        data = data.replace("—", "")
+        data = data.replace(":", "")
         data = data.replace("\n", "")
         # print(data)
 

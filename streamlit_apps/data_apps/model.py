@@ -249,11 +249,11 @@ def main():
         report = classification_report(test_df['cat_id'],
                                     pred, 
                                     target_names=mapping,
-                                    output_dict=True
+                                    # output_dict=True
                                     )
-        # st.code("++" + report)
-        st.write(report)
-        st.write("balanced_accuracy", balanced_accuracy_score(test_df['cat_id'],pred))
+        st.code("++" + report)
+        # st.write(report)
+        # st.write("balanced_accuracy", balanced_accuracy_score(test_df['cat_id'],pred))
 
     from functools import partial
 

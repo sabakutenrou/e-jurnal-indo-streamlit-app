@@ -125,9 +125,12 @@ def main():
             )
             if selected == 'kelas':
                 predicted_text = predict(st.session_state['teks_abstrak'])
-                plot_radar(predicted_text["decision"][0])
-                st.success('Kelas Prediksi : ' + predicted_text['label'])
                 # st.write(predicted_text) # debug
+                if max(predicted_text["decision"][0]) >= 0:
+                    plot_radar(predicted_text["decision"][0])
+                    st.success('Kelas Prediksi : ' + predicted_text['label'])
+                else : st.success('Kelas Prediksi : ' + 'Tidak Ditemukan')
+
             elif selected == 'preprocess':
                 st.write("Teks:")
                 cleaned = preprocess(st.session_state['teks_abstrak'])
